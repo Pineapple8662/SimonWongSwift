@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		836A192657DBD80D5AACE91C /* Pods_SimonWongSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */; };
 		842F143F24CA954300C45090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F143E24CA954300C45090 /* AppDelegate.swift */; };
 		842F144124CA954300C45090 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F144024CA954300C45090 /* SceneDelegate.swift */; };
 		842F144324CA954300C45090 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F144224CA954300C45090 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimonWongSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		842F143B24CA954300C45090 /* SimonWongSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimonWongSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842F143E24CA954300C45090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842F144024CA954300C45090 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		842F144724CA954600C45090 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842F144A24CA954600C45090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842F144C24CA954600C45090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98384983532BD539A3B504CF /* Pods-SimonWongSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimonWongSwift.release.xcconfig"; path = "Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift.release.xcconfig"; sourceTree = "<group>"; };
+		C1A514E647815C153FBA5EA2 /* Pods-SimonWongSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimonWongSwift.debug.xcconfig"; path = "Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				836A192657DBD80D5AACE91C /* Pods_SimonWongSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				842F143D24CA954300C45090 /* SimonWongSwift */,
 				842F143C24CA954300C45090 /* Products */,
+				C3604349CA3E8351EF7ABB6E /* Pods */,
+				C786934DFEE2E4E9106CFF59 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = SimonWongSwift;
 			sourceTree = "<group>";
 		};
+		C3604349CA3E8351EF7ABB6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1A514E647815C153FBA5EA2 /* Pods-SimonWongSwift.debug.xcconfig */,
+				98384983532BD539A3B504CF /* Pods-SimonWongSwift.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C786934DFEE2E4E9106CFF59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 842F144F24CA954600C45090 /* Build configuration list for PBXNativeTarget "SimonWongSwift" */;
 			buildPhases = (
+				0B43063CAC8DD737DB7C1AAB /* [CP] Check Pods Manifest.lock */,
 				842F143724CA954300C45090 /* Sources */,
 				842F143824CA954300C45090 /* Frameworks */,
 				842F143924CA954300C45090 /* Resources */,
+				8212F4B4D2038997A49EBC42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B43063CAC8DD737DB7C1AAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimonWongSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8212F4B4D2038997A49EBC42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		842F143724CA954300C45090 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		842F145024CA954600C45090 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A514E647815C153FBA5EA2 /* Pods-SimonWongSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		842F145124CA954600C45090 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98384983532BD539A3B504CF /* Pods-SimonWongSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

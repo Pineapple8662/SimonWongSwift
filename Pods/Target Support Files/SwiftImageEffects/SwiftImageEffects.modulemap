@@ -1,0 +1,6 @@
+framework module SwiftImageEffects {
+  umbrella header "SwiftImageEffects-umbrella.h"
+
+  export *
+  module * { export * }
+}
