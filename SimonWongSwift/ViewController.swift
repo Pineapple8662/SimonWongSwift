@@ -6,8 +6,6 @@
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 
-import UIKit
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
