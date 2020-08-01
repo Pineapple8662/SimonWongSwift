@@ -78,21 +78,21 @@ class BaseNavigationBar: UIView {
     var titleLabelFont: UIFont?
     var removeBackButton = false {
         didSet {
-            if removeBackButton {
-                if backButton != nil {
-                    leadingButtons.removeFirst()
-                }
-            }
+//            if removeBackButton {
+//                if backButton != nil {
+//                    leadingButtons.removeFirst()
+//                }
+//            }
         }
     }
     var backButton: UIButton?
     private var _leadingButtons: [UIButton]?
     var leadingButtons: [UIButton] {
         get {
-            if _leadingButtons == nil {
+//            if _leadingButtons == nil {
                 backButton = UIButton.navigationBarButton(imageName: "navigation_back", target: self, action:#selector(didTapBackButton(_:)))
                 _leadingButtons = [backButton!]
-            }
+//            }
             return _leadingButtons!
         }
         set {
@@ -144,9 +144,9 @@ class BaseNavigationBar: UIView {
         addSubview(mainStackView)
         mainStackView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(UIStatusBarHeight)
-            make.left.equalToSuperview().offset(UISafeAreaLeftRightPadding)
+            make.left.equalToSuperview().offset(UISafeAreaLeftRightMargin)
             make.bottom.equalToSuperview()
-            make.right.equalToSuperview().offset(-UISafeAreaLeftRightPadding)
+            make.right.equalToSuperview().offset(-UISafeAreaLeftRightMargin)
         }
         mainStackView.addArrangedSubview(leadingStackView)
         mainStackView.addArrangedSubview(centerStackView)

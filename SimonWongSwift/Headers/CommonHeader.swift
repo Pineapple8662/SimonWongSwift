@@ -20,7 +20,7 @@ var UIStatusBarHeight: CGFloat {
     }
 }
 var UINavigationBarHeight: CGFloat = (UIStatusBarHeight + 44)
-var UISafeAreaBottomPadding: CGFloat {
+var UISafeAreaBottomMargin: CGFloat {
     get {
         if UIDevice.iPhoneSeries.all {
             return (UIDevice.iPhoneSeries.iPhoneX_or_higher ? 34 : 0)
@@ -29,7 +29,7 @@ var UISafeAreaBottomPadding: CGFloat {
         }
     }
 }
-var UITabBarHeight: CGFloat = (UISafeAreaBottomPadding + 49)
+var UITabBarHeight: CGFloat = (UISafeAreaBottomMargin + 49)
 
 var UIScreenBounds = UIScreen.main.bounds
 var UIScreenWidth = UIScreenBounds.width
@@ -49,7 +49,7 @@ var keyWindow: UIWindow? {
 }
 
 /// 默认左右间距
-var UISafeAreaLeftRightPadding: CGFloat = (min(UIScreenWidth, UIScreenHeight) == 414 ? 20 : 15)
+var UISafeAreaLeftRightMargin: CGFloat = (min(UIScreenWidth, UIScreenHeight) == 414 ? 20 : 15)
 
 // MARK: - TableView
 
