@@ -20,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreenBounds)
         window?.backgroundColor = .black
         // 设置根视图
-        let tabBarVC = UITabBarController()
-//        let rootVC =
-        window?.rootViewController = tabBarVC
+        let tabBarVC = TabBarController()
+        let placeholderVC = BaseViewController()
+        let rootVC = SplitViewController(master: BaseNavigationController(rootViewControllerNoWrapping: tabBarVC), detail: BaseNavigationController(rootViewController: placeholderVC))
+        window?.rootViewController = rootVC
         // makeKeyAndVisible
         window?.makeKeyAndVisible()
         // 渐变动画
