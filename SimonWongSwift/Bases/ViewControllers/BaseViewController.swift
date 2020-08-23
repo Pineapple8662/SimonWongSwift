@@ -25,7 +25,8 @@ class BaseViewController: UIViewController, BaseNavigationBarProtocol {
         navigationBarTitle = "12345"
         
         view.backgroundColor = .lightView
-        view.backgroundColor = .random
+//        view.backgroundColor = .random
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
