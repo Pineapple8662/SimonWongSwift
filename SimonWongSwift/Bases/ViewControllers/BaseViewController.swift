@@ -23,16 +23,8 @@ class BaseViewController: UIViewController, BaseNavigationBarProtocol {
         super.viewDidLoad()
         navigationBarMode = .white
         navigationBarTitle = "12345"
-        
         view.backgroundColor = .lightView
 //        view.backgroundColor = .random
-        
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        let vc = BaseViewController()
-        navigationController?.pushViewController(vc, animated: true)
         
     }
 
