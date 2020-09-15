@@ -17,9 +17,9 @@ extension UIColor {
     /// 浅色view
     static let lightView: UIColor = {
         if #available(iOS 13.0, *) {
-            return dynamicColor(hex_f5f5f7, systemBackground)
+            return dynamicColor(hex_f8f8f8, systemBackground)
         } else {
-            return hex_f5f5f7
+            return hex_f8f8f8
         }
     }()
     
@@ -55,7 +55,7 @@ extension UIColor {
     // MARK: View颜色
     
     /// 浅色view
-    static var hex_f5f5f7 = hex(0xf5f5f7)
+    static var hex_f8f8f8 = hex(0xf8f8f8)
     
     // MARK: 字体颜色
     
@@ -70,8 +70,6 @@ extension UIColor {
     static let hex_e9e9e9 = hex(0xe9e9e9)
     
     // MAKE: - Dark颜色
-    
-    static let hex_f8f8f8 = hex(0xf8f8f8)
     
     /// 黑色导航栏 & TabBar
     static let hex_282828 = hex(0x282828)

@@ -10,6 +10,8 @@ import UIKit
 
 class BaseViewController: UIViewController, BaseNavigationBarProtocol {
 
+    var animView = UIView()
+    
     deinit {
         DDLogDebug("\(self): \(#function)")
         StatusBarActivityIndicator.hide()
@@ -23,8 +25,12 @@ class BaseViewController: UIViewController, BaseNavigationBarProtocol {
         super.viewDidLoad()
         navigationBarMode = .white
         navigationBarTitle = "12345"
-        view.backgroundColor = .lightView
-//        view.backgroundColor = .random
+        view.backgroundColor = .lightView        
+
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
 

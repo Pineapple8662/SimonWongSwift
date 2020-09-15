@@ -28,6 +28,7 @@ def common_pods
   pod 'CYLTabBarController'
   pod 'MBProgressHUD'
   pod 'MJRefresh'
+  pod 'pop'
   pod 'RTRootNavigationController'
 
 end
