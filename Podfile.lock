@@ -11,9 +11,9 @@ PODS:
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.6)
   - KeychainAccess (4.2.0)
-  - Kingfisher (5.15.0):
-    - Kingfisher/Core (= 5.15.0)
-  - Kingfisher/Core (5.15.0)
+  - Kingfisher (5.15.1):
+    - Kingfisher/Core (= 5.15.1)
+  - Kingfisher/Core (5.15.1)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
   - pop (1.0.12)
@@ -93,7 +93,7 @@ SPEC CHECKSUMS:
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
-  Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
+  Kingfisher: 3260a05e78a17fdbeb2f14dd8e66ffc768491231
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
@@ -109,4 +109,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 54180324d475690bfbf45c70a0e92beb7790aeb0
 
-COCOAPODS: 1.10.0.beta.2
+COCOAPODS: 1.10.0.rc.1
