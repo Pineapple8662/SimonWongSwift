@@ -24,9 +24,12 @@ class BaseViewController: UIViewController, BaseNavigationBarProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationBarMode = .white
-        navigationBarTitle = "12345"
-        view.backgroundColor = .lightView        
-
+        navigationBarTitle = "我是标题"
+        view.backgroundColor = .lightView
+        
+        let btn0 = UIButton(type: .system)
+        btn0.setTitle("按钮", for: .normal)
+        navigationBar?.leadingButtons = [btn0]
         
     }
     

@@ -33,26 +33,26 @@ class BaseNavigationBar: UIView {
     lazy var mainStackView: UIStackView = {
         let mainStackView = UIStackView()
         mainStackView.axis = .horizontal
-        mainStackView.distribution = .equalSpacing
+        mainStackView.distribution = .fill
         return mainStackView
     }()
     lazy var centerStackView: UIStackView = {
         let centerStackView = UIStackView()
         centerStackView.axis = .horizontal
-        centerStackView.distribution = .equalSpacing
+        centerStackView.distribution = .fill
         centerStackView.spacing = 4
         return centerStackView
     }()
     lazy var leadingStackView: UIStackView = {
         let leadingStackView = UIStackView()
         leadingStackView.axis = .horizontal
-        leadingStackView.distribution = .equalSpacing
+        leadingStackView.distribution = .fill
         leadingStackView.spacing = 4
         return leadingStackView
     }()
     lazy var trailingStackView: UIStackView = {
         let trailingStackView = UIStackView()
-        trailingStackView.distribution = .equalSpacing
+        trailingStackView.distribution = .fill
         trailingStackView.spacing = 4
         return trailingStackView
     }()
@@ -60,7 +60,7 @@ class BaseNavigationBar: UIView {
     lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.textColor = DefaultBaseNavigationBarTitleLabelTextColor
-        titleLabel.font = .boldSystemFont(ofSize: 19)
+        titleLabel.font = .boldSystemFont(ofSize: 18)
         titleLabel.textAlignment = .center
         return titleLabel
     }()
@@ -150,6 +150,9 @@ class BaseNavigationBar: UIView {
         }
         mainStackView.addArrangedSubview(leadingStackView)
         mainStackView.addArrangedSubview(centerStackView)
+        centerStackView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview();
+        }
         mainStackView.addArrangedSubview(trailingStackView)
         // 添加标题
         centerStackView.addArrangedSubview(titleLabel)
