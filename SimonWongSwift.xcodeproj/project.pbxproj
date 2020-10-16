@@ -41,6 +41,7 @@
 		8471A31C24D56554008DA574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31B24D56553008DA574 /* TabBarController.swift */; };
 		8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31D24D573B3008DA574 /* UIColor+Random.swift */; };
 		84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */; };
+		84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAB0032539517900CBA4C5 /* UIView+Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		8471A31B24D56553008DA574 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8471A31D24D573B3008DA574 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Config.swift"; sourceTree = "<group>"; };
+		84FAB0032539517900CBA4C5 /* UIView+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		98384983532BD539A3B504CF /* Pods-SimonWongSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimonWongSwift.release.xcconfig"; path = "Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift.release.xcconfig"; sourceTree = "<group>"; };
 		C1A514E647815C153FBA5EA2 /* Pods-SimonWongSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimonWongSwift.debug.xcconfig"; path = "Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				8471A31724D54F12008DA574 /* UIView+ViewController.swift */,
+				84FAB0032539517900CBA4C5 /* UIView+Frame.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				842B927E24D128F8000BA398 /* SplitViewController.swift in Sources */,
 				3564850B24D594710052304D /* UIImage+UIColor.swift in Sources */,
 				843D34A324D3ECBF00404FC6 /* StatusBarActivityIndicator.swift in Sources */,
+				84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */,
 				8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */,
 				8471A31224D54BD2008DA574 /* UIButton+BaseNavigationBar.swift in Sources */,
 				843D34A724D3F7BA00404FC6 /* UIWindow+Hierarchy.swift in Sources */,
