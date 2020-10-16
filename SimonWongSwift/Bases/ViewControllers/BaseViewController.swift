@@ -26,17 +26,5 @@ class BaseViewController: UIViewController {
         view.backgroundColor = .lightView
         navigationItem.title = "累觉不爱"
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        
-        print(view.safeAreaInsets.top)
-        print(view.safeAreaInsets.left)
-        print(view.safeAreaInsets.bottom)
-        print(view.safeAreaInsets.right)
-        
-        self.navigationController?.pushViewController(BaseViewController(), animated: true)
-        
-    }
 
 }
