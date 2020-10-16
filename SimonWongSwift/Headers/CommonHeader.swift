@@ -13,7 +13,7 @@ import UIKit
 var UIStatusBarHeight: CGFloat {
     get {
         if UIDevice.iPhoneSeries.all {
-            return (UIDevice.iPhoneSeries.iPhoneX_or_higher ? 44 : 20)
+            return (UIDevice.iPhoneSeries.screenSizeIsGreaterThanOrEqual_iPhoneX ? 44 : 20)
         } else {
             return (UIDevice.iPadSeries.roundedCorners ? 30 : 20)
         }
@@ -23,7 +23,7 @@ var UINavigationBarHeight: CGFloat = (UIStatusBarHeight + 44)
 var UISafeAreaBottomMargin: CGFloat {
     get {
         if UIDevice.iPhoneSeries.all {
-            return (UIDevice.iPhoneSeries.iPhoneX_or_higher ? 34 : 0)
+            return (UIDevice.iPhoneSeries.screenSizeIsGreaterThanOrEqual_iPhoneX ? 34 : 0)
         } else {
             return (UIDevice.iPadSeries.roundedCorners ? 15 : 0)
         }

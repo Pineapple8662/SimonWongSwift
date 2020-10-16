@@ -25,11 +25,11 @@ extension UIButton {
         let button = adapterInit(coder: aDecoder)
         if (button.titleLabel == nil) { return button }
         var fontSize = button.titleLabel!.font.pointSize
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             fontSize += FontSizeDecrement.decrement_1
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             fontSize += FontSizeDecrement.decrement_2
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             fontSize += FontSizeDecrement.decrement_3
         }
         button.titleLabel!.font = button.titleLabel!.font.withSize(fontSize)

@@ -29,12 +29,13 @@ class BaseViewController: UIViewController, BaseNavigationBarProtocol {
         
         let btn0 = UIButton(type: .system)
         btn0.setTitle("按钮", for: .normal)
-        navigationBar?.leadingButtons = [btn0]
-        
+        navigationBar?.leadingButtons = [btn0]        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        print("UIScreenWidth: \(UIScreenWidth)")
+        print("UIScreenHeight: \(UIScreenHeight)")
+        print("UIScreen.main.scale: \(UIScreen.main.scale)")
     }
 
 }

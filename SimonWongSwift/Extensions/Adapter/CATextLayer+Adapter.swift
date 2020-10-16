@@ -23,11 +23,11 @@ extension CATextLayer {
     
     @objc private func adapterSetFontSize(_ fontSize: CGFloat) {
         var fontSize = fontSize
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             fontSize += FontSizeDecrement.decrement_1
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             fontSize += FontSizeDecrement.decrement_2
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             fontSize += FontSizeDecrement.decrement_3
         }
         adapterSetFontSize(fontSize)

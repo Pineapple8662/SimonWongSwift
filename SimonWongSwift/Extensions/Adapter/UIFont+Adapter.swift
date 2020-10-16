@@ -65,11 +65,11 @@ extension UIFont {
     
     @objc private class func adapterSystemFont(ofSize fontSize: CGFloat) -> UIFont {
         var newFont: UIFont?
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             newFont = UIFont.adapterSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_1)
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             newFont = UIFont.adapterSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_2)
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             newFont = UIFont.adapterSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_3)
         } else {
             newFont = UIFont.adapterSystemFont(ofSize: fontSize)
@@ -79,11 +79,11 @@ extension UIFont {
     
     @objc private class func adapterBoldSystemFont(ofSize fontSize: CGFloat) -> UIFont {
         var newFont: UIFont?
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             newFont = UIFont.adapterBoldSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_1)
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             newFont = UIFont.adapterBoldSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_2)
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             newFont = UIFont.adapterBoldSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_3)
         } else {
             newFont = UIFont.adapterBoldSystemFont(ofSize: fontSize)
@@ -93,11 +93,11 @@ extension UIFont {
     
     @objc private class func adapterItalicSystemFont(ofSize fontSize: CGFloat) -> UIFont {
         var newFont: UIFont?
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             newFont = UIFont.adapterItalicSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_1)
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             newFont = UIFont.adapterItalicSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_2)
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             newFont = UIFont.adapterItalicSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_3)
         } else {
             newFont = UIFont.adapterItalicSystemFont(ofSize: fontSize)
@@ -107,11 +107,11 @@ extension UIFont {
     
     @objc private class func adapterSystemFont(ofSize fontSize: CGFloat, weight: UIFont.Weight) -> UIFont {
         var newFont: UIFont?
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             newFont = UIFont.adapterSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_1, weight: weight)
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             newFont = UIFont.adapterSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_2, weight: weight)
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             newFont = UIFont.adapterSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_3, weight: weight)
         } else {
             newFont = UIFont.adapterSystemFont(ofSize: fontSize, weight: weight)
@@ -121,11 +121,11 @@ extension UIFont {
     
     @objc private class func adapterMonospacedDigitSystemFont(ofSize fontSize: CGFloat, weight: UIFont.Weight) -> UIFont {
         var newFont: UIFont?
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             newFont = UIFont.adapterMonospacedDigitSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_1, weight: weight)
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             newFont = UIFont.adapterMonospacedDigitSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_2, weight: weight)
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             newFont = UIFont.adapterMonospacedDigitSystemFont(ofSize: fontSize + FontSizeDecrement.decrement_3, weight: weight)
         } else {
             newFont = UIFont.adapterMonospacedDigitSystemFont(ofSize: fontSize, weight: weight)
@@ -135,11 +135,11 @@ extension UIFont {
     
     @objc private class func adapterInit(name fontName: String, size fontSize: CGFloat) -> UIFont {
         var newFont: UIFont?
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             newFont = UIFont.adapterInit(name: fontName, size: fontSize + FontSizeDecrement.decrement_1)
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             newFont = UIFont.adapterInit(name: fontName, size: fontSize + FontSizeDecrement.decrement_2)
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             newFont = UIFont.adapterInit(name: fontName, size: fontSize + FontSizeDecrement.decrement_3)
         } else {
             newFont = UIFont.adapterInit(name: fontName, size: fontSize)

@@ -25,11 +25,11 @@ extension UITextField {
         let textField = adapterInit(coder: aDecoder)
         if (textField.font == nil) { return textField }
         var fontSize = textField.font!.pointSize
-        if UIDevice.iPhoneSeries.screenWidth375 && UIDevice.iPhoneSeries.iPhoneX_or_higher {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX || UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone12 {
             fontSize += FontSizeDecrement.decrement_1
-        } else if UIDevice.iPhoneSeries.seriesOfiPhone8 {
+        } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             fontSize += FontSizeDecrement.decrement_2
-        } else if UIDevice.iPhoneSeries.iPhoneSE_or_lower {
+        } else if UIDevice.iPhoneSeries.screenSizeIsLessThanOrEqual_iPhoneSE {
             fontSize += FontSizeDecrement.decrement_3
         }
         textField.font = textField.font!.withSize(fontSize)
