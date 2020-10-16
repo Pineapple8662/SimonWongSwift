@@ -1,8 +1,8 @@
 PODS:
   - Alamofire (5.2.2)
   - CHTCollectionViewWaterfallLayout/Swift (0.9.8)
-  - CocoaLumberjack/Core (3.6.2)
-  - CocoaLumberjack/Swift (3.6.2):
+  - CocoaLumberjack/Core (3.7.0)
+  - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
   - CryptoSwift (1.3.2)
   - CYLTabBarController (1.29.0):
@@ -11,9 +11,9 @@ PODS:
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.6)
   - KeychainAccess (4.2.1)
-  - Kingfisher (5.15.3):
-    - Kingfisher/Core (= 5.15.3)
-  - Kingfisher/Core (5.15.3)
+  - Kingfisher (5.15.6):
+    - Kingfisher/Core (= 5.15.6)
+  - Kingfisher/Core (5.15.6)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
   - pop (1.0.12)
@@ -87,13 +87,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   CHTCollectionViewWaterfallLayout: 5f241d2480ab4939aa0d1ad4981de9eef1fbe60d
-  CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   CryptoSwift: 093499be1a94b0cae36e6c26b70870668cb56060
   CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KeychainAccess: 9b07f665298d13c3a85881bd3171f6f49b8151c1
-  Kingfisher: 2fef2f4d9e809285aff7f6195b5290520904f3fa
+  Kingfisher: b3554e7bf6106115b44e8795300bad580ef2fdc7
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
