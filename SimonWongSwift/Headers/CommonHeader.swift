@@ -13,23 +13,13 @@ import UIKit
 var UIStatusBarHeight: CGFloat {
     get {
         if UIDevice.iPhoneSeries.all {
-            return (UIDevice.iPhoneSeries.screenSizeIsGreaterThanOrEqual_iPhoneX ? 44 : 20)
+            return (UIDevice.iPhoneSeries.roundedCornersSeries ? 44 : 20)
         } else {
-            return (UIDevice.iPadSeries.roundedCorners ? 30 : 20)
+            return (UIDevice.iPadSeries.roundedCornersSeries ? 30 : 20)
         }
     }
 }
 var UINavigationBarHeight: CGFloat = (UIStatusBarHeight + 44)
-var UISafeAreaBottomMargin: CGFloat {
-    get {
-        if UIDevice.iPhoneSeries.all {
-            return (UIDevice.iPhoneSeries.screenSizeIsGreaterThanOrEqual_iPhoneX ? 34 : 0)
-        } else {
-            return (UIDevice.iPadSeries.roundedCorners ? 15 : 0)
-        }
-    }
-}
-var UITabBarHeight: CGFloat = (UISafeAreaBottomMargin + 49)
 
 var UIScreenBounds = UIScreen.main.bounds
 var UIScreenWidth = UIScreenBounds.width
@@ -47,9 +37,6 @@ var keyWindow: UIWindow? {
         return UIApplication.shared.keyWindow
     }
 }
-
-/// 默认左右间距
-var UISafeAreaLeftRightMargin: CGFloat = (min(UIScreenWidth, UIScreenHeight) == 414 ? 20 : 15)
 
 // MARK: - TableView
 

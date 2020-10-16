@@ -35,13 +35,12 @@
 		843D34AD24D40ABD00404FC6 /* UIColor+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34AC24D40ABD00404FC6 /* UIColor+Config.swift */; };
 		843D34AF24D40B5F00404FC6 /* UIColor+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34AE24D40B5F00404FC6 /* UIColor+Common.swift */; };
 		843D34B124D41A3C00404FC6 /* UIColor+DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34B024D41A3C00404FC6 /* UIColor+DynamicColor.swift */; };
-		8471A30F24D54255008DA574 /* BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A30E24D54255008DA574 /* BaseNavigationBar.swift */; };
 		8471A31224D54BD2008DA574 /* UIButton+BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31124D54BD2008DA574 /* UIButton+BaseNavigationBar.swift */; };
 		8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31424D54C25008DA574 /* UIFont+Common.swift */; };
 		8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31724D54F12008DA574 /* UIView+ViewController.swift */; };
-		8471A31A24D56329008DA574 /* BaseNavigationBarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31924D56329008DA574 /* BaseNavigationBarProtocol.swift */; };
 		8471A31C24D56554008DA574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31B24D56553008DA574 /* TabBarController.swift */; };
 		8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31D24D573B3008DA574 /* UIColor+Random.swift */; };
+		84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,13 +75,12 @@
 		843D34AC24D40ABD00404FC6 /* UIColor+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Config.swift"; sourceTree = "<group>"; };
 		843D34AE24D40B5F00404FC6 /* UIColor+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Common.swift"; sourceTree = "<group>"; };
 		843D34B024D41A3C00404FC6 /* UIColor+DynamicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DynamicColor.swift"; sourceTree = "<group>"; };
-		8471A30E24D54255008DA574 /* BaseNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBar.swift; sourceTree = "<group>"; };
 		8471A31124D54BD2008DA574 /* UIButton+BaseNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+BaseNavigationBar.swift"; sourceTree = "<group>"; };
 		8471A31424D54C25008DA574 /* UIFont+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Common.swift"; sourceTree = "<group>"; };
 		8471A31724D54F12008DA574 /* UIView+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
-		8471A31924D56329008DA574 /* BaseNavigationBarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBarProtocol.swift; sourceTree = "<group>"; };
 		8471A31B24D56553008DA574 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8471A31D24D573B3008DA574 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Config.swift"; sourceTree = "<group>"; };
 		98384983532BD539A3B504CF /* Pods-SimonWongSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimonWongSwift.release.xcconfig"; path = "Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift.release.xcconfig"; sourceTree = "<group>"; };
 		C1A514E647815C153FBA5EA2 /* Pods-SimonWongSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimonWongSwift.debug.xcconfig"; path = "Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,7 +151,6 @@
 			children = (
 				842B926E24D11C51000BA398 /* LoadFromNibProtocol.swift */,
 				842B927224D11CFA000BA398 /* ReuseIdentifierProtocol.swift */,
-				8471A31924D56329008DA574 /* BaseNavigationBarProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -172,6 +169,7 @@
 			children = (
 				842B927C24D128D0000BA398 /* ViewControllers */,
 				842F143E24CA954300C45090 /* AppDelegate.swift */,
+				84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */,
 				842B927A24D12692000BA398 /* AppDelegate+Fade.swift */,
 			);
 			path = Other;
@@ -299,7 +297,6 @@
 		8471A30D24D54243008DA574 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8471A30E24D54255008DA574 /* BaseNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -474,8 +471,8 @@
 				842B927624D11D7E000BA398 /* ImportHeader.swift in Sources */,
 				8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */,
 				3564850224D5943E0052304D /* UILabel+Adapter.swift in Sources */,
+				84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */,
 				842B927B24D12692000BA398 /* AppDelegate+Fade.swift in Sources */,
-				8471A31A24D56329008DA574 /* BaseNavigationBarProtocol.swift in Sources */,
 				843D349D24D3EC0B00404FC6 /* BaseViewController.swift in Sources */,
 				3564850824D5943E0052304D /* UIFont+Adapter.swift in Sources */,
 				843D34AD24D40ABD00404FC6 /* UIColor+Config.swift in Sources */,
@@ -485,7 +482,6 @@
 				842B927324D11CFA000BA398 /* ReuseIdentifierProtocol.swift in Sources */,
 				3564851124D5950F0052304D /* DispatchQueue+Once.swift in Sources */,
 				842B927E24D128F8000BA398 /* SplitViewController.swift in Sources */,
-				8471A30F24D54255008DA574 /* BaseNavigationBar.swift in Sources */,
 				3564850B24D594710052304D /* UIImage+UIColor.swift in Sources */,
 				843D34A324D3ECBF00404FC6 /* StatusBarActivityIndicator.swift in Sources */,
 				8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */,

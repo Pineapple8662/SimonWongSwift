@@ -31,7 +31,7 @@ class TabBarController: CYLTabBarController {
         UITabBar.appearance().shadowImage = UIImage(color: .dynamicColor(.hex_e9e9e9, .clear))
         let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.lightText]
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
-        let selectedAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.red]
+        let selectedAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.darkText]
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
     }
     

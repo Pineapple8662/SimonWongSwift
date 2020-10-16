@@ -22,19 +22,19 @@ extension UIDevice {
     }()
     
     /*
-     * iPhone SE / iPhone 5s / iPhone 5 (4-inch) 320 * 568 @2x
-     * iPhone 6, iPhone 6s, iPhone 7, iPhone 8, iPhone SE 2nd generation (4.7-inch) 375 * 667 @2x
-     * iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8 Plus (5.5-inch) 414 * 736 @3x
-     * iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini 375 * 812 @3x
-     * iPhone Xr, iPhone Xs Max, iPhone 11, iPhone 11 Pro Max 414 * 896 @2x || @3x
-     * iPhone 12, iPhone 12 Pro 390 * 844 @3x
-     * iPhone 12 Pro Max 428 * 926 @3x
+     * iPhone SE / iPhone 5s / iPhone 5 (4-inch) 320pt * 568pt @2x
+     * iPhone 6, iPhone 6s, iPhone 7, iPhone 8, iPhone SE 2nd generation (4.7-inch) 375pt * 667pt @2x
+     * iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8 Plus (5.5-inch) 414pt * 736pt @3x
+     * iPhone X, iPhone Xs, iPhone 11 Pro, iPhone 12 mini 375pt * 812pt @3x
+     * iPhone Xr, iPhone Xs Max, iPhone 11, iPhone 11 Pro Max 414pt * 896pt @2x || @3x
+     * iPhone 12, iPhone 12 Pro 390pt * 844pt @3x
+     * iPhone 12 Pro Max 428pt * 926pt @3x
      */
     
     /// iPhone
     struct iPhoneSeries {
         static let all = UIDevice.current.userInterfaceIdiom == .phone
-        /// iPhone SE, iPhone 5s, iPhone 5, iPhone 4s 及其以下 与 iPod 系列
+        /// iPhone SE, iPhone 5s, iPhone 5, iPhone 4s 及其以下
         static let screenSizeIsLessThanOrEqual_iPhoneSE = (all && max(UIScreenWidth, UIScreenHeight) <= 568)
         /// iPhone 6, iPhone 6s, iPhone 7, iPhone 8
         static let screenSizeIsEqual_iPhone8 = (all && min(UIScreenWidth, UIScreenHeight) == 375 && max(UIScreenWidth, UIScreenHeight) == 667)
@@ -49,24 +49,19 @@ extension UIDevice {
         /// iPhone 12 Pro Max
         static let screenSizeIsEqual_iPhone12ProMax = (all && min(UIScreenWidth, UIScreenHeight) == 428 && max(UIScreenWidth, UIScreenHeight) == 926)
         /// iPhone X, iPhone Xr, iPhone Xs, iPhone Xs Max, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 mini, iPhone 12, iPhone 12 Pro, iPhone 12 Pro Max
-        static let screenSizeIsGreaterThanOrEqual_iPhoneX: Bool = (all && max(UIScreenWidth, UIScreenHeight) >= 812)
+        static let roundedCornersSeries: Bool = {
+            return (all && max(UIScreenWidth, UIScreenHeight) >= 812)
+        }()
     }
-    
-    /*
-     * iPad Pro (10.5-inch) 834 * 1112
-     * iPad Pro (12.9-inch) (2rd generation) 1024 * 1366
-     * iPad Pro (11-inch) 834 * 1194
-     * iPad Pro (12.9-inch) (3rd generation) 1024 * 1366
-     */
     
     /// iPad
     struct iPadSeries {
         static let all = UIDevice.current.userInterfaceIdiom == .pad
-        /// 圆角屏 待完成
-        static let roundedCorners = (all && max(UIScreenWidth, UIScreenHeight) == 1194) || (all && max(UIScreenWidth, UIScreenHeight) == 1366)
+        /// 带圆角系列
+        static let roundedCornersSeries = (all && max(UIScreenWidth, UIScreenHeight) == 1194) || (all && max(UIScreenWidth, UIScreenHeight) == 1366)
     }
     
-    static let roundedCornersSeries = iPhoneSeries.screenSizeIsGreaterThanOrEqual_iPhoneX || iPadSeries.roundedCorners
+    static let roundedCornersSeries = iPhoneSeries.roundedCornersSeries || iPadSeries.roundedCornersSeries
     
 }
 

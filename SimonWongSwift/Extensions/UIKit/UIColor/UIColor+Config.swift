@@ -36,7 +36,7 @@ extension UIColor {
 
     // MARK: 分割线颜色
     
-    static let customSeparator0: UIColor = {
+    static let customSeparator: UIColor = {
         if #available(iOS 13.0, *) {
             return dynamicColor(hex_e9e9e9, separator)
         } else {

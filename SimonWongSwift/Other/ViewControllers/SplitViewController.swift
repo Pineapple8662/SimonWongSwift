@@ -49,7 +49,7 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .customSeparator0
+        view.backgroundColor = .customSeparator
         guard let masterVC = masterViewController, let detailVC = detailViewController else { return }
         viewControllers = [masterVC, detailVC]
         delegate = self
@@ -96,13 +96,6 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
             masterViewController?.show(vc, sender: nil)
         } else {
             detailViewController?.viewControllers = [vc]
-            if vc.navigationController?.isKind(of: RTContainerNavigationController.self) ?? false {
-                let naviVC = vc.navigationController as! RTContainerNavigationController
-                naviVC.viewDidLoadHandler = { [weak naviVC] in
-                    guard let naviVC = naviVC else { return }
-                    naviVC.customNavigationBar.removeBackButton = true
-                }
-            }
         }
         return true
     }

@@ -24,7 +24,7 @@ extension UILabel {
     @objc private func adapterInit(coder aDecoder: NSCoder) -> UILabel {
         let label = adapterInit(coder: aDecoder)
         var fontSize = label.font.pointSize
-        if UIDevice.iPhoneSeries.screenSizeIsGreaterThanOrEqual_iPhoneX {
+        if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhoneX {
             fontSize += FontSizeDecrement.decrement_1
         } else if UIDevice.iPhoneSeries.screenSizeIsEqual_iPhone8 {
             fontSize += FontSizeDecrement.decrement_2
