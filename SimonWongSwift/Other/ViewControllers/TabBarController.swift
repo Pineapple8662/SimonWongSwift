@@ -30,14 +30,14 @@ class TabBarController: CYLTabBarController {
         UITabBar.appearance().backgroundColor = .dynamicColor(.white, .hex_282828)
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().shadowImage = UIImage(color: .dynamicColor(UIColor.hex_e9e9e9.withAlphaComponent(0.3), .clear))
-        let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.lightText]
+        let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
         let selectedAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.darkText]
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
     }
     
     private func customizeTabBar() {
-        let dic0 = [CYLTabBarItemTitle: "标题",
+        let dic0 = [CYLTabBarItemTitle: "登录",
                     CYLTabBarItemImage: "tabbar_icon_0",
                     CYLTabBarItemSelectedImage: "tabbar_icon_0_selected"]
         let dic1 = [CYLTabBarItemTitle: "标题",
@@ -47,16 +47,16 @@ class TabBarController: CYLTabBarController {
                     CYLTabBarItemImage: "tabbar_icon_2",
                     CYLTabBarItemSelectedImage: "tabbar_icon_2_selected"]
         let dic3 = [CYLTabBarItemTitle: "标题",
-                    CYLTabBarItemImage: "tabbar_icon_2",
-                    CYLTabBarItemSelectedImage: "tabbar_icon_2_selected"]
-        let dic4 = [CYLTabBarItemTitle: "标题",
                     CYLTabBarItemImage: "tabbar_icon_3",
                     CYLTabBarItemSelectedImage: "tabbar_icon_3_selected"]
+        let dic4 = [CYLTabBarItemTitle: "标题",
+                    CYLTabBarItemImage: "tabbar_icon_4",
+                    CYLTabBarItemSelectedImage: "tabbar_icon_4_selected"]
         tabBarItemsAttributes = [dic0, dic1, dic2, dic3, dic4]
     }
     
     private func configureViewControllers() {
-        let naviVC0 = RTContainerNavigationController(rootViewController: BaseViewController())
+        let naviVC0 = RTContainerNavigationController(rootViewController: LoginController())
         let naviVC1 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC2 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC3 = RTContainerNavigationController(rootViewController: BaseViewController())
