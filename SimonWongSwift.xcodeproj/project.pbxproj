@@ -264,15 +264,8 @@
 		842F143D24CA954300C45090 /* SimonWongSwift */ = {
 			isa = PBXGroup;
 			children = (
-				842B927F24D12973000BA398 /* Bases */,
-				843042DD253D3F2700A592AB /* Classes */,
-				842B926C24D11C16000BA398 /* Extensions */,
-				842B927424D11D70000BA398 /* Headers */,
-				842B926D24D11C3F000BA398 /* Protocols */,
-				842B927924D12673000BA398 /* Other */,
-				843D349E24D3EC7E00404FC6 /* Utils */,
 				8430431C253D703300A592AB /* Resources */,
-				843D349B24D3EB1600404FC6 /* Bridging-Header.h */,
+				84304321253D713C00A592AB /* Sources */,
 			);
 			path = SimonWongSwift;
 			sourceTree = "<group>";
@@ -395,6 +388,21 @@
 			children = (
 			);
 			path = Localize;
+			sourceTree = "<group>";
+		};
+		84304321253D713C00A592AB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				842B927F24D12973000BA398 /* Bases */,
+				843042DD253D3F2700A592AB /* Classes */,
+				842B926C24D11C16000BA398 /* Extensions */,
+				842B927424D11D70000BA398 /* Headers */,
+				842B926D24D11C3F000BA398 /* Protocols */,
+				842B927924D12673000BA398 /* Other */,
+				843D349E24D3EC7E00404FC6 /* Utils */,
+				843D349B24D3EB1600404FC6 /* Bridging-Header.h */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		843D349E24D3EC7E00404FC6 /* Utils */ = {
@@ -727,13 +735,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "SimonWongSwift/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimonWongSwift/Sources/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -783,12 +791,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "SimonWongSwift/Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimonWongSwift/Sources/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -800,7 +808,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SimonWongSwift/Info.plist;
+				INFOPLIST_FILE = SimonWongSwift/Resources/Settings/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -818,7 +827,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = SimonWongSwift/Info.plist;
+				INFOPLIST_FILE = SimonWongSwift/Resources/Settings/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

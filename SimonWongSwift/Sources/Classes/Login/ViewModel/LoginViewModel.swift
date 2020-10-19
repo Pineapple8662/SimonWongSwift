@@ -16,7 +16,7 @@ class LoginViewModel: ViewModelType {
     
     struct Input {
         let name: AnyObserver<String>
-        let validate: AnyObserver<Void>
+//        let validate: AnyObserver<Void>
     }
     
     struct Output {
