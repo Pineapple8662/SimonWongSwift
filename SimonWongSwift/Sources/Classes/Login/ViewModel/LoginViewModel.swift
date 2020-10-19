@@ -16,7 +16,7 @@ class LoginViewModel: ViewModelType {
     
     struct Input {
         let name: AnyObserver<String>
-//        let validate: AnyObserver<Void>
+        let validate: AnyObserver<Void>
     }
     
     struct Output {
@@ -28,11 +28,10 @@ class LoginViewModel: ViewModelType {
     
     init() {
         let greeting = validateSubject.withLatestFrom(nameSubject).map { (name) in
-            return "Hello \(name)!"
+            return "我是\(name)"
         }.asDriver(onErrorJustReturn: ":-(")
         self.output = Output(greeting: greeting)
-//        self.input = Input(name: nameSubject.asObserver(), validate: validateSubject.asObserver())
-        self.input = Input(name: nameSubject.asObserver())
+        self.input = Input(name: nameSubject.asObserver(), validate: validateSubject.asObserver())
     }
     
 }
