@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-protocol ViewModelProtocol {
+protocol ViewModelType {
     
     associatedtype Input
     associatedtype Output

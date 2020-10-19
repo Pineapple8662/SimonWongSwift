@@ -36,7 +36,7 @@
 		843042CE253D362500A592AB /* UIBezierPath+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042CD253D362500A592AB /* UIBezierPath+Circle.swift */; };
 		843042D2253D365400A592AB /* CAPropertyAnimation+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042D1253D365400A592AB /* CAPropertyAnimation+Key.swift */; };
 		843042D6253D371200A592AB /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042D5253D371200A592AB /* BaseViewProtocol.swift */; };
-		843042DA253D3EAA00A592AB /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042D9253D3EAA00A592AB /* ViewModelProtocol.swift */; };
+		843042DA253D3EAA00A592AB /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042D9253D3EAA00A592AB /* ViewModelType.swift */; };
 		843042E2253D3F5A00A592AB /* LoginContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042E1253D3F5A00A592AB /* LoginContoller.swift */; };
 		843042E5253D3FB000A592AB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042E4253D3FB000A592AB /* LoginViewModel.swift */; };
 		843042E8253D452300A592AB /* DisposeBagProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042E7253D452300A592AB /* DisposeBagProtocol.swift */; };
@@ -92,7 +92,7 @@
 		843042CD253D362500A592AB /* UIBezierPath+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Circle.swift"; sourceTree = "<group>"; };
 		843042D1253D365400A592AB /* CAPropertyAnimation+Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAPropertyAnimation+Key.swift"; sourceTree = "<group>"; };
 		843042D5253D371200A592AB /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
-		843042D9253D3EAA00A592AB /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		843042D9253D3EAA00A592AB /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		843042E1253D3F5A00A592AB /* LoginContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContoller.swift; sourceTree = "<group>"; };
 		843042E4253D3FB000A592AB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		843042E7253D452300A592AB /* DisposeBagProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBagProtocol.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 				842B926E24D11C51000BA398 /* LoadFromNibProtocol.swift */,
 				842B927224D11CFA000BA398 /* ReuseIdentifierProtocol.swift */,
 				843042D5253D371200A592AB /* BaseViewProtocol.swift */,
-				843042D9253D3EAA00A592AB /* ViewModelProtocol.swift */,
+				843042D9253D3EAA00A592AB /* ViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -271,11 +271,8 @@
 				842B926D24D11C3F000BA398 /* Protocols */,
 				842B927924D12673000BA398 /* Other */,
 				843D349E24D3EC7E00404FC6 /* Utils */,
+				8430431C253D703300A592AB /* Resources */,
 				843D349B24D3EB1600404FC6 /* Bridging-Header.h */,
-				842F144724CA954600C45090 /* System.xcassets */,
-				843042F5253D5F6800A592AB /* Images.xcassets */,
-				842F144924CA954600C45090 /* LaunchScreen.storyboard */,
-				842F144C24CA954600C45090 /* Info.plist */,
 			);
 			path = SimonWongSwift;
 			sourceTree = "<group>";
@@ -355,6 +352,49 @@
 				843042EF253D5EF500A592AB /* String+Substring.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		8430431C253D703300A592AB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8430431E253D708400A592AB /* Assets */,
+				8430431F253D70C000A592AB /* Fonts */,
+				84304320253D70CE00A592AB /* Localize */,
+				8430431D253D707400A592AB /* Settings */,
+				842F144924CA954600C45090 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8430431D253D707400A592AB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				842F144C24CA954600C45090 /* Info.plist */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		8430431E253D708400A592AB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				842F144724CA954600C45090 /* System.xcassets */,
+				843042F5253D5F6800A592AB /* Images.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8430431F253D70C000A592AB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		84304320253D70CE00A592AB /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localize;
 			sourceTree = "<group>";
 		};
 		843D349E24D3EC7E00404FC6 /* Utils */ = {
@@ -602,7 +642,7 @@
 				843D349D24D3EC0B00404FC6 /* BaseViewController.swift in Sources */,
 				3564850824D5943E0052304D /* UIFont+Adapter.swift in Sources */,
 				843D34AD24D40ABD00404FC6 /* UIColor+Config.swift in Sources */,
-				843042DA253D3EAA00A592AB /* ViewModelProtocol.swift in Sources */,
+				843042DA253D3EAA00A592AB /* ViewModelType.swift in Sources */,
 				842B928224D12995000BA398 /* BaseNavigationController.swift in Sources */,
 				843042F1253D5EF500A592AB /* String+Size.swift in Sources */,
 				3564850624D5943E0052304D /* UITextField+Adapter.swift in Sources */,

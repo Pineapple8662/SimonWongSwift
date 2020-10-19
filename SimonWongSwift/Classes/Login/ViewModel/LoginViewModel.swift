@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class LoginViewModel: ViewModelProtocol {
+class LoginViewModel: ViewModelType {
     
     let input: Input
     let output: Output
@@ -31,7 +31,8 @@ class LoginViewModel: ViewModelProtocol {
             return "Hello \(name)!"
         }.asDriver(onErrorJustReturn: ":-(")
         self.output = Output(greeting: greeting)
-        self.input = Input(name: nameSubject.asObserver(), validate: validateSubject.asObserver())
+//        self.input = Input(name: nameSubject.asObserver(), validate: validateSubject.asObserver())
+        self.input = Input(name: nameSubject.asObserver())
     }
     
 }
