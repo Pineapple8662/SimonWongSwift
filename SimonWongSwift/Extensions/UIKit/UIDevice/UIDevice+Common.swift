@@ -48,20 +48,12 @@ extension UIDevice {
         static let screenSizeIsEqual_iPhone12 = (all && min(UIScreenWidth, UIScreenHeight) == 390 && max(UIScreenWidth, UIScreenHeight) == 844)
         /// iPhone 12 Pro Max
         static let screenSizeIsEqual_iPhone12ProMax = (all && min(UIScreenWidth, UIScreenHeight) == 428 && max(UIScreenWidth, UIScreenHeight) == 926)
-        /// iPhone X, iPhone Xr, iPhone Xs, iPhone Xs Max, iPhone 11, iPhone 11 Pro, iPhone 11 Pro Max, iPhone 12 mini, iPhone 12, iPhone 12 Pro, iPhone 12 Pro Max
-        static let roundedCornersSeries: Bool = {
-            return (all && max(UIScreenWidth, UIScreenHeight) >= 812)
-        }()
     }
     
     /// iPad
     struct iPadSeries {
         static let all = UIDevice.current.userInterfaceIdiom == .pad
-        /// 带圆角系列
-        static let roundedCornersSeries = (all && max(UIScreenWidth, UIScreenHeight) == 1194) || (all && max(UIScreenWidth, UIScreenHeight) == 1366)
     }
-    
-    static let roundedCornersSeries = iPhoneSeries.roundedCornersSeries || iPadSeries.roundedCornersSeries
     
 }
 

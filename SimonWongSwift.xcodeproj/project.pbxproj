@@ -52,7 +52,6 @@
 		843D34AD24D40ABD00404FC6 /* UIColor+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34AC24D40ABD00404FC6 /* UIColor+Config.swift */; };
 		843D34AF24D40B5F00404FC6 /* UIColor+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34AE24D40B5F00404FC6 /* UIColor+Common.swift */; };
 		843D34B124D41A3C00404FC6 /* UIColor+DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34B024D41A3C00404FC6 /* UIColor+DynamicColor.swift */; };
-		8471A31224D54BD2008DA574 /* UIButton+BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31124D54BD2008DA574 /* UIButton+BaseNavigationBar.swift */; };
 		8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31424D54C25008DA574 /* UIFont+Common.swift */; };
 		8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31724D54F12008DA574 /* UIView+ViewController.swift */; };
 		8471A31C24D56554008DA574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31B24D56553008DA574 /* TabBarController.swift */; };
@@ -110,7 +109,6 @@
 		843D34AC24D40ABD00404FC6 /* UIColor+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Config.swift"; sourceTree = "<group>"; };
 		843D34AE24D40B5F00404FC6 /* UIColor+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Common.swift"; sourceTree = "<group>"; };
 		843D34B024D41A3C00404FC6 /* UIColor+DynamicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DynamicColor.swift"; sourceTree = "<group>"; };
-		8471A31124D54BD2008DA574 /* UIButton+BaseNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+BaseNavigationBar.swift"; sourceTree = "<group>"; };
 		8471A31424D54C25008DA574 /* UIFont+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Common.swift"; sourceTree = "<group>"; };
 		8471A31724D54F12008DA574 /* UIView+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
 		8471A31B24D56553008DA574 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -136,13 +134,13 @@
 		356484FA24D5943E0052304D /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
-				356484FB24D5943E0052304D /* UILabel+Adapter.swift */,
-				356484FC24D5943E0052304D /* UIButton+Adapter.swift */,
-				356484FD24D5943E0052304D /* UITextView+Adapter.swift */,
 				356484FE24D5943E0052304D /* AdapterConst.swift */,
-				356484FF24D5943E0052304D /* UITextField+Adapter.swift */,
 				3564850024D5943E0052304D /* CATextLayer+Adapter.swift */,
+				356484FC24D5943E0052304D /* UIButton+Adapter.swift */,
 				3564850124D5943E0052304D /* UIFont+Adapter.swift */,
+				356484FB24D5943E0052304D /* UILabel+Adapter.swift */,
+				356484FF24D5943E0052304D /* UITextField+Adapter.swift */,
+				356484FD24D5943E0052304D /* UITextView+Adapter.swift */,
 			);
 			path = Adapter;
 			sourceTree = "<group>";
@@ -175,10 +173,10 @@
 		842B926C24D11C16000BA398 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				843042EA253D5EE800A592AB /* Foundation */,
 				356484FA24D5943E0052304D /* Adapter */,
 				84304298253D358A00A592AB /* CoreGraphics */,
 				3564850C24D594E20052304D /* Dispatch */,
+				843042EA253D5EE800A592AB /* Foundation */,
 				843042D0253D364E00A592AB /* QuartzCore */,
 				843D34A424D3F7A000404FC6 /* UIKit */,
 			);
@@ -381,12 +379,11 @@
 			isa = PBXGroup;
 			children = (
 				843042CC253D361E00A592AB /* UIBezierPath */,
-				3564850924D5945E0052304D /* UIImage */,
-				8471A31624D54F04008DA574 /* UIView */,
-				8471A31324D54C1B008DA574 /* UIFont */,
-				8471A31024D54BC8008DA574 /* UIButton */,
 				843D34AB24D40AAC00404FC6 /* UIColor */,
 				843D34A824D3F97B00404FC6 /* UIDevice */,
+				8471A31324D54C1B008DA574 /* UIFont */,
+				3564850924D5945E0052304D /* UIImage */,
+				8471A31624D54F04008DA574 /* UIView */,
 				843D34A524D3F7AD00404FC6 /* UIWindow */,
 			);
 			path = UIKit;
@@ -426,14 +423,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8471A31024D54BC8008DA574 /* UIButton */ = {
-			isa = PBXGroup;
-			children = (
-				8471A31124D54BD2008DA574 /* UIButton+BaseNavigationBar.swift */,
-			);
-			path = UIButton;
-			sourceTree = "<group>";
-		};
 		8471A31324D54C1B008DA574 /* UIFont */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,8 +434,8 @@
 		8471A31624D54F04008DA574 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				8471A31724D54F12008DA574 /* UIView+ViewController.swift */,
 				84FAB0032539517900CBA4C5 /* UIView+Frame.swift */,
+				8471A31724D54F12008DA574 /* UIView+ViewController.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -628,7 +617,6 @@
 				84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */,
 				843042D2253D365400A592AB /* CAPropertyAnimation+Key.swift in Sources */,
 				8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */,
-				8471A31224D54BD2008DA574 /* UIButton+BaseNavigationBar.swift in Sources */,
 				843042E2253D3F5A00A592AB /* LoginContoller.swift in Sources */,
 				843D34A724D3F7BA00404FC6 /* UIWindow+Hierarchy.swift in Sources */,
 			);

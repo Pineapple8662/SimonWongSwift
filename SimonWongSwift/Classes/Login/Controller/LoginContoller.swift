@@ -14,6 +14,7 @@ class LoginController: BaseViewController, DisposeBagProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "登录"
         vm.output.greeting.drive(navigationItem.rx.title).disposed(by: disposeBag)
     }
     
