@@ -14,8 +14,12 @@ extension DispatchQueue {
     
     static func once(token: String, completion: () -> Void) {
         objc_sync_enter(self)
-        defer { objc_sync_exit(self) }
-        if onceTracker.contains(token) { return }
+        defer {
+            objc_sync_exit(self)
+        }
+        if onceTracker.contains(token) {
+            return
+        }
         onceTracker.append(token)
         completion()
     }

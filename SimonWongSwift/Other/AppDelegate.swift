@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .black
         // 设置根视图
         let tabBarVC = TabBarController()
-        let placeholderVC = BaseViewController()
+        let placeholderVC = PlaceholderController()
         let rootVC = SplitViewController(master: BaseNavigationController(rootViewControllerNoWrapping: tabBarVC), detail: BaseNavigationController(rootViewController: placeholderVC))
         window?.rootViewController = rootVC
         // makeKeyAndVisible

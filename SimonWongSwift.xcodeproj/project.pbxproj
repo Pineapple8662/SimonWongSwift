@@ -28,6 +28,14 @@
 		842F143F24CA954300C45090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F143E24CA954300C45090 /* AppDelegate.swift */; };
 		842F144824CA954600C45090 /* System.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842F144724CA954600C45090 /* System.xcassets */; };
 		842F144B24CA954600C45090 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842F144924CA954600C45090 /* LaunchScreen.storyboard */; };
+		84304290253D311900A592AB /* PlaceholderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430428F253D311900A592AB /* PlaceholderController.swift */; };
+		84304295253D352100A592AB /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84304293253D352100A592AB /* CustomActivityIndicator.swift */; };
+		84304296253D352100A592AB /* CustomActivityIndicatorAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84304294253D352100A592AB /* CustomActivityIndicatorAnimator.swift */; };
+		8430429B253D359500A592AB /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84304299253D359500A592AB /* CGRect+Extension.swift */; };
+		8430429C253D359500A592AB /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430429A253D359500A592AB /* CGSize+Extension.swift */; };
+		843042CE253D362500A592AB /* UIBezierPath+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042CD253D362500A592AB /* UIBezierPath+Circle.swift */; };
+		843042D2253D365400A592AB /* CAPropertyAnimation+Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042D1253D365400A592AB /* CAPropertyAnimation+Key.swift */; };
+		843042D6253D371200A592AB /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042D5253D371200A592AB /* BaseViewProtocol.swift */; };
 		843D349D24D3EC0B00404FC6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D349C24D3EC0B00404FC6 /* BaseViewController.swift */; };
 		843D34A324D3ECBF00404FC6 /* StatusBarActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34A224D3ECBF00404FC6 /* StatusBarActivityIndicator.swift */; };
 		843D34A724D3F7BA00404FC6 /* UIWindow+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34A624D3F7BA00404FC6 /* UIWindow+Hierarchy.swift */; };
@@ -68,6 +76,14 @@
 		842F144724CA954600C45090 /* System.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = System.xcassets; sourceTree = "<group>"; };
 		842F144A24CA954600C45090 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842F144C24CA954600C45090 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8430428F253D311900A592AB /* PlaceholderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderController.swift; sourceTree = "<group>"; };
+		84304293253D352100A592AB /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
+		84304294253D352100A592AB /* CustomActivityIndicatorAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicatorAnimator.swift; sourceTree = "<group>"; };
+		84304299253D359500A592AB /* CGRect+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
+		8430429A253D359500A592AB /* CGSize+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		843042CD253D362500A592AB /* UIBezierPath+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Circle.swift"; sourceTree = "<group>"; };
+		843042D1253D365400A592AB /* CAPropertyAnimation+Key.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAPropertyAnimation+Key.swift"; sourceTree = "<group>"; };
+		843042D5253D371200A592AB /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		843D349B24D3EB1600404FC6 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		843D349C24D3EC0B00404FC6 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		843D34A224D3ECBF00404FC6 /* StatusBarActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarActivityIndicator.swift; sourceTree = "<group>"; };
@@ -141,8 +157,10 @@
 		842B926C24D11C16000BA398 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3564850C24D594E20052304D /* Dispatch */,
 				356484FA24D5943E0052304D /* Adapter */,
+				84304298253D358A00A592AB /* CoreGraphics */,
+				3564850C24D594E20052304D /* Dispatch */,
+				843042D0253D364E00A592AB /* QuartzCore */,
 				843D34A424D3F7A000404FC6 /* UIKit */,
 			);
 			path = Extensions;
@@ -153,6 +171,7 @@
 			children = (
 				842B926E24D11C51000BA398 /* LoadFromNibProtocol.swift */,
 				842B927224D11CFA000BA398 /* ReuseIdentifierProtocol.swift */,
+				843042D5253D371200A592AB /* BaseViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -182,6 +201,7 @@
 			children = (
 				842B927D24D128F8000BA398 /* SplitViewController.swift */,
 				8471A31B24D56553008DA574 /* TabBarController.swift */,
+				8430428F253D311900A592AB /* PlaceholderController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -239,6 +259,31 @@
 			path = SimonWongSwift;
 			sourceTree = "<group>";
 		};
+		84304298253D358A00A592AB /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				84304299253D359500A592AB /* CGRect+Extension.swift */,
+				8430429A253D359500A592AB /* CGSize+Extension.swift */,
+			);
+			path = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		843042CC253D361E00A592AB /* UIBezierPath */ = {
+			isa = PBXGroup;
+			children = (
+				843042CD253D362500A592AB /* UIBezierPath+Circle.swift */,
+			);
+			path = UIBezierPath;
+			sourceTree = "<group>";
+		};
+		843042D0253D364E00A592AB /* QuartzCore */ = {
+			isa = PBXGroup;
+			children = (
+				843042D1253D365400A592AB /* CAPropertyAnimation+Key.swift */,
+			);
+			path = QuartzCore;
+			sourceTree = "<group>";
+		};
 		843D349E24D3EC7E00404FC6 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +296,8 @@
 			isa = PBXGroup;
 			children = (
 				843D34A224D3ECBF00404FC6 /* StatusBarActivityIndicator.swift */,
+				84304293253D352100A592AB /* CustomActivityIndicator.swift */,
+				84304294253D352100A592AB /* CustomActivityIndicatorAnimator.swift */,
 			);
 			path = ActivityIndicator;
 			sourceTree = "<group>";
@@ -258,6 +305,7 @@
 		843D34A424D3F7A000404FC6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				843042CC253D361E00A592AB /* UIBezierPath */,
 				3564850924D5945E0052304D /* UIImage */,
 				8471A31624D54F04008DA574 /* UIView */,
 				8471A31324D54C1B008DA574 /* UIFont */,
@@ -374,7 +422,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = SimonWong;
 				TargetAttributes = {
 					842F143A24CA954300C45090 = {
@@ -460,6 +508,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				843D34AA24D3F99100404FC6 /* UIDevice+Common.swift in Sources */,
+				8430429C253D359500A592AB /* CGSize+Extension.swift in Sources */,
+				84304290253D311900A592AB /* PlaceholderController.swift in Sources */,
 				843D34B124D41A3C00404FC6 /* UIColor+DynamicColor.swift in Sources */,
 				842B927824D11F90000BA398 /* CommonHeader.swift in Sources */,
 				3564850F24D594F30052304D /* DispatchQueue+After.swift in Sources */,
@@ -467,12 +517,16 @@
 				3564850424D5943E0052304D /* UITextView+Adapter.swift in Sources */,
 				8471A31C24D56554008DA574 /* TabBarController.swift in Sources */,
 				3564850724D5943E0052304D /* CATextLayer+Adapter.swift in Sources */,
+				8430429B253D359500A592AB /* CGRect+Extension.swift in Sources */,
 				8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */,
 				842F143F24CA954300C45090 /* AppDelegate.swift in Sources */,
 				843D34AF24D40B5F00404FC6 /* UIColor+Common.swift in Sources */,
+				84304296253D352100A592AB /* CustomActivityIndicatorAnimator.swift in Sources */,
 				3564850324D5943E0052304D /* UIButton+Adapter.swift in Sources */,
 				842B927624D11D7E000BA398 /* ImportHeader.swift in Sources */,
 				8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */,
+				84304295253D352100A592AB /* CustomActivityIndicator.swift in Sources */,
+				843042CE253D362500A592AB /* UIBezierPath+Circle.swift in Sources */,
 				3564850224D5943E0052304D /* UILabel+Adapter.swift in Sources */,
 				84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */,
 				842B927B24D12692000BA398 /* AppDelegate+Fade.swift in Sources */,
@@ -486,8 +540,10 @@
 				3564851124D5950F0052304D /* DispatchQueue+Once.swift in Sources */,
 				842B927E24D128F8000BA398 /* SplitViewController.swift in Sources */,
 				3564850B24D594710052304D /* UIImage+UIColor.swift in Sources */,
+				843042D6253D371200A592AB /* BaseViewProtocol.swift in Sources */,
 				843D34A324D3ECBF00404FC6 /* StatusBarActivityIndicator.swift in Sources */,
 				84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */,
+				843042D2253D365400A592AB /* CAPropertyAnimation+Key.swift in Sources */,
 				8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */,
 				8471A31224D54BD2008DA574 /* UIButton+BaseNavigationBar.swift in Sources */,
 				843D34A724D3F7BA00404FC6 /* UIWindow+Hierarchy.swift in Sources */,
@@ -534,6 +590,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -558,7 +615,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -595,6 +652,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -613,7 +671,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, BaseViewProtocol {
 
     var animView = UIView()
     
@@ -24,11 +24,18 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightView
-        navigationItem.title = "累觉不爱"
+        navigationItem.title = "标题"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if indicator.isAnimating {
+            indicator.startAnimating()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        showLoadingUI()
     }
 
 }

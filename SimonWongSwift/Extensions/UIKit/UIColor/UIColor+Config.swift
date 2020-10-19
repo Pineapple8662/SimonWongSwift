@@ -66,7 +66,7 @@ extension UIColor {
     
     // MARK: 分割线颜色
     
-    /// 分割线颜色0
+    /// 分割线颜色
     static let hex_e9e9e9 = hex(0xe9e9e9)
     
     // MAKE: - Dark颜色
