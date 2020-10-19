@@ -1,9 +1,9 @@
 //
 //  DisposeBagProtocol.swift
-//  ShoppingMall
+//  SimonWongSwift
 //
 //  Created by SimonWong on 2019/5/31.
-//  Copyright © 2019 Guangzhou Tanghe Information Technology Co., Ltd. All rights reserved.
+//  Copyright © 2020 SimonWong. All rights reserved.
 //
 
 protocol DisposeBagProtocol: class { }

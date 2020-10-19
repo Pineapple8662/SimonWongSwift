@@ -24,7 +24,6 @@ class BaseViewController: UIViewController, BaseViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightView
-        navigationItem.title = "标题"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,10 +31,6 @@ class BaseViewController: UIViewController, BaseViewProtocol {
         if indicator.isAnimating {
             indicator.startAnimating()
         }
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        showLoadingUI()
     }
 
 }

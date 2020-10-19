@@ -19,6 +19,7 @@ class LoginController: BaseViewController, DisposeBagProtocol {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        showLoadingUI()
         vm.input.name.onNext("wtf")
     }
     

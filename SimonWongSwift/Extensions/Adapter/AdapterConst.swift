@@ -1,9 +1,9 @@
 //
 //  AdapterConst.swift
-//  ShoppingMall
+//  SimonWongSwift
 //
 //  Created by SimonWong on 2019/2/21.
-//  Copyright © 2019 Guangzhou Tanghe Information Technology Co., Ltd. All rights reserved.
+//  Copyright © 2020 SimonWong. All rights reserved.
 //
 
 import UIKit

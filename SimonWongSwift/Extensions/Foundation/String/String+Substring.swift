@@ -1,9 +1,9 @@
 //
 //  String+Extension.swift
-//  ShoppingMall
+//  SimonWongSwift
 //
 //  Created by SimonWong on 2020/2/17.
-//  Copyright © 2020 Guangzhou Tanghe Information Technology Co., Ltd. All rights reserved.
+//  Copyright © 2020 SimonWong. All rights reserved.
 //
 
 extension String {
