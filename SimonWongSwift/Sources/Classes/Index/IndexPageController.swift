@@ -1,0 +1,69 @@
+//
+//  IndexPageController.swift
+//  SimonWongSwift
+//
+//  Created by Admin on 2020/10/19.
+//  Copyright © 2020 SimonWong. All rights reserved.
+//
+
+import UIKit
+import WMPageController
+
+class IndexPageController: WMPageController {
+    
+    static let menuViewHeight: CGFloat = 45
+    
+    private var meunViewTitles: [String]?
+
+    convenience init(meunViewTitles: [String]) {
+        self.init()
+        self.meunViewTitles = meunViewTitles
+        self.dataSource = self
+        self.delegate = self
+        self.menuViewLayoutMode = .left
+        self.progressWidth = 24
+        self.pageAnimatable = true
+        self.titleSizeSelected = 16
+        self.titleSizeNormal = 14
+        self.titleColorSelected = .hex(0x191A1E)
+        self.titleColorNormal = .lightText
+        self.titleFontName = "PingFangSC-Medium"
+        self.progressColor = .hex(0x191A1E)
+//        self.itemsWidths = meunViewTitles.map({ (string) -> NSNumber in
+//            return NSNumber(value: string.calculateWidth(font: .mediumSystemFont(ofSize: 16)))
+//        })
+        self.menuViewStyle = .line
+        self.progressViewBottomSpace = 6
+        self.progressViewCornerRadius = 1
+        self.menuViewContentMargin = 8
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .lightView
+    }
+    
+    override func numbersOfChildControllers(in pageController: WMPageController) -> Int {
+        return self.meunViewTitles?.count ?? 0
+    }
+    
+    override func pageController(_ pageController: WMPageController, viewControllerAt index: Int) -> UIViewController {
+        return IndexSubviewController()
+    }
+    
+    override func menuView(_ menu: WMMenuView!, titleAt index: Int) -> String! {
+        return self.meunViewTitles?[index]
+    }
+    
+    override func pageController(_ pageController: WMPageController, preferredFrameFor menuView: WMMenuView) -> CGRect {
+        menuView.backgroundColor = .white
+//        menuView.addBottomBorder(color: .customSeparator, width: 0.5)
+        return CGRect(x: .zero, y: .zero, width: self.view.width, height: Self.menuViewHeight)
+    }
+    
+    override func pageController(_ pageController: WMPageController, preferredFrameForContentView contentView: WMScrollView) -> CGRect {
+        let originY = Self.menuViewHeight
+        return CGRect(x: .zero, y: originY, width: self.view.width, height: self.view.height - originY)
+    }
+
+}

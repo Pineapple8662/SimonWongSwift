@@ -38,7 +38,7 @@ class TabBarController: CYLTabBarController {
     }
     
     private func customizeTabBar() {
-        let dic0 = [CYLTabBarItemTitle: "登录",
+        let dic0 = [CYLTabBarItemTitle: "首页",
                     CYLTabBarItemImage: "tabbar_icon_0",
                     CYLTabBarItemSelectedImage: "tabbar_icon_0_selected"]
         let dic1 = [CYLTabBarItemTitle: "标题",
@@ -57,7 +57,7 @@ class TabBarController: CYLTabBarController {
     }
     
     private func configureViewControllers() {
-        let naviVC0 = RTContainerNavigationController(rootViewController: LoginController())
+        let naviVC0 = RTContainerNavigationController(rootViewController: IndexRootController())
         let naviVC1 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC2 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC3 = RTContainerNavigationController(rootViewController: BaseViewController())

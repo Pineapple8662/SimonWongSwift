@@ -30,6 +30,9 @@ def common_pods
   pod 'MJRefresh'
   pod 'pop'
   pod 'RTRootNavigationController'
+  pod 'STPopup'
+  pod 'WMPageController'
+  pod 'YBImageBrowser'
 
 end
 

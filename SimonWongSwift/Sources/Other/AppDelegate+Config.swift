@@ -25,7 +25,7 @@ extension AppDelegate {
         navigationBar.tintColor = .darkText // 按钮颜色
         navigationBar.barTintColor = nil // 背景颜色
         navigationBar.shadowImage = UIImage() // 去除分割线
-        navigationBar.titleTextAttributes = [.font: UIFont.mediumSystemFont(ofSize: 17), .foregroundColor: UIColor.darkText] // 标题
+        navigationBar.titleTextAttributes = [.font: UIFont.mediumSystemFont(ofSize: 18), .foregroundColor: UIColor.darkText] // 标题
         
         // UILabel
         UILabel.appearance().backgroundColor = .clear // 用于可视化测试调节颜色后还是显示透明

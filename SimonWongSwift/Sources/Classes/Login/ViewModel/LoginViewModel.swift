@@ -28,7 +28,7 @@ class LoginViewModel: ViewModelType {
     
     init() {
         let greeting = validateSubject.withLatestFrom(nameSubject).map { (name) in
-            return "我是\(name)"
+            return "Output is \(name)"
         }.asDriver(onErrorJustReturn: ":-(")
         self.output = Output(greeting: greeting)
         self.input = Input(name: nameSubject.asObserver(), validate: validateSubject.asObserver())

@@ -52,10 +52,18 @@
 		843D34AD24D40ABD00404FC6 /* UIColor+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34AC24D40ABD00404FC6 /* UIColor+Config.swift */; };
 		843D34AF24D40B5F00404FC6 /* UIColor+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34AE24D40B5F00404FC6 /* UIColor+Common.swift */; };
 		843D34B124D41A3C00404FC6 /* UIColor+DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34B024D41A3C00404FC6 /* UIColor+DynamicColor.swift */; };
+		8448FF6E253D912300F91299 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF6D253D912300F91299 /* UIView+Border.swift */; };
+		8448FF73253D920600F91299 /* UIScrollView+MultipleScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */; };
+		8448FF7A253D946400F91299 /* IndexSubviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF79253D946400F91299 /* IndexSubviewController.swift */; };
+		8448FF7E253D97DC00F91299 /* PageScrollNotificationProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */; };
+		8448FF82253D98AF00F91299 /* IndexConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF81253D98AF00F91299 /* IndexConst.swift */; };
 		8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31424D54C25008DA574 /* UIFont+Common.swift */; };
 		8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31724D54F12008DA574 /* UIView+ViewController.swift */; };
 		8471A31C24D56554008DA574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31B24D56553008DA574 /* TabBarController.swift */; };
 		8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31D24D573B3008DA574 /* UIColor+Random.swift */; };
+		84E803BE253D84B200A72725 /* IndexRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E803BD253D84B200A72725 /* IndexRootController.swift */; };
+		84E803C1253D85CD00A72725 /* IndexRootController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E803C0253D85CD00A72725 /* IndexRootController.xib */; };
+		84E803E0253D8AB500A72725 /* IndexPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E803DF253D8AB500A72725 /* IndexPageController.swift */; };
 		84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */; };
 		84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAB0032539517900CBA4C5 /* UIView+Frame.swift */; };
 /* End PBXBuildFile section */
@@ -109,10 +117,18 @@
 		843D34AC24D40ABD00404FC6 /* UIColor+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Config.swift"; sourceTree = "<group>"; };
 		843D34AE24D40B5F00404FC6 /* UIColor+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Common.swift"; sourceTree = "<group>"; };
 		843D34B024D41A3C00404FC6 /* UIColor+DynamicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DynamicColor.swift"; sourceTree = "<group>"; };
+		8448FF6D253D912300F91299 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
+		8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+MultipleScroll.swift"; sourceTree = "<group>"; };
+		8448FF79253D946400F91299 /* IndexSubviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSubviewController.swift; sourceTree = "<group>"; };
+		8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageScrollNotificationProtocal.swift; sourceTree = "<group>"; };
+		8448FF81253D98AF00F91299 /* IndexConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexConst.swift; sourceTree = "<group>"; };
 		8471A31424D54C25008DA574 /* UIFont+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Common.swift"; sourceTree = "<group>"; };
 		8471A31724D54F12008DA574 /* UIView+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
 		8471A31B24D56553008DA574 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8471A31D24D573B3008DA574 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		84E803BD253D84B200A72725 /* IndexRootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexRootController.swift; sourceTree = "<group>"; };
+		84E803C0253D85CD00A72725 /* IndexRootController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IndexRootController.xib; sourceTree = "<group>"; };
+		84E803DF253D8AB500A72725 /* IndexPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPageController.swift; sourceTree = "<group>"; };
 		84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Config.swift"; sourceTree = "<group>"; };
 		84FAB0032539517900CBA4C5 /* UIView+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		98384983532BD539A3B504CF /* Pods-SimonWongSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimonWongSwift.release.xcconfig"; path = "Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +207,7 @@
 				842B927224D11CFA000BA398 /* ReuseIdentifierProtocol.swift */,
 				843042D5253D371200A592AB /* BaseViewProtocol.swift */,
 				843042D9253D3EAA00A592AB /* ViewModelType.swift */,
+				8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -298,6 +315,7 @@
 		843042DD253D3F2700A592AB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84E803BC253D848700A72725 /* Index */,
 				843042DE253D3F3000A592AB /* Login */,
 			);
 			path = Classes;
@@ -426,6 +444,7 @@
 		843D34A424D3F7A000404FC6 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				8448FF71253D91FC00F91299 /* UIScrollView */,
 				843042CC253D361E00A592AB /* UIBezierPath */,
 				843D34AB24D40AAC00404FC6 /* UIColor */,
 				843D34A824D3F97B00404FC6 /* UIDevice */,
@@ -464,6 +483,14 @@
 			path = UIColor;
 			sourceTree = "<group>";
 		};
+		8448FF71253D91FC00F91299 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
 		8471A30D24D54243008DA574 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -482,10 +509,23 @@
 		8471A31624D54F04008DA574 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				8448FF6D253D912300F91299 /* UIView+Border.swift */,
 				84FAB0032539517900CBA4C5 /* UIView+Frame.swift */,
 				8471A31724D54F12008DA574 /* UIView+ViewController.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		84E803BC253D848700A72725 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				8448FF81253D98AF00F91299 /* IndexConst.swift */,
+				84E803BD253D84B200A72725 /* IndexRootController.swift */,
+				84E803C0253D85CD00A72725 /* IndexRootController.xib */,
+				84E803DF253D8AB500A72725 /* IndexPageController.swift */,
+				8448FF79253D946400F91299 /* IndexSubviewController.swift */,
+			);
+			path = Index;
 			sourceTree = "<group>";
 		};
 		C3604349CA3E8351EF7ABB6E /* Pods */ = {
@@ -565,6 +605,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E803C1253D85CD00A72725 /* IndexRootController.xib in Resources */,
 				843042F6253D5F6800A592AB /* Images.xcassets in Resources */,
 				842F144B24CA954600C45090 /* LaunchScreen.storyboard in Resources */,
 				842F144824CA954600C45090 /* System.xcassets in Resources */,
@@ -632,11 +673,15 @@
 				8471A31C24D56554008DA574 /* TabBarController.swift in Sources */,
 				3564850724D5943E0052304D /* CATextLayer+Adapter.swift in Sources */,
 				8430429B253D359500A592AB /* CGRect+Extension.swift in Sources */,
+				8448FF82253D98AF00F91299 /* IndexConst.swift in Sources */,
+				84E803E0253D8AB500A72725 /* IndexPageController.swift in Sources */,
+				8448FF73253D920600F91299 /* UIScrollView+MultipleScroll.swift in Sources */,
 				8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */,
 				842F143F24CA954300C45090 /* AppDelegate.swift in Sources */,
 				843D34AF24D40B5F00404FC6 /* UIColor+Common.swift in Sources */,
 				843042E8253D452300A592AB /* DisposeBagProtocol.swift in Sources */,
 				84304296253D352100A592AB /* CustomActivityIndicatorAnimator.swift in Sources */,
+				8448FF6E253D912300F91299 /* UIView+Border.swift in Sources */,
 				3564850324D5943E0052304D /* UIButton+Adapter.swift in Sources */,
 				842B927624D11D7E000BA398 /* ImportHeader.swift in Sources */,
 				8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */,
@@ -656,6 +701,7 @@
 				3564850624D5943E0052304D /* UITextField+Adapter.swift in Sources */,
 				842B926F24D11C51000BA398 /* LoadFromNibProtocol.swift in Sources */,
 				842B927324D11CFA000BA398 /* ReuseIdentifierProtocol.swift in Sources */,
+				84E803BE253D84B200A72725 /* IndexRootController.swift in Sources */,
 				3564851124D5950F0052304D /* DispatchQueue+Once.swift in Sources */,
 				843042F2253D5EF500A592AB /* String+Random.swift in Sources */,
 				842B927E24D128F8000BA398 /* SplitViewController.swift in Sources */,
@@ -664,7 +710,9 @@
 				843D34A324D3ECBF00404FC6 /* StatusBarActivityIndicator.swift in Sources */,
 				84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */,
 				843042D2253D365400A592AB /* CAPropertyAnimation+Key.swift in Sources */,
+				8448FF7A253D946400F91299 /* IndexSubviewController.swift in Sources */,
 				8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */,
+				8448FF7E253D97DC00F91299 /* PageScrollNotificationProtocal.swift in Sources */,
 				843042E2253D3F5A00A592AB /* LoginContoller.swift in Sources */,
 				843D34A724D3F7BA00404FC6 /* UIWindow+Hierarchy.swift in Sources */,
 			);
