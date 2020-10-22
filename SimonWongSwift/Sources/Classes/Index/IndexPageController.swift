@@ -29,9 +29,9 @@ class IndexPageController: WMPageController {
         self.titleColorNormal = .lightText
         self.titleFontName = "PingFangSC-Medium"
         self.progressColor = .hex(0x191A1E)
-//        self.itemsWidths = meunViewTitles.map({ (string) -> NSNumber in
-//            return NSNumber(value: string.calculateWidth(font: .mediumSystemFont(ofSize: 16)))
-//        })
+        self.itemsWidths = meunViewTitles.map { (string) -> NSNumber in
+            return NSNumber(value: Double(string.calculateWidth(font: .mediumSystemFont(ofSize: 16)) + 12))
+        }
         self.menuViewStyle = .line
         self.progressViewBottomSpace = 6
         self.progressViewCornerRadius = 1

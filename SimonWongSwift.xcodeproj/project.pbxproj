@@ -56,7 +56,9 @@
 		8448FF73253D920600F91299 /* UIScrollView+MultipleScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */; };
 		8448FF7A253D946400F91299 /* IndexSubviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF79253D946400F91299 /* IndexSubviewController.swift */; };
 		8448FF7E253D97DC00F91299 /* PageScrollNotificationProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */; };
-		8448FF82253D98AF00F91299 /* IndexConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF81253D98AF00F91299 /* IndexConst.swift */; };
+		8448FF82253D98AF00F91299 /* IndexNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF81253D98AF00F91299 /* IndexNotification.swift */; };
+		844B125A253E828B004CFF31 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B1259253E828B004CFF31 /* BaseTableViewController.swift */; };
+		844B127A253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */; };
 		8471A31524D54C25008DA574 /* UIFont+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31424D54C25008DA574 /* UIFont+Common.swift */; };
 		8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31724D54F12008DA574 /* UIView+ViewController.swift */; };
 		8471A31C24D56554008DA574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31B24D56553008DA574 /* TabBarController.swift */; };
@@ -121,7 +123,9 @@
 		8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+MultipleScroll.swift"; sourceTree = "<group>"; };
 		8448FF79253D946400F91299 /* IndexSubviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexSubviewController.swift; sourceTree = "<group>"; };
 		8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageScrollNotificationProtocal.swift; sourceTree = "<group>"; };
-		8448FF81253D98AF00F91299 /* IndexConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexConst.swift; sourceTree = "<group>"; };
+		8448FF81253D98AF00F91299 /* IndexNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexNotification.swift; sourceTree = "<group>"; };
+		844B1259253E828B004CFF31 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZNEmptyDataSetProtocol.swift; sourceTree = "<group>"; };
 		8471A31424D54C25008DA574 /* UIFont+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Common.swift"; sourceTree = "<group>"; };
 		8471A31724D54F12008DA574 /* UIView+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
 		8471A31B24D56553008DA574 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				843042D5253D371200A592AB /* BaseViewProtocol.swift */,
 				843042D9253D3EAA00A592AB /* ViewModelType.swift */,
 				8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */,
+				844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			children = (
 				842B928124D12995000BA398 /* BaseNavigationController.swift */,
 				843D349C24D3EC0B00404FC6 /* BaseViewController.swift */,
+				844B1259253E828B004CFF31 /* BaseTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -519,7 +525,7 @@
 		84E803BC253D848700A72725 /* Index */ = {
 			isa = PBXGroup;
 			children = (
-				8448FF81253D98AF00F91299 /* IndexConst.swift */,
+				8448FF81253D98AF00F91299 /* IndexNotification.swift */,
 				84E803BD253D84B200A72725 /* IndexRootController.swift */,
 				84E803C0253D85CD00A72725 /* IndexRootController.xib */,
 				84E803DF253D8AB500A72725 /* IndexPageController.swift */,
@@ -673,7 +679,7 @@
 				8471A31C24D56554008DA574 /* TabBarController.swift in Sources */,
 				3564850724D5943E0052304D /* CATextLayer+Adapter.swift in Sources */,
 				8430429B253D359500A592AB /* CGRect+Extension.swift in Sources */,
-				8448FF82253D98AF00F91299 /* IndexConst.swift in Sources */,
+				8448FF82253D98AF00F91299 /* IndexNotification.swift in Sources */,
 				84E803E0253D8AB500A72725 /* IndexPageController.swift in Sources */,
 				8448FF73253D920600F91299 /* UIScrollView+MultipleScroll.swift in Sources */,
 				8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */,
@@ -688,6 +694,7 @@
 				84304295253D352100A592AB /* CustomActivityIndicator.swift in Sources */,
 				843042F0253D5EF500A592AB /* String+Number.swift in Sources */,
 				843042CE253D362500A592AB /* UIBezierPath+Circle.swift in Sources */,
+				844B127A253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift in Sources */,
 				843042E5253D3FB000A592AB /* LoginViewModel.swift in Sources */,
 				3564850224D5943E0052304D /* UILabel+Adapter.swift in Sources */,
 				84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */,
@@ -703,6 +710,7 @@
 				842B927324D11CFA000BA398 /* ReuseIdentifierProtocol.swift in Sources */,
 				84E803BE253D84B200A72725 /* IndexRootController.swift in Sources */,
 				3564851124D5950F0052304D /* DispatchQueue+Once.swift in Sources */,
+				844B125A253E828B004CFF31 /* BaseTableViewController.swift in Sources */,
 				843042F2253D5EF500A592AB /* String+Random.swift in Sources */,
 				842B927E24D128F8000BA398 /* SplitViewController.swift in Sources */,
 				3564850B24D594710052304D /* UIImage+UIColor.swift in Sources */,

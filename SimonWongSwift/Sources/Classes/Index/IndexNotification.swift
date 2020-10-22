@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  IndexNotification.swift
 //  SimonWongSwift
 //
 //  Created by Admin on 2020/10/19.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class IndexConst: PageScrollNotificationProtocal {
+class IndexNotification: PageScrollNotificationProtocal {
     
-    func registerPrefixString() -> (String) {
+    static func registerPrefixString() -> (String) {
         return "Index"
     }
     

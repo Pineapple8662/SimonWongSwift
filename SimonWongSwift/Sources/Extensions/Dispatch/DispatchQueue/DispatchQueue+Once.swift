@@ -17,9 +17,7 @@ extension DispatchQueue {
         defer {
             objc_sync_exit(self)
         }
-        if onceTracker.contains(token) {
-            return
-        }
+        if onceTracker.contains(token) { return }
         onceTracker.append(token)
         completion()
     }

@@ -8,6 +8,7 @@ PODS:
   - CYLTabBarController (1.29.0):
     - CYLTabBarController/Core (= 1.29.0)
   - CYLTabBarController/Core (1.29.0)
+  - DZNEmptyDataSet (1.8.1)
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.6)
   - KeychainAccess (4.2.1)
@@ -57,6 +58,7 @@ DEPENDENCIES:
   - CocoaLumberjack/Swift
   - CryptoSwift
   - CYLTabBarController
+  - DZNEmptyDataSet
   - HandyJSON
   - IQKeyboardManagerSwift
   - KeychainAccess
@@ -83,6 +85,7 @@ SPEC REPOS:
     - CocoaLumberjack
     - CryptoSwift
     - CYLTabBarController
+    - DZNEmptyDataSet
     - HandyJSON
     - IQKeyboardManagerSwift
     - KeychainAccess
@@ -111,6 +114,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   CryptoSwift: 093499be1a94b0cae36e6c26b70870668cb56060
   CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KeychainAccess: 9b07f665298d13c3a85881bd3171f6f49b8151c1
@@ -133,6 +137,6 @@ SPEC CHECKSUMS:
   YBImageBrowser: 7ecc8bf33ffa5f3b94c397c29b4f3638dd37f527
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
 
-PODFILE CHECKSUM: 41be232425c9f54c58193f61e2c2a97161059b1a
+PODFILE CHECKSUM: 38e8759311d4dbdd513c0c0dafbb5a749f406c5b
 
 COCOAPODS: 1.10.0.rc.1

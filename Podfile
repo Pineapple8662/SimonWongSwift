@@ -26,6 +26,7 @@ def common_pods
   
   # Objective-C
   pod 'CYLTabBarController'
+  pod 'DZNEmptyDataSet'
   pod 'MBProgressHUD'
   pod 'MJRefresh'
   pod 'pop'

@@ -29,7 +29,7 @@ var keyWindow: UIWindow? {
 // MARK: - TableView
 
 /// 默认 tableView separatorInset
-var DefaultTableViewSeparatorInset: UIEdgeInsets = UIEdgeInsets(top: .zero, left: CGFloat.leastNonzeroMagnitude, bottom: .zero, right: .zero)
+var DefaultTableViewSeparatorInset: UIEdgeInsets = UIEdgeInsets(top: .zero, left: .leastNonzeroMagnitude, bottom: .zero, right: .zero)
 
 // MARK: - Cell
 

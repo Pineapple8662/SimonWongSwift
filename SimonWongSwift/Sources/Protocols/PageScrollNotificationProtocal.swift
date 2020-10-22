@@ -10,7 +10,7 @@ import UIKit
 
 protocol PageScrollNotificationProtocal: class {
     
-    func registerPrefixString() -> (String)
+    static func registerPrefixString() -> (String)
     
 }
 
@@ -34,7 +34,18 @@ extension PageScrollNotificationProtocal {
     
     static var didScrollDidToTop: Notification.Name {
         get {
-            return Notification.Name(rawValue: "\(String(describing: getPrefixString))DidScrollDidToTopNotification")
+            DDLogDebug("rawValue: \("\(getPrefixString())DidScrollDidToTopNotification")")
+            return Notification.Name(rawValue: "\(getPrefixString())DidScrollDidToTopNotification")
+        }
+    }
+    static var didLeaveTheTop: Notification.Name {
+        get {
+            return Notification.Name(rawValue: "\(getPrefixString())DidLeaveTheTopNotification")
+        }
+    }
+    static var forceAllScrollToTop: Notification.Name {
+        get {
+            return Notification.Name(rawValue: "\(getPrefixString())ForceAllScrollToTopNotification")
         }
     }
     

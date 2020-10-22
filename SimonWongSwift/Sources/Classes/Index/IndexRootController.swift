@@ -35,8 +35,8 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.delegate = self
         scrollContentWidthConstraint.constant = UIDevelopingWidth
-        // registerHandler
-        registerHandler()
+        // register
+        register()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,8 +44,19 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
         scrollViewDidScroll(scrollView)
     }
     
-    private func registerHandler() {
-        
+    private func register() {
+        _ = NotificationCenter.default.rx.notification(IndexNotification.didScrollDidToTop)
+            .takeUntil(self.rx.deallocated)
+            .subscribe(onNext: { [weak self] (notification) in
+                guard let ws = self else { return }
+                let object = notification.object
+                if object as? IndexPageController != ws.pageController { return }
+                guard let userInfo = notification.userInfo else { return }
+                let canScroll: Bool = userInfo["canScroll"] as! Bool
+                if canScroll {
+                    ws.canScroll = canScroll
+                }
+            })
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -57,8 +68,18 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
         if offsetY >= maxOffsetY {
             canScroll = false
             scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)
-            NotificationCenter.default.post(name: IndexConst.didScrollDidToTop, object: self.pageController, userInfo: ["canScroll":true, "offsetY":(offsetY - maxOffsetY)])
+            NotificationCenter.default.post(name: IndexNotification.didScrollDidToTop, object: pageController, userInfo: ["canScroll": true, "offsetY": (offsetY - maxOffsetY)])
+        } else {
+            if !canScroll {
+                scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)
+            }
         }
+    }
+    
+    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+        canScroll = true
+        scrollView.setContentOffset(.zero, animated: true)
+        NotificationCenter.default.post(name: IndexNotification.forceAllScrollToTop, object: pageController, userInfo: nil)
     }
     
 }
