@@ -26,11 +26,8 @@ class BaseViewController: UIViewController, BaseViewProtocol, DZNEmptyDataSetPro
         view.backgroundColor = .lightView
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if indicator.isAnimating {
-            indicator.startAnimating()
-        }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        indicator.startAnimating()
     }
 
 }
