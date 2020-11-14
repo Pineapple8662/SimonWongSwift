@@ -30,7 +30,7 @@ class IndexSubviewController: BasePlainTableViewController {
     }
     
     override func register() {
-        _ = NotificationCenter.default.rx.notification(IndexNotification.didScrollDidToTop)
+        _ = NotificationCenter.default.rx.notification(IndexNotification.didScrollToTop)
             .takeUntil(self.rx.deallocated)
             .subscribe(onNext: { [weak self] (notification) in
                 guard let ws = self else { return }
@@ -42,6 +42,7 @@ class IndexSubviewController: BasePlainTableViewController {
                     ws.canScroll = canScroll
                     let vc = ws.pageController.currentViewController
                     if vc != self { return }
+                    ws.tableView.showsVerticalScrollIndicator = true
                     let offsetY = userInfo["offsetY"] as! CGFloat
                     if ws.tableView.contentOffset.y < ws.tableView.contentSize.height - ws.tableView.height {
                         let newOffsetY = ws.tableView.contentOffset.y + offsetY
@@ -54,6 +55,7 @@ class IndexSubviewController: BasePlainTableViewController {
             let object = notification.object
             if object as? IndexPageController != ws.pageController { return }
             ws.canScroll = false
+            ws.tableView.showsVerticalScrollIndicator = false
             ws.tableView.contentOffset = .zero
         })
         _ = NotificationCenter.default.rx.notification(IndexNotification.forceAllScrollToTop).takeUntil(self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in

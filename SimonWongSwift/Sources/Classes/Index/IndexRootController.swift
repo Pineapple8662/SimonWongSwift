@@ -68,7 +68,7 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
         if offsetY >= maxOffsetY {
             canScroll = false
             scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)
-            NotificationCenter.default.post(name: IndexNotification.didScrollDidToTop, object: pageController, userInfo: ["canScroll": true, "offsetY": (offsetY - maxOffsetY)])
+            NotificationCenter.default.post(name: IndexNotification.didScrollToTop, object: pageController, userInfo: ["canScroll": true, "offsetY": (offsetY - maxOffsetY)])
         } else {
             if !canScroll {
                 scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)

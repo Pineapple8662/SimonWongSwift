@@ -32,10 +32,10 @@ extension PageScrollNotificationProtocal {
         }
     }
     
-    static var didScrollDidToTop: Notification.Name {
+    static var didScrollToTop: Notification.Name {
         get {
-            DDLogDebug("rawValue: \("\(getPrefixString())DidScrollDidToTopNotification")")
-            return Notification.Name(rawValue: "\(getPrefixString())DidScrollDidToTopNotification")
+            DDLogDebug("rawValue: \("\(getPrefixString())DidScrollToTopNotification")")
+            return Notification.Name(rawValue: "\(getPrefixString())DidScrollToTopNotification")
         }
     }
     static var didLeaveTheTop: Notification.Name {
