@@ -17,7 +17,7 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
     
     private var pageController: IndexPageController!
     private var menuViewTitles = ["第一", "第二", "第三"]
-    private var canScroll = false
+    private var canScroll = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
     }
     
     private func register() {
-        _ = NotificationCenter.default.rx.notification(IndexNotification.didScrollDidToTop)
+        _ = NotificationCenter.default.rx.notification(IndexNotification.didLeaveTheTop)
             .takeUntil(self.rx.deallocated)
             .subscribe(onNext: { [weak self] (notification) in
                 guard let ws = self else { return }
