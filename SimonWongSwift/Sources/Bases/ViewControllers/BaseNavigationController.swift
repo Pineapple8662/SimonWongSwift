@@ -26,7 +26,7 @@ class BaseNavigationController: RTRootNavigationController {
     }
     
     @objc func didTapLeftBarButtonItem() {
-        popViewController(animated: true)
+        popViewController(animated: true) 
     }
     
 }
