@@ -102,6 +102,14 @@ Check out [CONTRIBUTING.md](CONTRIBUTING.md) for more information on how to help
 
 ## Installation
 
+### Hardened Runtime (macOS) and Xcode
+
+Binary CryptoSwift.xcframework (Used by Swift Package Manager package integration) won't load properly in your app if the app uses **Sign to Run Locally**  Signing Certificate with Hardened Runtime enabled. It is possible to setup Xcode like this. To solve the problem you have two options:
+- Use proper Signing Certificate, eg. *Development* <- this is the proper action
+- Use `Disable Library Validation` aka `com.apple.security.cs.disable-library-validation` entitlement
+
+#### Xcode Project
+
 To install CryptoSwift, add it as a submodule to your project (on the top level project directory):
 
     git submodule add https://github.com/krzyzanowskim/CryptoSwift.git
@@ -113,21 +121,19 @@ It is recommended to enable [Whole-Module Optimization](https://swift.org/blog/w
 You can use [Swift Package Manager](https://swift.org/package-manager/) and specify dependency in `Package.swift` by adding this:
 
 ```swift
-.package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMinor(from: "1.3.3"))
+.package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMinor(from: "1.3.8"))
 ```
 
 See: [Package.swift - manual](http://blog.krzyzanowskim.com/2016/08/09/package-swift-manual/)
 
 Notice: Swift Package Manager uses debug configuration for debug Xcode build, that may result in significant (up to x10000) worse performance. Performance characteristic is different in Release build. To overcome this prolem, consider embed `CryptoSwift.xcframework` described below.
 
-Notice: As of Swift 5.3, it's impossible to use Swift Package Manager to distribute binary (pre-compiled, optimized) version of CryptoSwift for every platform.
-
 #### CocoaPods
 
 You can use [CocoaPods](https://cocoapods.org/pods/CryptoSwift).
 
 ```ruby
-pod 'CryptoSwift', '~> 1.3.3'
+pod 'CryptoSwift', '~> 1.3.8'
 ```
 
 Bear in mind that CocoaPods will build CryptoSwift without [Whole-Module Optimization](https://swift.org/blog/whole-module-optimizations/) that may impact performance. You can change it manually after installation, or use [cocoapods-wholemodule](https://github.com/jedlewison/cocoapods-wholemodule) plugin.
@@ -177,7 +183,8 @@ In the project, you'll find [single scheme](https://mxcl.dev/PromiseKit/news/201
 - Swift 4.0, branch [swift4](https://github.com/krzyzanowskim/CryptoSwift/tree/swift4) version <= 0.12.0
 - Swift 4.2, branch [swift42](https://github.com/krzyzanowskim/CryptoSwift/tree/swift42) version <= 0.15.0
 - Swift 5.0, branch [swift5](https://github.com/krzyzanowskim/CryptoSwift/tree/swift5) version <= 1.2.0
-- Swift 5.1 and newer, branch [master](https://github.com/krzyzanowskim/CryptoSwift/tree/master)
+- Swift 5.1, branch [swift5](https://github.com/krzyzanowskim/CryptoSwift/tree/swift51) version <= 1.3.3
+- Swift 5.3 and newer, branch [master](https://github.com/krzyzanowskim/CryptoSwift/tree/master)
 
 ## How-to
 
