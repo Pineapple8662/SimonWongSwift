@@ -3,7 +3,7 @@ platform :ios, '11.0'
 inhibit_all_warnings!
 use_frameworks!
 
-def common_pods
+def universal_pods
   
   # SDK
   pod 'WechatOpenSDK' # 微信
@@ -39,7 +39,7 @@ end
 
 target 'SimonWongSwift' do
   
-  common_pods
+  universal_pods
   
 end
 

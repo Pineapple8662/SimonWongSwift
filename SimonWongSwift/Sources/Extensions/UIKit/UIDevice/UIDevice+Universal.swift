@@ -1,5 +1,5 @@
 //
-//  UIDevice+Common.swift
+//  UIDevice+Universal.swift
 //  SimonWongSwift
 //
 //  Created by Admin on 2020/7/31.
@@ -33,7 +33,22 @@ extension UIDevice {
     
     /// iPhone
     struct iPhoneSeries {
+        
+        /// all
         static let all = UIDevice.current.userInterfaceIdiom == .phone
+        
+        /// 全面屏 - 带圆角
+        static var roundedCorner: Bool {
+            get {
+                if iPhoneSeries.all {
+                    if #available(iOS 11.0, *) {
+                        return (keyWindow?.safeAreaInsets.bottom ?? 0) > 0
+                    }
+                }
+                return false
+            }
+        }
+        
         /// iPhone SE, iPhone 5s, iPhone 5, iPhone 4s 及其以下
         static let screenSizeIsLessThanOrEqual_iPhoneSE = (all && max(UIScreenWidth, UIScreenHeight) <= 568)
         /// iPhone 6, iPhone 6s, iPhone 7, iPhone 8
@@ -48,11 +63,34 @@ extension UIDevice {
         static let screenSizeIsEqual_iPhone12 = (all && min(UIScreenWidth, UIScreenHeight) == 390 && max(UIScreenWidth, UIScreenHeight) == 844)
         /// iPhone 12 Pro Max
         static let screenSizeIsEqual_iPhone12ProMax = (all && min(UIScreenWidth, UIScreenHeight) == 428 && max(UIScreenWidth, UIScreenHeight) == 926)
+        
     }
     
     /// iPad
     struct iPadSeries {
+        
+        /// all
         static let all = UIDevice.current.userInterfaceIdiom == .pad
+        
+        /// 全面屏 - 带圆角
+        static var roundedCorner: Bool {
+            get {
+                if iPadSeries.all {
+                    if #available(iOS 11.0, *) {
+                        return (keyWindow?.safeAreaInsets.bottom ?? 0) > 0
+                    }
+                }
+                return false
+            }
+        }
+        
+    }
+    
+    /// 全面屏
+    static var roundedCorner: Bool {
+        
+        return iPhoneSeries.roundedCorner || iPadSeries.roundedCorner
+        
     }
     
 }

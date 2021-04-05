@@ -1,5 +1,5 @@
 //
-//  UIColor+Common.swift
+//  UIColor+Universal.swift
 //  SimonWongSwift
 //
 //  Created by Admin on 2020/7/31.

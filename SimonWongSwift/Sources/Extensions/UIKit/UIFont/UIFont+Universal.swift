@@ -1,5 +1,5 @@
 //
-//  UIFont+Common.swift
+//  UIFont+Universal.swift
 //  SimonWongSwift
 //
 //  Created by Admin on 2020/8/1.

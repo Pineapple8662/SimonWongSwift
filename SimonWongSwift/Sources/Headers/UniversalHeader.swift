@@ -1,5 +1,5 @@
 //
-//  CommonHeader.swift
+//  UniversalHeader.swift
 //  SimonWongSwift
 //
 //  Created by Admin on 2020/7/29.

@@ -76,5 +76,9 @@ class IndexSubviewController: BasePlainTableViewController {
             NotificationCenter.default.post(name: IndexNotification.didLeaveTheTop, object: pageController, userInfo: ["canScroll": true])
         }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140
+    }
 
 }
