@@ -43,7 +43,7 @@ class CustomActivityIndicator: UIView {
     private func configureSubviews() {
         _ = NotificationCenter.default.rx
             .notification(UIApplication.willEnterForegroundNotification)
-            .takeUntil(self.rx.deallocated)
+            .take(until: self.rx.deallocated)
             .subscribe(onNext: { [weak self] _ in
                 guard let ws = self else { return }
                 ws.willEnterForeground()

@@ -31,7 +31,7 @@ class IndexSubviewController: BasePlainTableViewController {
     
     override func register() {
         _ = NotificationCenter.default.rx.notification(IndexNotification.didScrollToTop)
-            .takeUntil(self.rx.deallocated)
+            .take(until: self.rx.deallocated)
             .subscribe(onNext: { [weak self] (notification) in
                 guard let ws = self else { return }
                 let object = notification.object
@@ -50,7 +50,7 @@ class IndexSubviewController: BasePlainTableViewController {
                     }
                 }
             })
-        _ = NotificationCenter.default.rx.notification(IndexNotification.didLeaveTheTop).takeUntil(self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
+        _ = NotificationCenter.default.rx.notification(IndexNotification.didLeaveTheTop).take(until: self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
             guard let ws = self else { return }
             let object = notification.object
             if object as? IndexPageController != ws.pageController { return }
@@ -58,7 +58,7 @@ class IndexSubviewController: BasePlainTableViewController {
             ws.tableView.showsVerticalScrollIndicator = false
             ws.tableView.contentOffset = .zero
         })
-        _ = NotificationCenter.default.rx.notification(IndexNotification.forceAllScrollToTop).takeUntil(self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
+        _ = NotificationCenter.default.rx.notification(IndexNotification.forceAllScrollToTop).take(until: self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
             guard let ws = self else { return }
             let object = notification.object
             if object as? IndexPageController != ws.pageController { return }

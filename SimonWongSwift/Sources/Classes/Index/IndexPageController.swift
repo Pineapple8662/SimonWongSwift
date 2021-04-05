@@ -24,13 +24,13 @@ class IndexPageController: WMPageController {
         self.progressWidth = 24
         self.pageAnimatable = true
         self.titleSizeSelected = 16
-        self.titleSizeNormal = 14
+        self.titleSizeNormal = 16
         self.titleColorSelected = .hex(0x191A1E)
         self.titleColorNormal = .lightText
         self.titleFontName = "PingFangSC-Medium"
         self.progressColor = .hex(0x191A1E)
         self.itemsWidths = meunViewTitles.map { (string) -> NSNumber in
-            return NSNumber(value: Double(string.calculateWidth(font: .mediumSystemFont(ofSize: 16)) + 12))
+            return NSNumber(value: Double(string.calculateWidth(font: .mediumSystemFont(ofSize: 16)) + 24))
         }
         self.menuViewStyle = .line
         self.progressViewBottomSpace = 6
