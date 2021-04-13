@@ -10,12 +10,13 @@ import UIKit
 
 class SMScrollExampleSubviewController: BasePlainTableViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var index: Int = 0
+    
     private var pageController: SMScrollExamplePageController!
     private var canScroll = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .random
         pageController = wm_pageController as? SMScrollExamplePageController
         configureTableView()
     }
@@ -26,8 +27,9 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
         tableView.showsVerticalScrollIndicator = false
         tableView.snp.remakeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-//            make.height.equalTo(UIScreenHeight - (navigationController?.navigationBar.height ?? 0) - SMScrollExamplePageController.menuViewHeight)
-            make.bottom.equalTo(self.view.snp.bottomMargin)
+            print("navigationController?.navigationBar.height ?? 0: \(navigationController?.navigationBar.height ?? 0)")
+            print("self.view.safeAreaInsets.bottom: \(self.view.safeAreaInsets.bottom)")
+            make.height.equalTo(UIScreenHeight - 88 - SMScrollExamplePageController.menuViewHeight - self.view.safeAreaInsets.bottom)
         }
         tableView.dataSource = self
         tableView.delegate = self
@@ -95,6 +97,7 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
             cell = BaseTableViewCell(style: .value1, reuseIdentifier: BaseTableViewCell.reuseIdentifier)
         }
         cell?.backgroundColor = CGFloat(indexPath.row).remainder(dividingBy: 2) == 0 ? UIColor.red.withAlphaComponent(0.3) : UIColor.blue.withAlphaComponent(0.3)
+        cell?.textLabel?.text = "\(pageController.menuView!.dataSource.menuView(pageController.menuView, titleAt: index)!)_\(indexPath.row)"
         return cell!
     }
     

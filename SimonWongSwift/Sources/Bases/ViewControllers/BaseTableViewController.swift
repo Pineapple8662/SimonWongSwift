@@ -43,7 +43,7 @@ class BaseTableViewController: BaseViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        if !self.isKind(of: BasePlainTableViewController.self) && !self.isKind(of: BaseGroupedTableViewController.self) {
+        if self.isMember(of: BaseTableViewController.self) {
             fatalError("不允许直接继承BaseTableViewController，请继承BaseTableViewController子类")
         }
     }
@@ -100,6 +100,19 @@ class BaseGroupedTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         tableView = UITableView(frame: .zero, style: .grouped)
+        super.viewDidLoad()
+    }
+    
+}
+
+class BaseInsetGroupedTableViewController: BaseTableViewController {
+    
+    override func viewDidLoad() {
+        if #available(iOS 13.0, *) {
+            tableView = UITableView(frame: .zero, style: .insetGrouped)
+        } else {
+            tableView = UITableView(frame: .zero, style: .plain)
+        }
         super.viewDidLoad()
     }
     

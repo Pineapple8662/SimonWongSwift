@@ -57,7 +57,7 @@ class SMLoginController: BaseViewController, DisposeBagProtocol {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print(tabBarController?.tabBar.height ?? 0)
+        print("tabBarController?.tabBar.height: \(tabBarController?.tabBar.height ?? 0)")
     }
     
 }

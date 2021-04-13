@@ -48,7 +48,9 @@ class SMScrollExamplePageController: WMPageController {
     }
     
     override func pageController(_ pageController: WMPageController, viewControllerAt index: Int) -> UIViewController {
-        return SMScrollExampleSubviewController()
+        let vc = SMScrollExampleSubviewController()
+        vc.index = index
+        return vc
     }
     
     override func menuView(_ menu: WMMenuView!, titleAt index: Int) -> String! {

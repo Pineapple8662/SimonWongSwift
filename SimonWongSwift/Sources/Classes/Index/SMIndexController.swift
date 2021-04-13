@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SMIndexController: BasePlainTableViewController, UITableViewDataSource, UITableViewDelegate {
+class SMIndexController: BaseInsetGroupedTableViewController, UITableViewDataSource, UITableViewDelegate {
     
     private var sources: [String] = ["滚动穿透", "登录页面", "弹出窗口"]
 
@@ -22,7 +22,13 @@ class SMIndexController: BasePlainTableViewController, UITableViewDataSource, UI
         super.configureTableView()
         tableView.dataSource = self
         tableView.delegate = self
-        tableViewTopEdgeInset = 10
+        var topEdgeInset: CGFloat = 10
+        if #available(iOS 13.0, *) {
+            if tableView.style != .insetGrouped {
+                topEdgeInset = .zero
+            }
+        }
+        tableViewTopEdgeInset = topEdgeInset
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

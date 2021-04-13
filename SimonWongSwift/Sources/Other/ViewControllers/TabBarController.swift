@@ -27,7 +27,7 @@ class TabBarController: CYLTabBarController {
     }
     
     private static func configureAppearance() {
-        UITabBar.appearance().backgroundColor = .dynamicColor(.white, .hex_323232)
+        UITabBar.appearance().backgroundColor = .dynamicColor(.white, .hex_282828)
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().shadowImage = UIImage(color: .dynamicColor(UIColor.hex_e9e9e9.withAlphaComponent(0.3), .clear))
         UITabBar.appearance().unselectedItemTintColor = .darkText
