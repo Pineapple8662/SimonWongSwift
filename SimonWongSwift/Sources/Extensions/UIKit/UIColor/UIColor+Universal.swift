@@ -2,7 +2,7 @@
 //  UIColor+Universal.swift
 //  SimonWongSwift
 //
-//  Created by Admin on 2020/7/31.
+//  Created by SimonWong on 2020/7/31.
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 

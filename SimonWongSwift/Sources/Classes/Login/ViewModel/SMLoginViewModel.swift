@@ -1,15 +1,15 @@
 //
-//  LoginViewModel.swift
+//  SMLoginViewModel.swift
 //  SimonWongSwift
 //
-//  Created by Admin on 2020/10/19.
+//  Created by SimonWong on 2020/10/19.
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 
 import UIKit
 import RxSwift
 
-class LoginViewModel: ViewModelType {
+class SMLoginViewModel: ViewModelType {
     
     let input: Input
     let output: Output

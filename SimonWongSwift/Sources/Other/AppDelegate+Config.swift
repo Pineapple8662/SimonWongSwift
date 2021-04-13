@@ -2,7 +2,7 @@
 //  AppDelegate+Config.swift
 //  SimonWongSwift
 //
-//  Created by Admin on 2020/10/16.
+//  Created by SimonWong on 2020/10/16.
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 

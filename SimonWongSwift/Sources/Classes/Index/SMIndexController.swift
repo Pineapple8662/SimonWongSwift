@@ -45,7 +45,7 @@ class SMIndexController: BasePlainTableViewController, UITableViewDataSource, UI
             let vc = SMScrollExampleRootController()
             navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 1 {
-            let vc = LoginController()
+            let vc = SMLoginController()
             navigationController?.pushViewController(vc, animated: true)
         } else if indexPath.row == 2 {
             

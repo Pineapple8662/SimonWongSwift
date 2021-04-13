@@ -1,8 +1,8 @@
 //
-//  IndexSubviewController.swift
+//  SMScrollExampleSubviewController.swift
 //  SimonWongSwift
 //
-//  Created by Admin on 2020/10/19.
+//  Created by SimonWong on 2020/10/19.
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 

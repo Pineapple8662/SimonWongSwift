@@ -2,7 +2,7 @@
 //  UIFont+Universal.swift
 //  SimonWongSwift
 //
-//  Created by Admin on 2020/8/1.
+//  Created by SimonWong on 2020/8/1.
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 

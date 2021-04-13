@@ -2,7 +2,7 @@
 //  BaseTableViewController.swift
 //  SimonWongSwift
 //
-//  Created by Admin on 2020/10/20.
+//  Created by SimonWong on 2020/10/20.
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 

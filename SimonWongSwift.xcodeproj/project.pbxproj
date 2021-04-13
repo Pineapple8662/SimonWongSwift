@@ -40,7 +40,7 @@
 		843042D6253D371200A592AB /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042D5253D371200A592AB /* BaseViewProtocol.swift */; };
 		843042DA253D3EAA00A592AB /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042D9253D3EAA00A592AB /* ViewModelType.swift */; };
 		843042E2253D3F5A00A592AB /* LoginContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042E1253D3F5A00A592AB /* LoginContoller.swift */; };
-		843042E5253D3FB000A592AB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042E4253D3FB000A592AB /* LoginViewModel.swift */; };
+		843042E5253D3FB000A592AB /* SMLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042E4253D3FB000A592AB /* SMLoginViewModel.swift */; };
 		843042E8253D452300A592AB /* DisposeBagProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042E7253D452300A592AB /* DisposeBagProtocol.swift */; };
 		843042F0253D5EF500A592AB /* String+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042EC253D5EF500A592AB /* String+Number.swift */; };
 		843042F1253D5EF500A592AB /* String+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843042ED253D5EF500A592AB /* String+Size.swift */; };
@@ -108,7 +108,7 @@
 		843042D5253D371200A592AB /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		843042D9253D3EAA00A592AB /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		843042E1253D3F5A00A592AB /* LoginContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContoller.swift; sourceTree = "<group>"; };
-		843042E4253D3FB000A592AB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		843042E4253D3FB000A592AB /* SMLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMLoginViewModel.swift; sourceTree = "<group>"; };
 		843042E7253D452300A592AB /* DisposeBagProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBagProtocol.swift; sourceTree = "<group>"; };
 		843042EC253D5EF500A592AB /* String+Number.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Number.swift"; sourceTree = "<group>"; };
 		843042ED253D5EF500A592AB /* String+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Size.swift"; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 		843042E0253D3F4200A592AB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				843042E4253D3FB000A592AB /* LoginViewModel.swift */,
+				843042E4253D3FB000A592AB /* SMLoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -711,7 +711,7 @@
 				843042F0253D5EF500A592AB /* String+Number.swift in Sources */,
 				843042CE253D362500A592AB /* UIBezierPath+Circle.swift in Sources */,
 				844B127A253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift in Sources */,
-				843042E5253D3FB000A592AB /* LoginViewModel.swift in Sources */,
+				843042E5253D3FB000A592AB /* SMLoginViewModel.swift in Sources */,
 				3564850224D5943E0052304D /* UILabel+Adapter.swift in Sources */,
 				84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */,
 				842B927B24D12692000BA398 /* AppDelegate+Fade.swift in Sources */,

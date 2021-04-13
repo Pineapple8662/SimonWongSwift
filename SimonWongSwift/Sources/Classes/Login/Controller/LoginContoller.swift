@@ -2,15 +2,15 @@
 //  LoginContoller.swift
 //  SimonWongSwift
 //
-//  Created by Admin on 2020/10/19.
+//  Created by SimonWong on 2020/10/19.
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 
 import UIKit
 
-class LoginController: BaseViewController, DisposeBagProtocol {
+class SMLoginController: BaseViewController, DisposeBagProtocol {
     
-    private let vm = LoginViewModel()
+    private let vm = SMLoginViewModel()
     
     private var textField = UITextField()
     private var button = UIButton(type: .system)
