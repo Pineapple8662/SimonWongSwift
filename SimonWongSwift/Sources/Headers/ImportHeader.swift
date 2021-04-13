@@ -10,7 +10,6 @@
 @_exported import UIKit
 
 @_exported import Alamofire
-@_exported import CocoaLumberjack
 @_exported import HandyJSON
 @_exported import IQKeyboardManagerSwift
 @_exported import Kingfisher

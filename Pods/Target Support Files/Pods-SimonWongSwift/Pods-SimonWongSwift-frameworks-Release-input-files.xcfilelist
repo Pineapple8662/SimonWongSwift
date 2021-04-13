@@ -2,7 +2,6 @@ ${PODS_ROOT}/Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift-framew
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework
 ${BUILT_PRODUCTS_DIR}/CYLTabBarController/CYLTabBarController.framework
-${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
 ${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework
 ${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework
 ${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework

@@ -57,7 +57,7 @@ class TabBarController: CYLTabBarController {
     }
     
     private func configureViewControllers() {
-        let naviVC0 = RTContainerNavigationController(rootViewController: IndexRootController())
+        let naviVC0 = RTContainerNavigationController(rootViewController: NewIndexController())
         let naviVC1 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC2 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC3 = RTContainerNavigationController(rootViewController: BaseViewController())

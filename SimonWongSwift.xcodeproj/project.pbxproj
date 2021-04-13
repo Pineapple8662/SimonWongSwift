@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35376CFB262607370097642D /* NewIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35376CFA262607370097642D /* NewIndexController.swift */; };
 		3564850224D5943E0052304D /* UILabel+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356484FB24D5943E0052304D /* UILabel+Adapter.swift */; };
 		3564850324D5943E0052304D /* UIButton+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356484FC24D5943E0052304D /* UIButton+Adapter.swift */; };
 		3564850424D5943E0052304D /* UITextView+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356484FD24D5943E0052304D /* UITextView+Adapter.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimonWongSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35376CFA262607370097642D /* NewIndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIndexController.swift; sourceTree = "<group>"; };
 		356484FB24D5943E0052304D /* UILabel+Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Adapter.swift"; sourceTree = "<group>"; };
 		356484FC24D5943E0052304D /* UIButton+Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Adapter.swift"; sourceTree = "<group>"; };
 		356484FD24D5943E0052304D /* UITextView+Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Adapter.swift"; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 		84E803BC253D848700A72725 /* Index */ = {
 			isa = PBXGroup;
 			children = (
+				35376CFA262607370097642D /* NewIndexController.swift */,
 				8448FF81253D98AF00F91299 /* IndexNotification.swift */,
 				84E803BD253D84B200A72725 /* IndexRootController.swift */,
 				84E803C0253D85CD00A72725 /* IndexRootController.xib */,
@@ -580,7 +583,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = SimonWong;
 				TargetAttributes = {
 					842F143A24CA954300C45090 = {
@@ -690,6 +693,7 @@
 				8448FF6E253D912300F91299 /* UIView+Border.swift in Sources */,
 				3564850324D5943E0052304D /* UIButton+Adapter.swift in Sources */,
 				842B927624D11D7E000BA398 /* ImportHeader.swift in Sources */,
+				35376CFB262607370097642D /* NewIndexController.swift in Sources */,
 				8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */,
 				84304295253D352100A592AB /* CustomActivityIndicator.swift in Sources */,
 				843042F0253D5EF500A592AB /* String+Number.swift in Sources */,
@@ -777,7 +781,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -792,7 +796,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -840,7 +844,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXCLUDED_ARCHS = arm64;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -849,7 +853,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -870,7 +874,7 @@
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = SimonWongSwift/Resources/Settings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -892,7 +896,7 @@
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = SimonWongSwift/Resources/Settings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

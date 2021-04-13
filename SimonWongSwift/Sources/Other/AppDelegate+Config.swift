@@ -12,7 +12,6 @@ extension AppDelegate {
     
     func configureBases() {
         AppDelegate.configureAppearance()
-        AppDelegate.configureDDLog()
         AppDelegate.configureIQKeyboardManager()
         AppDelegate.configureAdapter()
     }
@@ -43,25 +42,6 @@ extension AppDelegate {
         UITableViewCell.appearance().selectionStyle = .none
         UITableViewCell.appearance().accessoryType = .none
         UITableViewCell.appearance().tintColor = .darkText
-    }
-    
-    private static func configureDDLog() {
-        var logLevel: DDLogLevel = .off
-        #if DEBUG
-        logLevel = .verbose
-        #else
-        logLevel = .warning
-        #endif
-        if #available(iOS 10.0, *) {
-            DDLog.add(DDOSLogger.sharedInstance, with: logLevel)
-        } else {
-            DDLog.add(DDTTYLogger.sharedInstance!, with: logLevel) // TTY - Xcode控制台
-            DDLog.add(DDASLLogger.sharedInstance, with: logLevel) // ASL - Apple system logs 苹果系统日志
-        }
-        let fileLogger: DDFileLogger = DDFileLogger() // 本地文件日志
-        fileLogger.rollingFrequency = 60 * 60 * 24 // 每24小时创建一个新的文件
-        fileLogger.logFileManager.maximumNumberOfLogFiles = 7 // 最多创建7个文件
-        DDLog.add(fileLogger, with: logLevel)
     }
     
     private static func configureIQKeyboardManager() {
