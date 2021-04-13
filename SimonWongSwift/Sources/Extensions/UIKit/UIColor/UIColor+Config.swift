@@ -71,9 +71,7 @@ extension UIColor {
     
     // MAKE: - Dark颜色
     
-    /// 黑色导航栏 & TabBar
-    static let hex_282828 = hex(0x282828)
-    /// Dark cell
+    /// 黑色导航栏 & TabBar & Dark cell background color
     static let hex_323232 = hex(0x323232)
     
 }

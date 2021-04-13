@@ -27,7 +27,7 @@ class TabBarController: CYLTabBarController {
     }
     
     private static func configureAppearance() {
-        UITabBar.appearance().backgroundColor = .dynamicColor(.white, .hex_282828)
+        UITabBar.appearance().backgroundColor = .dynamicColor(.white, .hex_323232)
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().shadowImage = UIImage(color: .dynamicColor(UIColor.hex_e9e9e9.withAlphaComponent(0.3), .clear))
         UITabBar.appearance().unselectedItemTintColor = .darkText
@@ -54,7 +54,7 @@ class TabBarController: CYLTabBarController {
     }
     
     private func configureViewControllers() {
-        let naviVC0 = RTContainerNavigationController(rootViewController: NewIndexController())
+        let naviVC0 = RTContainerNavigationController(rootViewController: SMIndexController())
         let naviVC1 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC2 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC3 = RTContainerNavigationController(rootViewController: BaseViewController())

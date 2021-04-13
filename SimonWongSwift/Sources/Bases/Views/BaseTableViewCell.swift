@@ -25,6 +25,7 @@ class BaseTableViewCell: UITableViewCell, ReuseIdentifierProtocol {
     }
     
     private func configureBaseSubviews() {
+        backgroundColor = .dynamicColor(.white, .hex_323232)
         if self.isMember(of: Self.self) {
             selectionStyle = .default
         }

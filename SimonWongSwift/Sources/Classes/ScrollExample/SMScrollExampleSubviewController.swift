@@ -8,34 +8,38 @@
 
 import UIKit
 
-class IndexSubviewController: BasePlainTableViewController {
+class SMScrollExampleSubviewController: BasePlainTableViewController, UITableViewDataSource, UITableViewDelegate {
 
-    private var pageController: IndexPageController!
+    private var pageController: SMScrollExamplePageController!
     private var canScroll = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .random
-        pageController = wm_pageController as? IndexPageController
+        pageController = wm_pageController as? SMScrollExamplePageController
         configureTableView()
     }
     
     override func configureTableView() {
         super.configureTableView()
+        tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.snp.remakeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-            make.height.equalTo(UIScreenHeight - IndexPageController.menuViewHeight)
+//            make.height.equalTo(UIScreenHeight - (navigationController?.navigationBar.height ?? 0) - SMScrollExamplePageController.menuViewHeight)
+            make.bottom.equalTo(self.view.snp.bottomMargin)
         }
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     override func register() {
-        _ = NotificationCenter.default.rx.notification(IndexNotification.didScrollToTop)
+        _ = NotificationCenter.default.rx.notification(SMScrollExampleNotification.didScrollToTop)
             .take(until: self.rx.deallocated)
             .subscribe(onNext: { [weak self] (notification) in
                 guard let ws = self else { return }
                 let object = notification.object
-                if object as? IndexPageController != ws.pageController { return }
+                if object as? SMScrollExamplePageController != ws.pageController { return }
                 guard let userInfo = notification.userInfo else { return }
                 let canScroll: Bool = userInfo["canScroll"] as! Bool
                 if canScroll {
@@ -50,18 +54,18 @@ class IndexSubviewController: BasePlainTableViewController {
                     }
                 }
             })
-        _ = NotificationCenter.default.rx.notification(IndexNotification.didLeaveTheTop).take(until: self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
+        _ = NotificationCenter.default.rx.notification(SMScrollExampleNotification.didLeaveTheTop).take(until: self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
             guard let ws = self else { return }
             let object = notification.object
-            if object as? IndexPageController != ws.pageController { return }
+            if object as? SMScrollExamplePageController != ws.pageController { return }
             ws.canScroll = false
             ws.tableView.showsVerticalScrollIndicator = false
             ws.tableView.contentOffset = .zero
         })
-        _ = NotificationCenter.default.rx.notification(IndexNotification.forceAllScrollToTop).take(until: self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
+        _ = NotificationCenter.default.rx.notification(SMScrollExampleNotification.forceAllScrollToTop).take(until: self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
             guard let ws = self else { return }
             let object = notification.object
-            if object as? IndexPageController != ws.pageController { return }
+            if object as? SMScrollExamplePageController != ws.pageController { return }
             ws.canScroll = false
             ws.tableView.contentOffset = .zero
         })
@@ -73,12 +77,29 @@ class IndexSubviewController: BasePlainTableViewController {
         }
         let offsetY = scrollView.contentOffset.y
         if offsetY < 0 {
-            NotificationCenter.default.post(name: IndexNotification.didLeaveTheTop, object: pageController, userInfo: ["canScroll": true])
+            NotificationCenter.default.post(name: SMScrollExampleNotification.didLeaveTheTop, object: pageController, userInfo: ["canScroll": true])
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 50
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
     }
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: BaseTableViewCell.reuseIdentifier) as? BaseTableViewCell
+        if cell == nil {
+            cell = BaseTableViewCell(style: .value1, reuseIdentifier: BaseTableViewCell.reuseIdentifier)
+        }
+        cell?.backgroundColor = CGFloat(indexPath.row).remainder(dividingBy: 2) == 0 ? UIColor.red.withAlphaComponent(0.3) : UIColor.blue.withAlphaComponent(0.3)
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }

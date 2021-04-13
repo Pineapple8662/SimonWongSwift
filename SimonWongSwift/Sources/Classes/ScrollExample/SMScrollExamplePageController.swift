@@ -9,7 +9,7 @@
 import UIKit
 import WMPageController
 
-class IndexPageController: WMPageController {
+class SMScrollExamplePageController: WMPageController {
     
     static let menuViewHeight: CGFloat = 45
     
@@ -48,7 +48,7 @@ class IndexPageController: WMPageController {
     }
     
     override func pageController(_ pageController: WMPageController, viewControllerAt index: Int) -> UIViewController {
-        return IndexSubviewController()
+        return SMScrollExampleSubviewController()
     }
     
     override func menuView(_ menu: WMMenuView!, titleAt index: Int) -> String! {

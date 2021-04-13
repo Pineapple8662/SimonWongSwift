@@ -10,7 +10,7 @@ import UIKit
 
 protocol PageScrollNotificationProtocal: class {
     
-    static func registerPrefixString() -> (String)
+    static func registerPrefixString() -> String
     
 }
 
@@ -22,7 +22,7 @@ extension PageScrollNotificationProtocal {
         get {
             var prefixString: String? = objc_getAssociatedObject(self, &prefixStringKey) as? String
             if prefixString == nil {
-                prefixString = ""
+                prefixString = registerPrefixString()
                 objc_setAssociatedObject(self, &prefixStringKey, prefixString, .OBJC_ASSOCIATION_COPY_NONATOMIC)
             }
             return prefixString

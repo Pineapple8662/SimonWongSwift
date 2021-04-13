@@ -1,5 +1,5 @@
 //
-//  NewIndexController.swift
+//  IndexController.swift
 //  SimonWongSwift
 //
 //  Created by SimonWong on 2021/4/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewIndexController: BasePlainTableViewController, UITableViewDataSource, UITableViewDelegate {
+class SMIndexController: BasePlainTableViewController, UITableViewDataSource, UITableViewDelegate {
     
     private var sources: [String] = ["滚动穿透", "登录页面", "弹出窗口"]
 
@@ -42,6 +42,12 @@ class NewIndexController: BasePlainTableViewController, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
+            let vc = SMScrollExampleRootController()
+            navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 1 {
+            let vc = LoginController()
+            navigationController?.pushViewController(vc, animated: true)
+        } else if indexPath.row == 2 {
             
         }
     }

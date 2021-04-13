@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IndexRootController" customModule="SimonWongSwift" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMScrollExampleRootController" customModule="SimonWongSwift" customModuleProvider="target">
             <connections>
                 <outlet property="scrollBottomContentView" destination="H8T-tz-BH2" id="18J-60-2ae"/>
                 <outlet property="scrollContentView" destination="eYR-qk-wwl" id="EYF-wZ-07D"/>
@@ -24,7 +24,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nwq-s7-k1y">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYR-qk-wwl">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1386"/>
@@ -34,14 +34,14 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82H-Pg-fhg">
                                             <rect key="frame" x="0.0" y="12" width="414" height="165"/>
-                                            <color key="backgroundColor" red="0.43921568630000002" green="0.72549019609999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.53016948699999999" green="0.8026247621" blue="0.10066514460000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="165" id="v5U-P3-3ze"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qG7-oN-Flr">
                                             <rect key="frame" x="0.0" y="189" width="414" height="185"/>
-                                            <color key="backgroundColor" red="0.43921568630000002" green="0.72549019609999998" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.53016948699999999" green="0.8026247621" blue="0.10066514460000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="185" id="CFW-BT-dhr"/>
                                             </constraints>
@@ -92,10 +92,10 @@
             <constraints>
                 <constraint firstItem="Nwq-s7-k1y" firstAttribute="leading" secondItem="9I2-lY-b6s" secondAttribute="leading" id="3YO-4Q-1Ri"/>
                 <constraint firstItem="Nwq-s7-k1y" firstAttribute="trailing" secondItem="9I2-lY-b6s" secondAttribute="trailing" id="ejE-Zo-Zni"/>
-                <constraint firstItem="Nwq-s7-k1y" firstAttribute="bottom" secondItem="9I2-lY-b6s" secondAttribute="bottom" id="nxh-VT-6O0"/>
+                <constraint firstItem="Nwq-s7-k1y" firstAttribute="bottom" secondItem="Ifa-Ln-ZgA" secondAttribute="bottom" id="nxh-VT-6O0"/>
                 <constraint firstItem="Nwq-s7-k1y" firstAttribute="top" secondItem="Ifa-Ln-ZgA" secondAttribute="top" id="sg3-2K-g02"/>
             </constraints>
-            <point key="canvasLocation" x="-2214.4927536231885" y="124.55357142857142"/>
+            <point key="canvasLocation" x="-2659" y="116"/>
         </view>
     </objects>
     <resources>

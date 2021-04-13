@@ -8,10 +8,10 @@
 
 import UIKit
 
-class IndexNotification: PageScrollNotificationProtocal {
+class SMScrollExampleNotification: PageScrollNotificationProtocal {
     
-    static func registerPrefixString() -> (String) {
-        return "Index"
+    static func registerPrefixString() -> String {
+        return "SMScrollExample"
     }
     
 }

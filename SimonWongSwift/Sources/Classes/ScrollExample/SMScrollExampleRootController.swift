@@ -8,22 +8,22 @@
 
 import UIKit
 
-class IndexRootController: BaseViewController, UIScrollViewDelegate {
+class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
     @IBOutlet weak var scrollContentWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollBottomContentView: UIView!
     
-    private var pageController: IndexPageController!
-    private var menuViewTitles = ["First", "Second", "Third"]
+    private var pageController: SMScrollExamplePageController!
+    private var menuViewTitles = ["Simon", "Scroll", "Example"]
     private var canScroll = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Index"
+        navigationItem.title = "滚动穿透"
         // page controller
-        pageController = IndexPageController(meunViewTitles: menuViewTitles)
+        pageController = SMScrollExamplePageController(meunViewTitles: menuViewTitles)
         addChild(pageController)
         scrollBottomContentView.addSubview(pageController.view)
         pageController.view.snp.makeConstraints { (make) in
@@ -45,12 +45,12 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
     }
     
     private func register() {
-        _ = NotificationCenter.default.rx.notification(IndexNotification.didLeaveTheTop)
+        _ = NotificationCenter.default.rx.notification(SMScrollExampleNotification.didLeaveTheTop)
             .take(until: self.rx.deallocated)
             .subscribe(onNext: { [weak self] (notification) in
                 guard let ws = self else { return }
                 let object = notification.object
-                if object as? IndexPageController != ws.pageController { return }
+                if object as? SMScrollExamplePageController != ws.pageController { return }
                 guard let userInfo = notification.userInfo else { return }
                 let canScroll: Bool = userInfo["canScroll"] as! Bool
                 if canScroll {
@@ -68,7 +68,7 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
         if offsetY >= maxOffsetY {
             canScroll = false
             scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)
-            NotificationCenter.default.post(name: IndexNotification.didScrollToTop, object: pageController, userInfo: ["canScroll": true, "offsetY": (offsetY - maxOffsetY)])
+            NotificationCenter.default.post(name: SMScrollExampleNotification.didScrollToTop, object: pageController, userInfo: ["canScroll": true, "offsetY": (offsetY - maxOffsetY)])
         } else {
             if !canScroll {
                 scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)
@@ -79,7 +79,7 @@ class IndexRootController: BaseViewController, UIScrollViewDelegate {
     func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
         canScroll = true
         scrollView.setContentOffset(.zero, animated: true)
-        NotificationCenter.default.post(name: IndexNotification.forceAllScrollToTop, object: pageController, userInfo: nil)
+        NotificationCenter.default.post(name: SMScrollExampleNotification.forceAllScrollToTop, object: pageController, userInfo: nil)
     }
     
 }
