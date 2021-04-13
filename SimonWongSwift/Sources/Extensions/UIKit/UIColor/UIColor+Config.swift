@@ -27,7 +27,7 @@ extension UIColor {
     
     /// 深色字体
     static let darkText: UIColor = {
-        return dynamicColor(hex_182335, hex_f8f8f8)
+        return dynamicColor(hex_333333, hex_f8f8f8)
     }()
     /// 浅色字体
     static let lightText: UIColor = {
@@ -60,7 +60,7 @@ extension UIColor {
     // MARK: 字体颜色
     
     /// 深色字体
-    static let hex_182335 = hex(0x182335)
+    static let hex_333333 = hex(0x333333)
     /// 浅色字体
     static let hex_969696 = hex(0x969696)
     

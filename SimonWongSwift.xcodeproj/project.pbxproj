@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		35376CFB262607370097642D /* NewIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35376CFA262607370097642D /* NewIndexController.swift */; };
+		35376E2C2626159E0097642D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35376E2B2626159E0097642D /* BaseTableViewCell.swift */; };
 		3564850224D5943E0052304D /* UILabel+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356484FB24D5943E0052304D /* UILabel+Adapter.swift */; };
 		3564850324D5943E0052304D /* UIButton+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356484FC24D5943E0052304D /* UIButton+Adapter.swift */; };
 		3564850424D5943E0052304D /* UITextView+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356484FD24D5943E0052304D /* UITextView+Adapter.swift */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimonWongSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35376CFA262607370097642D /* NewIndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIndexController.swift; sourceTree = "<group>"; };
+		35376E2B2626159E0097642D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		356484FB24D5943E0052304D /* UILabel+Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Adapter.swift"; sourceTree = "<group>"; };
 		356484FC24D5943E0052304D /* UIButton+Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Adapter.swift"; sourceTree = "<group>"; };
 		356484FD24D5943E0052304D /* UITextView+Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Adapter.swift"; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 		8471A30D24D54243008DA574 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				35376E2B2626159E0097642D /* BaseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				35376CFB262607370097642D /* NewIndexController.swift in Sources */,
 				8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */,
 				84304295253D352100A592AB /* CustomActivityIndicator.swift in Sources */,
+				35376E2C2626159E0097642D /* BaseTableViewCell.swift in Sources */,
 				843042F0253D5EF500A592AB /* String+Number.swift in Sources */,
 				843042CE253D362500A592AB /* UIBezierPath+Circle.swift in Sources */,
 				844B127A253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift in Sources */,

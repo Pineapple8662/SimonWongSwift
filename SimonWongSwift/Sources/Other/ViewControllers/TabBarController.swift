@@ -31,9 +31,9 @@ class TabBarController: CYLTabBarController {
         UITabBar.appearance().backgroundImage = UIImage()
         UITabBar.appearance().shadowImage = UIImage(color: .dynamicColor(UIColor.hex_e9e9e9.withAlphaComponent(0.3), .clear))
         UITabBar.appearance().unselectedItemTintColor = .darkText
-        let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
+        let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.mediumSystemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
-        let selectedAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
+        let selectedAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.mediumSystemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
     }
     
@@ -50,10 +50,7 @@ class TabBarController: CYLTabBarController {
         let dic3 = [CYLTabBarItemTitle: "标题",
                     CYLTabBarItemImage: "tabbar_icon_3",
                     CYLTabBarItemSelectedImage: "tabbar_icon_3_selected"]
-        let dic4 = [CYLTabBarItemTitle: "标题",
-                    CYLTabBarItemImage: "tabbar_icon_4",
-                    CYLTabBarItemSelectedImage: "tabbar_icon_4_selected"]
-        tabBarItemsAttributes = [dic0, dic1, dic2, dic3, dic4]
+        tabBarItemsAttributes = [dic0, dic1, dic2, dic3]
     }
     
     private func configureViewControllers() {
@@ -61,8 +58,7 @@ class TabBarController: CYLTabBarController {
         let naviVC1 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC2 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC3 = RTContainerNavigationController(rootViewController: BaseViewController())
-        let naviVC4 = RTContainerNavigationController(rootViewController: BaseViewController())
-        viewControllers = [naviVC0, naviVC1, naviVC2, naviVC3, naviVC4];
+        viewControllers = [naviVC0, naviVC1, naviVC2, naviVC3];
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

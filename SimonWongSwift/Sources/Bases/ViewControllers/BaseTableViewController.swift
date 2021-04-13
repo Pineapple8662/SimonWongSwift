@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseTableViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+class BaseTableViewController: BaseViewController {
     
     var tableViewTopMargin: CGFloat = 0 {
         didSet {
@@ -56,8 +56,6 @@ class BaseTableViewController: BaseViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         tableView.backgroundColor = view.backgroundColor
         tableView.separatorColor = .customSeparator
-        tableView.dataSource = self
-        tableView.delegate = self
         let selector = #selector(register)
         if responds(to: selector) {
             perform(selector)
@@ -81,16 +79,6 @@ class BaseTableViewController: BaseViewController, UITableViewDataSource, UITabl
         }
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .leastNonzeroMagnitude, bottom: .leastNonzeroMagnitude, right: .leastNonzeroMagnitude)
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.backgroundColor = .random
-        return cell
     }
     
 }
