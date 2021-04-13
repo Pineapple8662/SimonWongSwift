@@ -33,7 +33,7 @@ def universal_pods
   pod 'STPopup'
   pod 'WMPageController'
   pod 'YBImageBrowser'
-
+  
 end
 
 target 'SimonWongSwift' do
