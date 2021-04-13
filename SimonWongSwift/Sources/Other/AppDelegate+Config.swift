@@ -22,7 +22,7 @@ extension AppDelegate {
         navigationBar.barStyle = .default // 主题
         navigationBar.isTranslucent = false // 透明
         navigationBar.tintColor = .darkText // 按钮颜色
-        navigationBar.barTintColor = nil // 背景颜色
+        navigationBar.barTintColor = .dynamicColor(.white, .hex_282828) // 背景颜色
         navigationBar.shadowImage = UIImage() // 去除分割线
         navigationBar.titleTextAttributes = [.font: UIFont.mediumSystemFont(ofSize: 18), .foregroundColor: UIColor.darkText] // 标题
         

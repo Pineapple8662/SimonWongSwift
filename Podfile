@@ -44,7 +44,6 @@ end
 
 post_install do |installer_representation|
   installer_representation.pods_project.build_configurations.each do |config|
-    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
     config.build_settings['CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED'] = 'YES'
     config.build_settings['CODE_SIGNING_ALLOWED'] = 'NO'
   end
