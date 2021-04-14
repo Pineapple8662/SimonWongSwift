@@ -35,7 +35,6 @@ class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.delegate = self
         scrollContentWidthConstraint.constant = UIDevelopingWidth
-        // register
         register()
     }
     

@@ -15,7 +15,7 @@ var UIScreenWidth = UIScreenBounds.width
 var UIScreenHeight = UIScreenBounds.height
 var UIScreenScale = UIScreen.main.scale
 
-var UIDevelopingWidth = UIDevice.iPadSeries.all ? (UIScreenWidth - 0.5) / 2 : UIScreenWidth
+var UIDevelopingWidth = UIDevice.iPadSeries.all ? (UIScreenWidth - 1) / 2 : UIScreenWidth
 
 var SafeAreaBottomInset = mainWindow?.safeAreaInsets.bottom ?? 0
 
