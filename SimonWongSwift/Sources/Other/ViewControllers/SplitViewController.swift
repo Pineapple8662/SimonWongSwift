@@ -40,7 +40,7 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
         if #available(iOS 13.0, *) {
             return .default
         }
-        if keyWindow?.customCurrentViewController().0.navigationController?.navigationBar.barStyle == .default {
+        if mainWindow?.customCurrentViewController().0.navigationController?.navigationBar.barStyle == .default {
             return .default
         } else {
             return .lightContent

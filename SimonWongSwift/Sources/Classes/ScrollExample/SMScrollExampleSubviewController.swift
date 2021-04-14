@@ -31,8 +31,7 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
             let navigationBarHeight = navigationController?.navigationBar.height ?? 0
             make.height.equalTo(UIScreenHeight - statusBarHeight - navigationBarHeight - SMScrollExamplePageController.menuViewHeight)
         }
-        tableViewBottomEdgeInset = keyWindow?.safeAreaInsets.bottom ?? 0
-        tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .leastNonzeroMagnitude, bottom: (keyWindow?.safeAreaInsets.bottom ?? 0), right: .leastNonzeroMagnitude)
+        tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .leastNonzeroMagnitude, bottom: SafeAreaBottomInset, right: .leastNonzeroMagnitude)
         tableView.dataSource = self
         tableView.delegate = self
     }

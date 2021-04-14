@@ -42,7 +42,7 @@ extension UIDevice {
             get {
                 if iPhoneSeries.all {
                     if #available(iOS 11.0, *) {
-                        return (keyWindow?.safeAreaInsets.bottom ?? 0) > 0
+                        return SafeAreaBottomInset > 0
                     }
                 }
                 return false
@@ -77,7 +77,7 @@ extension UIDevice {
             get {
                 if iPadSeries.all {
                     if #available(iOS 11.0, *) {
-                        return (keyWindow?.safeAreaInsets.bottom ?? 0) > 0
+                        return SafeAreaBottomInset > 0
                     }
                 }
                 return false

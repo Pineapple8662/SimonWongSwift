@@ -49,10 +49,18 @@ class SMIndexController: BaseInsetGroupedTableViewController, UITableViewDataSou
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.row == 0 {
             let vc = SMScrollExampleRootController()
-            navigationController?.pushViewController(vc, animated: true)
+            if UIDevice.iPadSeries.all {
+                showDetailViewController(vc, sender: nil)
+            } else {
+                navigationController?.pushViewController(vc, animated: true)
+            }
         } else if indexPath.row == 1 {
             let vc = SMLoginController()
-            navigationController?.pushViewController(vc, animated: true)
+            if UIDevice.iPadSeries.all {
+                showDetailViewController(vc, sender: nil)
+            } else {
+                navigationController?.pushViewController(vc, animated: true)
+            }
         } else if indexPath.row == 2 {
             
         }

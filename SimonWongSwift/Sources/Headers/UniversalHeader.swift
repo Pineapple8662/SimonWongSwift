@@ -17,12 +17,24 @@ var UIScreenScale = UIScreen.main.scale
 
 var UIDevelopingWidth = UIDevice.iPadSeries.all ? (UIScreenWidth - 0.5) / 2 : UIScreenWidth
 
+var SafeAreaBottomInset = mainWindow?.safeAreaInsets.bottom ?? 0
+
 // MARK: - 特殊的View
 
-/// UIApplication.shared.keyWindow
-var keyWindow: UIWindow? {
+let mainWindowTag = 200
+var windows: [UIWindow] {
     get {
-        return UIApplication.shared.keyWindow
+        return UIApplication.shared.windows
+    }
+}
+var mainWindow: UIWindow? {
+    get {
+        for window in windows {
+            if window.tag == mainWindowTag {
+                return window
+            }
+        }
+        return nil
     }
 }
 
@@ -30,8 +42,3 @@ var keyWindow: UIWindow? {
 
 /// 默认 tableView separatorInset
 var DefaultTableViewSeparatorInset: UIEdgeInsets = UIEdgeInsets(top: .zero, left: .leastNonzeroMagnitude, bottom: .zero, right: .zero)
-
-// MARK: - Cell
-
-/// 默认 cell 高度
-let DefaultCellHeight: CGFloat = 50
