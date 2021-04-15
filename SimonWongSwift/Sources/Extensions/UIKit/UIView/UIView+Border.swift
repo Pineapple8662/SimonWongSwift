@@ -10,7 +10,6 @@ extension UIView {
     
     struct MarginType: OptionSet {
         let rawValue: Int
-        
         static let none = MarginType([])
         static let start = MarginType(rawValue: 1 << 0)
         static let end = MarginType(rawValue: 1 << 1)

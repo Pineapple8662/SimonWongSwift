@@ -42,4 +42,4 @@ var mainWindow: UIWindow? {
 // MARK: - TableView
 
 /// 默认 tableView separatorInset
-var DefaultTableViewSeparatorInset: UIEdgeInsets = UIEdgeInsets(top: .zero, left: .leastNonzeroMagnitude, bottom: .zero, right: .zero)
+var DefaultTableViewSeparatorInsets: UIEdgeInsets = UIEdgeInsets(top: .zero, left: .leastNonzeroMagnitude, bottom: .zero, right: .zero)

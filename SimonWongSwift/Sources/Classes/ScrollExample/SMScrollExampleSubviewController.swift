@@ -25,7 +25,6 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
         super.configureTableView()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.snp.remakeConstraints { (make) in
             make.top.left.right.equalToSuperview()
@@ -97,7 +96,6 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
         if cell == nil {
             cell = BaseTableViewCell(style: .value1, reuseIdentifier: BaseTableViewCell.reuseIdentifier)
         }
-        cell?.backgroundColor = CGFloat(indexPath.row).remainder(dividingBy: 2) == 0 ? UIColor.red.withAlphaComponent(0.3) : UIColor.blue.withAlphaComponent(0.3)
         cell?.textLabel?.text = "Argument \(indexPath.row)"
         return cell!
     }

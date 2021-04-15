@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		350979EB2628945D0013F417 /* UIView+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350979EA2628945D0013F417 /* UIView+GestureRecognizer.swift */; };
+		350979EF26289E670013F417 /* DraggableMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350979EE26289E670013F417 /* DraggableMaskView.swift */; };
 		35376CFB262607370097642D /* SMIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35376CFA262607370097642D /* SMIndexController.swift */; };
 		35376E2C2626159E0097642D /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35376E2B2626159E0097642D /* BaseTableViewCell.swift */; };
 		3564850224D5943E0052304D /* UILabel+Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356484FB24D5943E0052304D /* UILabel+Adapter.swift */; };
@@ -77,6 +78,7 @@
 /* Begin PBXFileReference section */
 		0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimonWongSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		350979EA2628945D0013F417 /* UIView+GestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+GestureRecognizer.swift"; sourceTree = "<group>"; };
+		350979EE26289E670013F417 /* DraggableMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableMaskView.swift; sourceTree = "<group>"; };
 		35376CFA262607370097642D /* SMIndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMIndexController.swift; sourceTree = "<group>"; };
 		35376E2B2626159E0097642D /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		356484FB24D5943E0052304D /* UILabel+Adapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Adapter.swift"; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				843D34A124D3ECAD00404FC6 /* ActivityIndicator */,
+				350979EE26289E670013F417 /* DraggableMaskView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				84304295253D352100A592AB /* CustomActivityIndicator.swift in Sources */,
 				35376E2C2626159E0097642D /* BaseTableViewCell.swift in Sources */,
 				843042F0253D5EF500A592AB /* String+Number.swift in Sources */,
+				350979EF26289E670013F417 /* DraggableMaskView.swift in Sources */,
 				843042CE253D362500A592AB /* UIBezierPath+Circle.swift in Sources */,
 				844B127A253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift in Sources */,
 				843042E5253D3FB000A592AB /* SMLoginViewModel.swift in Sources */,

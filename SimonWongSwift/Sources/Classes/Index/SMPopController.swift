@@ -11,6 +11,8 @@ import STPopup
 
 class SMPopController: BasePlainTableViewController, UITableViewDataSource, UITableViewDelegate {
     
+    private var maskView: DraggableMaskView = DraggableMaskView()
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         var width: CGFloat = 0
@@ -68,6 +70,14 @@ class SMPopController: BasePlainTableViewController, UITableViewDataSource, UITa
             }
         }
         configureTableView()
+        if UIDevice.iPhoneSeries.all {
+            if let containerView = popupController?.containerView {
+                containerView.addSubview(maskView)
+                maskView.snp.makeConstraints { (make) in
+                    make.edges.equalTo(containerView)
+                }
+            }
+        }
     }
     
     override func configureTableView() {

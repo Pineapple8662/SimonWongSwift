@@ -56,6 +56,7 @@ class BaseTableViewController: BaseViewController {
         super.viewDidLoad()
         tableView.backgroundColor = view.backgroundColor
         tableView.separatorColor = .separator
+        tableView.separatorInset = DefaultTableViewSeparatorInsets
         let selector = #selector(register)
         if responds(to: selector) {
             perform(selector)

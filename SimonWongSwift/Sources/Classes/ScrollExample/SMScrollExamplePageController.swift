@@ -25,10 +25,10 @@ class SMScrollExamplePageController: WMPageController {
         self.pageAnimatable = true
         self.titleSizeSelected = 16
         self.titleSizeNormal = 16
-        self.titleColorSelected = .hex(0x191A1E)
+        self.titleColorSelected = .darkText
         self.titleColorNormal = .lightText
         self.titleFontName = "PingFangSC-Medium"
-        self.progressColor = .hex(0x191A1E)
+        self.progressColor = .darkText
         self.itemsWidths = meunViewTitles.map { (string) -> NSNumber in
             return NSNumber(value: Double(string.calculateWidth(font: .mediumSystemFont(ofSize: 16)) + 24))
         }
@@ -41,6 +41,8 @@ class SMScrollExamplePageController: WMPageController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .lightView
+        menuView?.backgroundColor = .dynamicColor(.white, .hex_282828)
+        menuView?.addBottomBorder(color: .separator, width: 0.5)
     }
     
     override func numbersOfChildControllers(in pageController: WMPageController) -> Int {
@@ -58,8 +60,6 @@ class SMScrollExamplePageController: WMPageController {
     }
     
     override func pageController(_ pageController: WMPageController, preferredFrameFor menuView: WMMenuView) -> CGRect {
-        menuView.backgroundColor = .white
-//        menuView.addBottomBorder(color: .customSeparator, width: 0.5)
         return CGRect(x: .zero, y: .zero, width: self.view.width, height: Self.menuViewHeight)
     }
     

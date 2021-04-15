@@ -34,14 +34,14 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82H-Pg-fhg">
                                             <rect key="frame" x="0.0" y="12" width="414" height="165"/>
-                                            <color key="backgroundColor" red="1" green="0.2488476634" blue="0.1598878205" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" systemColor="systemTealColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="165" id="v5U-P3-3ze"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qG7-oN-Flr">
                                             <rect key="frame" x="0.0" y="189" width="414" height="185"/>
-                                            <color key="backgroundColor" red="1" green="0.2488476634" blue="0.1598878205" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" systemColor="systemTealColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="185" id="CFW-BT-dhr"/>
                                             </constraints>
@@ -95,12 +95,15 @@
                 <constraint firstItem="Nwq-s7-k1y" firstAttribute="bottom" secondItem="Ifa-Ln-ZgA" secondAttribute="bottom" id="nxh-VT-6O0"/>
                 <constraint firstItem="Nwq-s7-k1y" firstAttribute="top" secondItem="Ifa-Ln-ZgA" secondAttribute="top" id="sg3-2K-g02"/>
             </constraints>
-            <point key="canvasLocation" x="-2659" y="116"/>
+            <point key="canvasLocation" x="-1845" y="214"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
