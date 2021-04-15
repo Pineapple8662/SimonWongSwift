@@ -22,6 +22,13 @@ class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "滚动穿透"
+        if UIDevice.simulator {
+            OnceOperate.once(key: "SimulatorGGAlert") {
+                let alertVC = UIAlertController(title: nil, message: "模拟器可能会感到卡顿，用真机才能看到真正效果", preferredStyle: .alert)
+                alertVC.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
+                present(alertVC, animated: true, completion: nil)
+            }
+        }
         // page controller
         pageController = SMScrollExamplePageController(meunViewTitles: menuViewTitles)
         addChild(pageController)
