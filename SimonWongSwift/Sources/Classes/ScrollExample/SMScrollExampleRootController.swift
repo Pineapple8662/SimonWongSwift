@@ -24,7 +24,7 @@ class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
         navigationItem.title = "滚动穿透"
         if UIDevice.simulator {
             OnceOperate.once(key: "SimulatorGGAlert") {
-                let alertVC = UIAlertController(title: nil, message: "模拟器可能会感到卡顿，用真机才能看到真正效果", preferredStyle: .alert)
+                let alertVC = UIAlertController(title: "提示", message: "模拟器可能会感到卡顿，用真机才能看到真正效果", preferredStyle: .alert)
                 alertVC.addAction(UIAlertAction(title: "好的", style: .default, handler: nil))
                 present(alertVC, animated: true, completion: nil)
             }
