@@ -34,7 +34,6 @@ extension PageScrollNotificationProtocal {
     
     static var didScrollToTop: Notification.Name {
         get {
-            print("rawValue: \("\(getPrefixString())DidScrollToTopNotification")")
             return Notification.Name(rawValue: "\(getPrefixString())DidScrollToTopNotification")
         }
     }
