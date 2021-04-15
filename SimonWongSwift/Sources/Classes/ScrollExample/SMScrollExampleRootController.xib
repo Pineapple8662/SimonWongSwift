@@ -34,34 +34,16 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82H-Pg-fhg">
                                             <rect key="frame" x="0.0" y="12" width="414" height="165"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fake_data_001" translatesAutoresizingMaskIntoConstraints="NO" id="cfk-XE-kar">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemTealColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="cfk-XE-kar" secondAttribute="bottom" id="F1g-1j-Sf2"/>
-                                                <constraint firstAttribute="trailing" secondItem="cfk-XE-kar" secondAttribute="trailing" id="F8b-hN-OI3"/>
-                                                <constraint firstItem="cfk-XE-kar" firstAttribute="top" secondItem="82H-Pg-fhg" secondAttribute="top" id="aff-74-E8b"/>
                                                 <constraint firstAttribute="height" constant="165" id="v5U-P3-3ze"/>
-                                                <constraint firstItem="cfk-XE-kar" firstAttribute="leading" secondItem="82H-Pg-fhg" secondAttribute="leading" id="vQK-N0-71S"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qG7-oN-Flr">
                                             <rect key="frame" x="0.0" y="189" width="414" height="185"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fake_data_001" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-9s-YKV">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemTealColor"/>
                                             <constraints>
-                                                <constraint firstItem="NQd-9s-YKV" firstAttribute="top" secondItem="qG7-oN-Flr" secondAttribute="top" id="1nd-KY-Jrl"/>
                                                 <constraint firstAttribute="height" constant="185" id="CFW-BT-dhr"/>
-                                                <constraint firstItem="NQd-9s-YKV" firstAttribute="leading" secondItem="qG7-oN-Flr" secondAttribute="leading" id="I7u-GB-ksi"/>
-                                                <constraint firstAttribute="trailing" secondItem="NQd-9s-YKV" secondAttribute="trailing" id="Lqn-Q9-bmy"/>
-                                                <constraint firstAttribute="bottom" secondItem="NQd-9s-YKV" secondAttribute="bottom" id="pdK-XC-Ek4"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -117,9 +99,11 @@
         </view>
     </objects>
     <resources>
-        <image name="fake_data_001" width="375" height="163"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
