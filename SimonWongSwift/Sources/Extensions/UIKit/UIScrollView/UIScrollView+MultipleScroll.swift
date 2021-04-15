@@ -1,9 +1,9 @@
 //
 //  UIScrollView+MultipleScroll.swift
-//  ShoppingMall
+//  SimonWongSwift
 //
 //  Created by SimonWong on 2019/11/15.
-//  Copyright © 2019 Guangzhou Tanghe Information Technology Co., Ltd. All rights reserved.
+//  Copyright © 2019 SimonWong. All rights reserved.
 //
 
 private var isMultipleScrollEnabledKey: Void?

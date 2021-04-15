@@ -12,7 +12,7 @@ extension UIWindow {
     
     func customVisibleViewController() -> UIViewController {
         var tempVC = rootViewController
-        while tempVC?.preferredContentSize != nil {
+        while !(tempVC?.preferredContentSize.width == .zero) {
             tempVC = tempVC?.presentedViewController
         }
         return tempVC!

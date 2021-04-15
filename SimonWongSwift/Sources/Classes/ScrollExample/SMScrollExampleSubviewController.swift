@@ -23,18 +23,17 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
     
     override func configureTableView() {
         super.configureTableView()
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.snp.remakeConstraints { (make) in
             make.top.left.right.equalToSuperview()
-            let statusBarHeight = UIApplication.shared.statusBarFrame.height
             let navigationBarHeight = navigationController?.navigationBar.height ?? 0
-            make.height.equalTo(UIScreenHeight - statusBarHeight - navigationBarHeight - SMScrollExamplePageController.menuViewHeight)
+            make.height.equalTo(UIScreenHeight - UIStatusBarHeight - navigationBarHeight - SMScrollExamplePageController.menuViewHeight)
         }
         tableViewBottomEdgeInset = SafeAreaBottomInset
         tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .leastNonzeroMagnitude, bottom: SafeAreaBottomInset, right: .leastNonzeroMagnitude)
-        tableView.dataSource = self
-        tableView.delegate = self
     }
     
     override func register() {

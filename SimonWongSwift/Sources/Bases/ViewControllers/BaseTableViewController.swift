@@ -43,7 +43,7 @@ class BaseTableViewController: BaseViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        if self.isMember(of: BaseTableViewController.self) {
+        if !self.isKind(of: BasePlainTableViewController.self) && !self.isKind(of: BaseGroupedTableViewController.self) && !self.isKind(of: BaseInsetGroupedTableViewController.self) {
             fatalError("不允许直接继承BaseTableViewController，请继承BaseTableViewController子类")
         }
     }
@@ -78,7 +78,7 @@ class BaseTableViewController: BaseViewController {
             tableView.tableHeaderView = UIView(frame: CGRect(x: .zero, y: .zero, width: .zero, height: CGFloat.leastNonzeroMagnitude))
         }
         tableView.tableFooterView = UIView(frame: .zero)
-        tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .leastNonzeroMagnitude, bottom: .leastNonzeroMagnitude, right: .leastNonzeroMagnitude)
+        tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .zero, bottom: .leastNonzeroMagnitude, right: .zero)
     }
     
 }

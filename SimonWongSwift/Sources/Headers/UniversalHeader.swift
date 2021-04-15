@@ -17,6 +17,7 @@ var UIScreenScale = UIScreen.main.scale
 
 var UIDevelopingWidth = UIDevice.iPadSeries.all ? (UIScreenWidth - 1) / 2 : UIScreenWidth
 
+var UIStatusBarHeight = UIApplication.shared.statusBarFrame.height
 var SafeAreaBottomInset = mainWindow?.safeAreaInsets.bottom ?? 0
 
 // MARK: - 特殊的View

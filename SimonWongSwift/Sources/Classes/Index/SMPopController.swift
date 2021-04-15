@@ -13,28 +13,57 @@ class SMPopController: BasePlainTableViewController, UITableViewDataSource, UITa
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        
-//        self.contentSizeInPopup = CGSize(width: UIScreenWidth - 20 * 2, height: 522)
+        var width = UIDevelopingWidth
+        var height = UIScreenHeight - UIStatusBarHeight - SafeAreaBottomInset
+        height = 400 + SafeAreaBottomInset
+        if UIDevice.iPadSeries.all {
+            width = UIScreenHeight - 44 * 2
+            height = width
+        }
+        self.contentSizeInPopup = CGSize(width: width, height: height)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func present(in viewController: UIViewController) {
+    func show(in viewController: UIViewController? = mainWindow?.customVisibleViewController()) {
+        guard let viewController = viewController else { return }
         let popupController = STPopupController(rootViewController: self)
         if UIDevice.iPadSeries.all {
-            popupController.style = .bottomSheet
-        } else {
             popupController.style = .formSheet
+        } else {
+            popupController.style = .bottomSheet
         }
-        popupController.transitionStyle = .fade
+        popupController.transitionStyle = .slideVertical
         popupController.navigationBarHidden = true
         popupController.present(in: viewController)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let backgroundView = popupController?.backgroundView {
+            backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            backgroundView.isUserInteractionEnabled = true
+            backgroundView.addTapAction { [weak self] (gestureRecognizer) in
+                guard let ws = self else { return }
+                ws.popupController?.dismiss()
+            }
+        }
+        if let containerView = popupController?.containerView {
+            if UIDevice.iPadSeries.all {
+                containerView.layer.masksToBounds = true
+                containerView.layer.cornerRadius = 8
+            } else {
+                containerView.layer.masksToBounds = true
+                let cornerSize = CGSize(width: 8, height: 8)
+                let maskPath = UIBezierPath(roundedRect: containerView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: cornerSize)
+                let maskLayer = CAShapeLayer()
+                maskLayer.frame = containerView.bounds
+                maskLayer.path = maskPath.cgPath
+                containerView.layer.mask = maskLayer
+            }
+        }
         configureTableView()
     }
     
@@ -42,7 +71,9 @@ class SMPopController: BasePlainTableViewController, UITableViewDataSource, UITa
         super.configureTableView()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.becomeFirstResponder()
+        tableViewBottomMargin = -SafeAreaBottomInset
+        tableViewBottomEdgeInset = SafeAreaBottomInset
+        tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .leastNonzeroMagnitude, bottom: SafeAreaBottomInset, right: .leastNonzeroMagnitude)
         openRefreshHeader(target: self, action: #selector(endRefreshing))
     }
     
@@ -53,7 +84,7 @@ class SMPopController: BasePlainTableViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

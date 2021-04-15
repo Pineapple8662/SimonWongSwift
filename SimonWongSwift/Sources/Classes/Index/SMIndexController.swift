@@ -55,8 +55,8 @@ class SMIndexController: BaseInsetGroupedTableViewController, UITableViewDataSou
                 navigationController?.pushViewController(vc, animated: true)
             }
         } else if indexPath.row == 1 {
-            let alertVC = SMPopController()
-            present(alertVC, animated: true, completion: nil)
+            let vc = SMPopController()
+            vc.show()
         } else if indexPath.row == 2 {
             
         }

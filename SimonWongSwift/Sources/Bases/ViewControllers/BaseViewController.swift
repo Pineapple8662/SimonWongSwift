@@ -24,4 +24,8 @@ class BaseViewController: UIViewController, BaseViewProtocol, DZNEmptyDataSetPro
         view.backgroundColor = .lightView
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        indicator.startAnimating()
+    }
+    
 }

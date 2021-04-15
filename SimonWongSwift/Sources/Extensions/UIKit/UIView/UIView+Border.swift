@@ -1,9 +1,9 @@
 //
 //  UIView+CustomBorder.swift
-//  ShoppingMall
+//  SimonWongSwift
 //
 //  Created by SimonWong on 2019/4/11.
-//  Copyright © 2019 Guangzhou Tanghe Information Technology Co., Ltd. All rights reserved.
+//  Copyright © 2019 SimonWong. All rights reserved.
 //
 
 extension UIView {
