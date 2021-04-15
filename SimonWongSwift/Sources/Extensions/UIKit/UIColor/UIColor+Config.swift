@@ -38,7 +38,7 @@ extension UIColor {
     
     static let separator: UIColor = {
         if #available(iOS 13.0, *) {
-            return dynamicColor(hex_f3f3f3, hex_e9e9e9)
+            return dynamicColor(hex_f3f3f3, hex_292929)
         } else {
             return hex_f3f3f3
         }
@@ -77,6 +77,6 @@ extension UIColor {
     static let hex_323232 = hex(0x323232)
     
     /// 分割线颜色
-    static let hex_e9e9e9 = hex(0xe9e9e9)
+    static let hex_292929 = hex(0x292929)
     
 }
