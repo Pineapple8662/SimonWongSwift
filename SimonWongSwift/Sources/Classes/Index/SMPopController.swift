@@ -13,12 +13,15 @@ class SMPopController: BasePlainTableViewController, UITableViewDataSource, UITa
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        var width = UIDevelopingWidth
-        var height = UIScreenHeight - UIStatusBarHeight - SafeAreaBottomInset
-        height = 400 + SafeAreaBottomInset
+        var width: CGFloat = 0
+        var height: CGFloat = 0
         if UIDevice.iPadSeries.all {
-            width = UIScreenHeight - 44 * 2
+            width = UIScreenHeight - 88
             height = width
+        } else {
+            width = UIDevelopingWidth
+            height = UIScreenHeight - UIStatusBarHeight - SafeAreaBottomInset
+            height = 400 + SafeAreaBottomInset
         }
         self.contentSizeInPopup = CGSize(width: width, height: height)
     }
@@ -84,7 +87,7 @@ class SMPopController: BasePlainTableViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
