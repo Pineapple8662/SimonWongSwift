@@ -10,7 +10,7 @@ import UIKit
 
 class SMIndexController: BaseInsetGroupedTableViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private var sources: [String] = ["滚动穿透", "弹出窗口"]
+    private var sources: [String] = ["滚动穿透", "弹出窗口(编写中)"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
