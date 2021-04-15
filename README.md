@@ -3,7 +3,7 @@
 
 ### 内部Demo
 
-#### 滚动穿透`ScrollView嵌套`
+#### 滚动穿透（ScrollView嵌套）
 
 <img src="./GithubImages/滚动穿透.gif" width="250px" />
 [Github标题](#https://github.com/CoderSimonWong/DemosResources/raw/master/SimonWongSwift/滚动穿透.mp4)
@@ -16,10 +16,10 @@
 <img src="./GithubImages/美团商品.gif" width="250px" />
 > 还做过一个类似美团的效果
 [点我查看高清效果](https://github.com/CoderSimonWong/DemosResources/raw/master/SimonWongSwift/美团商品.mp4)
-`编写中`
+(编写中)
 
 #### 弹出窗口
 
-`编写中`
+(编写中)
 
 #### 还可以给我一个Star，鼓励我继续分享～
