@@ -18,11 +18,8 @@
 高清效果
 `https://github.com/CoderSimonWong/DemosResources/raw/master/SimonWongSwift/美团商品.mp4`
 <br>
-还做过一个类似美团的效果
-(编写中)
+还做过一个类似美团的效果(编写中)
 
-#### 弹出窗口
-
-(编写中)
+#### 弹出窗口(编写中)
 
 #### 还可以给我一个Star，鼓励我继续分享～
