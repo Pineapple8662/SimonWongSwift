@@ -82,10 +82,11 @@ class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
         }
     }
     
-    func scrollViewDidScrollToTop(_ scrollView: UIScrollView) {
+    func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
         canScroll = true
         scrollView.setContentOffset(.zero, animated: true)
         NotificationCenter.default.post(name: SMScrollExampleNotification.forceAllScrollToTop, object: pageController, userInfo: nil)
+        return true
     }
     
 }

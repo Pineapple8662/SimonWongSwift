@@ -12,7 +12,7 @@
 class CustomActivityIndicator: UIView {
     
     @IBInspectable
-    var color: UIColor = .separator {
+    var color: UIColor = .dynamicColor(.hex(0xe3e3e3), .hex_969696) {
         didSet {
             indicator.strokeColor = color.cgColor
         }
