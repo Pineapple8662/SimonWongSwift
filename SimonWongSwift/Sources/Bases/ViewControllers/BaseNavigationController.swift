@@ -11,6 +11,23 @@ import RTRootNavigationController
 
 class BaseNavigationController: RTRootNavigationController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // UINavigationBar
+        // 主题
+        navigationBar.barStyle = .default
+        // 透明
+        navigationBar.isTranslucent = false
+        // 按钮颜色
+        navigationBar.tintColor = .darkText
+        // 背景颜色
+        navigationBar.barTintColor = .dynamicColor(.white, .hex_282828)
+        // 去除分割线
+        navigationBar.shadowImage = UIImage()
+        // 标题
+        navigationBar.titleTextAttributes = [.font: UIFont.mediumSystemFont(ofSize: 17), .foregroundColor: UIColor.darkText]
+    }
+    
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if children.count > 0 {
             viewController.hidesBottomBarWhenPushed = true

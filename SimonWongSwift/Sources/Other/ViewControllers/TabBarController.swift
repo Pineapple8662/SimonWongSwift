@@ -18,8 +18,6 @@ class TabBarController: CYLTabBarController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         Self.configureAppearance()
-        customizeTabBar()
-        configureViewControllers()
     }
     
     required init?(coder: NSCoder) {
@@ -29,12 +27,24 @@ class TabBarController: CYLTabBarController {
     private static func configureAppearance() {
         UITabBar.appearance().backgroundColor = .dynamicColor(.white, .hex_282828)
         UITabBar.appearance().backgroundImage = UIImage()
-        UITabBar.appearance().shadowImage = UIImage(color: .dynamicColor(UIColor.hex_e9e9e9.withAlphaComponent(0.3), .clear))
+        UITabBar.appearance().shadowImage = UIImage(color: .dynamicColor(UIColor.hex_f3f3f3.withAlphaComponent(0.3), .clear))
         UITabBar.appearance().unselectedItemTintColor = .darkText
         let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
         let selectedAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .lightView
+        delegate = self
+        customizeTabBar()
+        configureViewControllers()
     }
     
     private func customizeTabBar() {
@@ -59,16 +69,6 @@ class TabBarController: CYLTabBarController {
         let naviVC2 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC3 = RTContainerNavigationController(rootViewController: BaseViewController())
         viewControllers = [naviVC0, naviVC1, naviVC2, naviVC3];
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .default
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .lightView
-        delegate = self
     }
     
 }

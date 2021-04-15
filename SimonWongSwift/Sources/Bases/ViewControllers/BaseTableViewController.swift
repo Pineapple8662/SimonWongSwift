@@ -55,7 +55,7 @@ class BaseTableViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = view.backgroundColor
-        tableView.separatorColor = .customSeparator
+        tableView.separatorColor = .separator
         let selector = #selector(register)
         if responds(to: selector) {
             perform(selector)

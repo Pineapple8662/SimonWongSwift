@@ -49,7 +49,7 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .customSeparator
+        view.backgroundColor = .separator
         guard let masterVC = masterViewController, let detailVC = detailViewController else { return }
         viewControllers = [masterVC, detailVC]
         delegate = self

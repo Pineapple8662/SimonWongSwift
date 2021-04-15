@@ -36,11 +36,11 @@ extension UIColor {
 
     // MARK: 分割线颜色
     
-    static let customSeparator: UIColor = {
+    static let separator: UIColor = {
         if #available(iOS 13.0, *) {
-            return dynamicColor(hex_e9e9e9, separator)
+            return dynamicColor(hex_f3f3f3, hex_e9e9e9)
         } else {
-            return hex_e9e9e9
+            return hex_f3f3f3
         }
     }()
     
@@ -67,7 +67,7 @@ extension UIColor {
     // MARK: 分割线颜色
     
     /// 分割线颜色
-    static let hex_e9e9e9 = hex(0xe9e9e9)
+    static let hex_f3f3f3 = hex(0xf3f3f3)
     
     // MAKE: - Dark颜色
     
@@ -75,5 +75,8 @@ extension UIColor {
     static let hex_282828 = hex(0x282828)
     /// Dark cell
     static let hex_323232 = hex(0x323232)
+    
+    /// 分割线颜色
+    static let hex_e9e9e9 = hex(0xe9e9e9)
     
 }
