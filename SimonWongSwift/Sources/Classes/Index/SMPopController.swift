@@ -71,12 +71,12 @@ class SMPopController: BasePlainTableViewController, UITableViewDataSource, UITa
         }
         configureTableView()
         if UIDevice.iPhoneSeries.all {
-            if let containerView = popupController?.containerView {
-                view.addSubview(maskView)
-                maskView.snp.makeConstraints { (make) in
-                    make.edges.equalToSuperview()
-                }
-            }
+//            if let containerView = popupController?.containerView {
+//                view.addSubview(maskView)
+//                maskView.snp.makeConstraints { (make) in
+//                    make.edges.equalToSuperview()
+//                }
+//            }
         }
     }
     
