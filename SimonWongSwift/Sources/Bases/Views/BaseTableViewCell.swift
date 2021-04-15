@@ -30,9 +30,9 @@ class BaseTableViewCell: UITableViewCell, ReuseIdentifierProtocol {
             selectionStyle = .default
         }
         textLabel?.textColor = .darkText
-        textLabel?.font = .mediumSystemFont(ofSize: 16)
+        textLabel?.font = .systemFont(ofSize: 16)
         detailTextLabel?.textColor = .lightText
-        detailTextLabel?.font = .mediumSystemFont(ofSize: 14)
+        detailTextLabel?.font = .systemFont(ofSize: 14)
     }
     
 }

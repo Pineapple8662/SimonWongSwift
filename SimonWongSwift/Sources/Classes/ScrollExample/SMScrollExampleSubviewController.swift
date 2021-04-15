@@ -31,7 +31,8 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
             let navigationBarHeight = navigationController?.navigationBar.height ?? 0
             make.height.equalTo(UIScreenHeight - statusBarHeight - navigationBarHeight - SMScrollExamplePageController.menuViewHeight)
         }
-        tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .leastNonzeroMagnitude, bottom: SafeAreaBottomInset, right: .leastNonzeroMagnitude)
+        tableViewBottomEdgeInset = SafeAreaBottomInset
+//        tableView.scrollIndicatorInsets = UIEdgeInsets(top: .leastNonzeroMagnitude, left: .leastNonzeroMagnitude, bottom: SafeAreaBottomInset, right: .leastNonzeroMagnitude)
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -98,7 +99,7 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
             cell = BaseTableViewCell(style: .value1, reuseIdentifier: BaseTableViewCell.reuseIdentifier)
         }
         cell?.backgroundColor = CGFloat(indexPath.row).remainder(dividingBy: 2) == 0 ? UIColor.red.withAlphaComponent(0.3) : UIColor.blue.withAlphaComponent(0.3)
-        cell?.textLabel?.text = "\(pageController.menuView!.dataSource.menuView(pageController.menuView, titleAt: index)!)_\(indexPath.row)"
+        cell?.textLabel?.text = "Argument \(indexPath.row)"
         return cell!
     }
     

@@ -19,6 +19,7 @@
 		3564850B24D594710052304D /* UIImage+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564850A24D594710052304D /* UIImage+UIColor.swift */; };
 		3564850F24D594F30052304D /* DispatchQueue+After.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564850E24D594F30052304D /* DispatchQueue+After.swift */; };
 		3564851124D5950F0052304D /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3564851024D5950F0052304D /* DispatchQueue+Once.swift */; };
+		35F73613262859B600D8F3A7 /* SMPopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F73612262859B600D8F3A7 /* SMPopController.swift */; };
 		836A192657DBD80D5AACE91C /* Pods_SimonWongSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */; };
 		842B926F24D11C51000BA398 /* LoadFromNibProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B926E24D11C51000BA398 /* LoadFromNibProtocol.swift */; };
 		842B927324D11CFA000BA398 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B927224D11CFA000BA398 /* ReuseIdentifierProtocol.swift */; };
@@ -86,6 +87,7 @@
 		3564850A24D594710052304D /* UIImage+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+UIColor.swift"; sourceTree = "<group>"; };
 		3564850E24D594F30052304D /* DispatchQueue+After.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+After.swift"; sourceTree = "<group>"; };
 		3564851024D5950F0052304D /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Once.swift"; sourceTree = "<group>"; };
+		35F73612262859B600D8F3A7 /* SMPopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMPopController.swift; sourceTree = "<group>"; };
 		842B926E24D11C51000BA398 /* LoadFromNibProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFromNibProtocol.swift; sourceTree = "<group>"; };
 		842B927224D11CFA000BA398 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 		842B927524D11D7E000BA398 /* ImportHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportHeader.swift; sourceTree = "<group>"; };
@@ -544,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				35376CFA262607370097642D /* SMIndexController.swift */,
+				35F73612262859B600D8F3A7 /* SMPopController.swift */,
 			);
 			path = Index;
 			sourceTree = "<group>";
@@ -725,6 +728,7 @@
 				842B926F24D11C51000BA398 /* LoadFromNibProtocol.swift in Sources */,
 				842B927324D11CFA000BA398 /* ReuseIdentifierProtocol.swift in Sources */,
 				84E803BE253D84B200A72725 /* SMScrollExampleRootController.swift in Sources */,
+				35F73613262859B600D8F3A7 /* SMPopController.swift in Sources */,
 				3564851124D5950F0052304D /* DispatchQueue+Once.swift in Sources */,
 				844B125A253E828B004CFF31 /* BaseTableViewController.swift in Sources */,
 				843042F2253D5EF500A592AB /* String+Random.swift in Sources */,

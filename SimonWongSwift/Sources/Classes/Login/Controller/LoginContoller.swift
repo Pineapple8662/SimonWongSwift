@@ -21,7 +21,7 @@ class SMLoginController: BaseViewController, DisposeBagProtocol {
         navigationItem.title = "登录"
         
         button.setTitle("确认", for: .normal)
-        button.titleLabel?.font = .mediumSystemFont(ofSize: 16)
+        button.titleLabel?.font = .systemFont(ofSize: 16)
         view.addSubview(button)
         button.snp.makeConstraints { (make) in
             make.center.equalTo(self.indicator)
@@ -30,7 +30,7 @@ class SMLoginController: BaseViewController, DisposeBagProtocol {
         textField.backgroundColor = UIColor.black.withAlphaComponent(0.1)
         textField.layer.cornerRadius = 8
         textField.textColor = .darkText
-        textField.font = .mediumSystemFont(ofSize: 14)
+        textField.font = .systemFont(ofSize: 14)
         textField.textAlignment = .center
         view.addSubview(textField)
         textField.snp.makeConstraints { (make) in

@@ -83,6 +83,48 @@ class BaseTableViewController: BaseViewController {
     
 }
 
+extension BaseTableViewController {
+    
+    @discardableResult
+    func openRefreshHeaderAndRefreshFooter(target: Any, action: Selector!) -> (MJRefreshStateHeader, MJRefreshAutoStateFooter) {
+        let header = openRefreshHeader(target: target, action: action)
+        let footer = openRefreshFooter(target: target, action: action)
+        return (header, footer)
+    }
+    
+    @discardableResult
+    func openRefreshHeader(target: Any, action: Selector!) -> MJRefreshStateHeader {
+        let header: MJRefreshStateHeader = MJRefreshStateHeader(refreshingTarget: target, refreshingAction: action)
+        header.lastUpdatedTimeLabel?.isHidden = true
+        header.stateLabel?.textColor = .lightText
+        header.stateLabel?.font = .systemFont(ofSize: 14)
+        header.setTitle("下拉刷新", for: .idle)
+        header.setTitle("松手刷新", for: .pulling)
+        header.setTitle("刷新中", for: .refreshing)
+        header.setTitle("即将刷新", for: .willRefresh)
+        header.setTitle("没有更多了", for: .noMoreData)
+        header.isAutomaticallyChangeAlpha = true
+        tableView.mj_header = header
+        return header
+    }
+    
+    @discardableResult
+    func openRefreshFooter(target: Any, action: Selector!) -> MJRefreshAutoStateFooter {
+        let footer: MJRefreshAutoStateFooter = MJRefreshAutoStateFooter(refreshingTarget: target, refreshingAction: action)
+        footer.stateLabel?.textColor = .lightText
+        footer.stateLabel?.font = .systemFont(ofSize: 14)
+        footer.setTitle("上拉加载更多", for: .idle)
+        footer.setTitle("松手加载更多", for: .pulling)
+        footer.setTitle("加载中...", for: .refreshing)
+        footer.setTitle("即将加载", for: .willRefresh)
+        footer.setTitle("没有更多了", for: .noMoreData)
+        tableView.mj_footer = footer
+        return footer
+    }
+    
+}
+
+
 // MARK: - BasePlainTableViewController
 
 class BasePlainTableViewController: BaseTableViewController {
@@ -117,4 +159,3 @@ class BaseInsetGroupedTableViewController: BaseTableViewController {
     }
     
 }
-

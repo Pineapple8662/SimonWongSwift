@@ -10,7 +10,7 @@ import UIKit
 
 class SMIndexController: BaseInsetGroupedTableViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private var sources: [String] = ["滚动穿透", "登录页面", "弹出窗口"]
+    private var sources: [String] = ["滚动穿透", "弹出窗口"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +55,8 @@ class SMIndexController: BaseInsetGroupedTableViewController, UITableViewDataSou
                 navigationController?.pushViewController(vc, animated: true)
             }
         } else if indexPath.row == 1 {
-            let vc = SMLoginController()
-            if UIDevice.iPadSeries.all {
-                showDetailViewController(vc, sender: nil)
-            } else {
-                navigationController?.pushViewController(vc, animated: true)
-            }
+            let alertVC = SMPopController()
+            present(alertVC, animated: true, completion: nil)
         } else if indexPath.row == 2 {
             
         }
