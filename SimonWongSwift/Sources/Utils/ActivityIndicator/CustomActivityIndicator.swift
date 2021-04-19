@@ -18,6 +18,8 @@ class CustomActivityIndicator: UIView {
         }
     }
     @IBInspectable
+    var contentSize: CGSize = CGSize(width: 40, height: 40)
+    @IBInspectable
     var lineWidth: CGFloat = 3 {
         didSet {
             indicator.lineWidth = lineWidth
@@ -67,7 +69,7 @@ class CustomActivityIndicator: UIView {
 extension CustomActivityIndicator {
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 40, height: 40)
+        return contentSize
     }
     
     override func layoutSubviews() {

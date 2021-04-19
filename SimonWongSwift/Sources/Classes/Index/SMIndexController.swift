@@ -10,7 +10,7 @@ import UIKit
 
 class SMIndexController: BaseInsetGroupedTableViewController, UITableViewDataSource, UITableViewDelegate {
     
-    private var sources: [String] = ["滚动穿透", "弹出窗口(编写中)", "Toast"]
+    private var sources: [String] = ["滚动穿透", "弹出窗口(编写中)", "Show Loading", "Show Toast", "Show Success", "Show Error"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,16 @@ class SMIndexController: BaseInsetGroupedTableViewController, UITableViewDataSou
             let vc = SMPopController()
             vc.show()
         } else if indexPath.row == 2 {
+            ProgressHUD.show()
+            DispatchQueue.after(3) {
+                ProgressHUD.dismiss()
+            }
+        } else if indexPath.row == 3 {
             ProgressHUD.show(message: "This's Toast!!!")
+        } else if indexPath.row == 4 {
+            ProgressHUD.show(success: "Success")
+        } else if indexPath.row == 5 {
+            ProgressHUD.show(error: "Error")
         }
     }
 
