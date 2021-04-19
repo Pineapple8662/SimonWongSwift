@@ -23,12 +23,12 @@ extension ProgressHUD {
         hud.animationType = .fade
         hud.margin = 20
         hud.bezelView.layer.masksToBounds = false
-        hud.bezelView.layer.shadowColor = UIColor.dynamicColor(.hex_323232, .hex_292929).cgColor
+        hud.bezelView.layer.shadowColor = UIColor.dynamicColor(.hex_323232, .hex(0x202020)).cgColor
         hud.bezelView.layer.shadowOpacity = 0.7
         hud.bezelView.layer.shadowOffset = .zero
         hud.bezelView.layer.cornerRadius = 15
         hud.bezelView.style = .solidColor
-        hud.bezelView.color = .dynamicColor(.hex_323232, .hex_292929)
+        hud.bezelView.color = .dynamicColor(.hex_323232, .hex(0x202020))
         hud.label.font = .mediumSystemFont(ofSize: 16)
         hud.label.numberOfLines = 0
         return hud
