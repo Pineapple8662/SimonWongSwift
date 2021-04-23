@@ -28,7 +28,7 @@ extension ProgressHUD {
         hud.bezelView.layer.shadowOffset = .zero
         hud.bezelView.layer.cornerRadius = 15
         hud.bezelView.style = .solidColor
-        hud.bezelView.color = .dynamicColor(.hex_323232, .hex(0x202020))
+        hud.bezelView.color = .dynamicColor(UIColor.hex_323232.withAlphaComponent(0.85), UIColor.hex(0x202020).withAlphaComponent(0.85))
         hud.label.font = .mediumSystemFont(ofSize: 16)
         hud.label.numberOfLines = 0
         return hud
