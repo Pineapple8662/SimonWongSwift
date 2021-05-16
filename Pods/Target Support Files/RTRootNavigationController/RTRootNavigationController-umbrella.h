@@ -11,6 +11,7 @@
 #endif
 
 #import "RTRootNavigationController.h"
+#import "RTViewControllerAnimatedTransitioning.h"
 #import "UIViewController+RTRootNavigationController.h"
 
 FOUNDATION_EXPORT double RTRootNavigationControllerVersionNumber;
