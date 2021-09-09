@@ -8,10 +8,13 @@
 
 import UIKit
 
-class SMScrollExampleNotification: PageScrollNotificationProtocal {
+extension Notification.Name {
     
-    static func registerPrefixString() -> String {
-        return "SMScrollExample"
+    struct ScrollExample {
+        static let didScrollToTop = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.didScrollToTop")
+        static let didLeaveTheTop = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.didLeaveTheTop")
+        static let forceAllScrollToTop = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.forceAllScrollToTop")
+        static let reloadData = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.reloadData")
     }
     
 }

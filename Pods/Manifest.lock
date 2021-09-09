@@ -1,17 +1,17 @@
 PODS:
   - Alamofire (5.4.3)
   - CHTCollectionViewWaterfallLayout/Swift (0.9.8)
-  - CryptoSwift (1.4.0)
-  - CYLTabBarController (1.29.0):
-    - CYLTabBarController/Core (= 1.29.0)
-  - CYLTabBarController/Core (1.29.0)
+  - CryptoSwift (1.4.1)
+  - CYLTabBarController (1.29.2):
+    - CYLTabBarController/Core (= 1.29.2)
+  - CYLTabBarController/Core (1.29.2)
   - DZNEmptyDataSet (1.8.1)
   - HandyJSON (5.0.2)
   - IQKeyboardManagerSwift (6.5.6)
   - KeychainAccess (4.2.2)
-  - Kingfisher (6.3.0)
+  - Kingfisher (6.3.1)
   - MBProgressHUD (1.2.0)
-  - MJRefresh (3.5.0)
+  - MJRefresh (3.7.2)
   - pop (1.0.12)
   - RTRootNavigationController (0.8.0):
     - RTRootNavigationController/Core (= 0.8.0)
@@ -104,15 +104,15 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   CHTCollectionViewWaterfallLayout: 5f241d2480ab4939aa0d1ad4981de9eef1fbe60d
-  CryptoSwift: 7cc902df1784de3b389a387756c7d710f197730c
-  CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
+  CryptoSwift: 0bc800a7e6a24c4fc9ebeab97d44b0d5f73a78bd
+  CYLTabBarController: db44b5901a28693a8a4279e4721b3aafdd36c178
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
-  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
-  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   RTRootNavigationController: 36c6301870f0467f89d69f4286795340b537d473
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
@@ -131,4 +131,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9f3f909d308796dbb84d578bde2f3a46909754f4
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.0.rc.1

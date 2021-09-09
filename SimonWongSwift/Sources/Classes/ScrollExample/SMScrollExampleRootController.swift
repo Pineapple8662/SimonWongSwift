@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
+class SMScrollExampleRootController: BaseViewController, DisposeBagProtocol, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollContentView: UIView!
@@ -51,7 +51,7 @@ class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
     }
     
     private func register() {
-        _ = NotificationCenter.default.rx.notification(SMScrollExampleNotification.didLeaveTheTop)
+        NotificationCenter.default.rx.notification(Notification.Name.ScrollExample.didLeaveTheTop)
             .take(until: self.rx.deallocated)
             .subscribe(onNext: { [weak self] (notification) in
                 guard let ws = self else { return }
@@ -63,6 +63,7 @@ class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
                     ws.canScroll = canScroll
                 }
             })
+            .disposed(by: disposeBag)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -74,7 +75,7 @@ class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
         if offsetY >= maxOffsetY {
             canScroll = false
             scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)
-            NotificationCenter.default.post(name: SMScrollExampleNotification.didScrollToTop, object: pageController, userInfo: ["canScroll": true, "offsetY": (offsetY - maxOffsetY)])
+            NotificationCenter.default.post(name: Notification.Name.ScrollExample.didScrollToTop, object: pageController, userInfo: ["canScroll": true, "offsetY": (offsetY - maxOffsetY)])
         } else {
             if !canScroll {
                 scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)
@@ -85,7 +86,7 @@ class SMScrollExampleRootController: BaseViewController, UIScrollViewDelegate {
     func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
         canScroll = true
         scrollView.setContentOffset(.zero, animated: true)
-        NotificationCenter.default.post(name: SMScrollExampleNotification.forceAllScrollToTop, object: pageController, userInfo: nil)
+        NotificationCenter.default.post(name: Notification.Name.ScrollExample.forceAllScrollToTop, object: pageController, userInfo: nil)
         return true
     }
     

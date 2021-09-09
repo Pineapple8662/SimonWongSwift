@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C1B8E026E9AFA0007078B5 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1B8DF26E9AFA0007078B5 /* Bundle+Extension.swift */; };
 		350979EB2628945D0013F417 /* UIView+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350979EA2628945D0013F417 /* UIView+GestureRecognizer.swift */; };
 		350979EF26289E670013F417 /* DraggableMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350979EE26289E670013F417 /* DraggableMaskView.swift */; };
 		35376CFB262607370097642D /* SMIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35376CFA262607370097642D /* SMIndexController.swift */; };
@@ -62,7 +63,6 @@
 		8448FF6E253D912300F91299 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF6D253D912300F91299 /* UIView+Border.swift */; };
 		8448FF73253D920600F91299 /* UIScrollView+MultipleScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */; };
 		8448FF7A253D946400F91299 /* SMScrollExampleSubviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF79253D946400F91299 /* SMScrollExampleSubviewController.swift */; };
-		8448FF7E253D97DC00F91299 /* PageScrollNotificationProtocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */; };
 		8448FF82253D98AF00F91299 /* SMScrollExampleNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF81253D98AF00F91299 /* SMScrollExampleNotification.swift */; };
 		844B125A253E828B004CFF31 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B1259253E828B004CFF31 /* BaseTableViewController.swift */; };
 		844B127A253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */; };
@@ -79,6 +79,7 @@
 
 /* Begin PBXFileReference section */
 		0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimonWongSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C1B8DF26E9AFA0007078B5 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		350979EA2628945D0013F417 /* UIView+GestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+GestureRecognizer.swift"; sourceTree = "<group>"; };
 		350979EE26289E670013F417 /* DraggableMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableMaskView.swift; sourceTree = "<group>"; };
 		35376CFA262607370097642D /* SMIndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMIndexController.swift; sourceTree = "<group>"; };
@@ -136,7 +137,6 @@
 		8448FF6D253D912300F91299 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+MultipleScroll.swift"; sourceTree = "<group>"; };
 		8448FF79253D946400F91299 /* SMScrollExampleSubviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScrollExampleSubviewController.swift; sourceTree = "<group>"; };
-		8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageScrollNotificationProtocal.swift; sourceTree = "<group>"; };
 		8448FF81253D98AF00F91299 /* SMScrollExampleNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMScrollExampleNotification.swift; sourceTree = "<group>"; };
 		844B1259253E828B004CFF31 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZNEmptyDataSetProtocol.swift; sourceTree = "<group>"; };
@@ -165,6 +165,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18C1B8DE26E9AF97007078B5 /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				18C1B8DF26E9AFA0007078B5 /* Bundle+Extension.swift */,
+			);
+			path = Bundle;
+			sourceTree = "<group>";
+		};
 		356484FA24D5943E0052304D /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +254,6 @@
 				842B927224D11CFA000BA398 /* ReuseIdentifierProtocol.swift */,
 				843042D5253D371200A592AB /* BaseViewProtocol.swift */,
 				843042D9253D3EAA00A592AB /* ViewModelType.swift */,
-				8448FF7D253D97DC00F91299 /* PageScrollNotificationProtocal.swift */,
 				844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */,
 			);
 			path = Protocols;
@@ -391,6 +398,7 @@
 		843042EA253D5EE800A592AB /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				18C1B8DE26E9AF97007078B5 /* Bundle */,
 				843042EB253D5EEE00A592AB /* String */,
 			);
 			path = Foundation;
@@ -755,6 +763,7 @@
 				35F73613262859B600D8F3A7 /* SMPopController.swift in Sources */,
 				3564851124D5950F0052304D /* DispatchQueue+Once.swift in Sources */,
 				844B125A253E828B004CFF31 /* BaseTableViewController.swift in Sources */,
+				18C1B8E026E9AFA0007078B5 /* Bundle+Extension.swift in Sources */,
 				843042F2253D5EF500A592AB /* String+Random.swift in Sources */,
 				842B927E24D128F8000BA398 /* SplitViewController.swift in Sources */,
 				3564850B24D594710052304D /* UIImage+UIColor.swift in Sources */,
@@ -764,7 +773,6 @@
 				843042D2253D365400A592AB /* CAPropertyAnimation+Key.swift in Sources */,
 				8448FF7A253D946400F91299 /* SMScrollExampleSubviewController.swift in Sources */,
 				8471A31524D54C25008DA574 /* UIFont+Universal.swift in Sources */,
-				8448FF7E253D97DC00F91299 /* PageScrollNotificationProtocal.swift in Sources */,
 				843042E2253D3F5A00A592AB /* LoginContoller.swift in Sources */,
 				843D34A724D3F7BA00404FC6 /* UIWindow+Hierarchy.swift in Sources */,
 			);

@@ -6,7 +6,7 @@
 //  Copyright © 2020 SimonWong. All rights reserved.
 //
 
-protocol DisposeBagProtocol: class { }
+protocol DisposeBagProtocol { }
 
 private var disposeBagKey: Void?
 

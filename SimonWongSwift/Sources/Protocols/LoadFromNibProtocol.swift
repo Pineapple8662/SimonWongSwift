@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol LoadFromNibProtocol: class { }
+protocol LoadFromNibProtocol { }
 
 extension LoadFromNibProtocol where Self: UIView {
     

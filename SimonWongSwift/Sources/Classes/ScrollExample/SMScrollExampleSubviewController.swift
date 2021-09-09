@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SMScrollExampleSubviewController: BasePlainTableViewController, UITableViewDataSource, UITableViewDelegate {
+class SMScrollExampleSubviewController: BasePlainTableViewController, DisposeBagProtocol, UITableViewDataSource, UITableViewDelegate {
 
     var index: Int = 0
     
@@ -36,7 +36,8 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
     }
     
     override func register() {
-        _ = NotificationCenter.default.rx.notification(SMScrollExampleNotification.didScrollToTop)
+        NotificationCenter.default.rx
+            .notification(Notification.Name.ScrollExample.didScrollToTop)
             .take(until: self.rx.deallocated)
             .subscribe(onNext: { [weak self] (notification) in
                 guard let ws = self else { return }
@@ -56,7 +57,11 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
                     }
                 }
             })
-        _ = NotificationCenter.default.rx.notification(SMScrollExampleNotification.didLeaveTheTop).take(until: self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
+            .disposed(by: disposeBag)
+        NotificationCenter.default.rx
+            .notification(Notification.Name.ScrollExample.didLeaveTheTop)
+            .take(until: self.rx.deallocated)
+            .subscribe(onNext: { [weak self] (notification) in
             guard let ws = self else { return }
             let object = notification.object
             if object as? SMScrollExamplePageController != ws.pageController { return }
@@ -64,13 +69,18 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
             ws.tableView.showsVerticalScrollIndicator = false
             ws.tableView.contentOffset = .zero
         })
-        _ = NotificationCenter.default.rx.notification(SMScrollExampleNotification.forceAllScrollToTop).take(until: self.rx.deallocated).subscribe(onNext: { [weak self] (notification) in
+            .disposed(by: disposeBag)
+        NotificationCenter.default.rx
+            .notification(Notification.Name.ScrollExample.forceAllScrollToTop)
+            .take(until: self.rx.deallocated)
+            .subscribe(onNext: { [weak self] (notification) in
             guard let ws = self else { return }
             let object = notification.object
             if object as? SMScrollExamplePageController != ws.pageController { return }
             ws.canScroll = false
             ws.tableView.contentOffset = .zero
         })
+            .disposed(by: disposeBag)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -79,7 +89,7 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, UITableVie
         }
         let offsetY = scrollView.contentOffset.y
         if offsetY < 0 {
-            NotificationCenter.default.post(name: SMScrollExampleNotification.didLeaveTheTop, object: pageController, userInfo: ["canScroll": true])
+            NotificationCenter.default.post(name: Notification.Name.ScrollExample.didLeaveTheTop, object: pageController, userInfo: ["canScroll": true])
         }
     }
     
