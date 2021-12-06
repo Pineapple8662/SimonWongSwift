@@ -16,7 +16,7 @@ class BaseNavigationController: RTRootNavigationController {
             viewController.hidesBottomBarWhenPushed = true
             viewController.rt_disableInteractivePop = false
             viewController.navigationItem.hidesBackButton = false
-            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "navigation_back"), style: .plain, target: self, action: #selector(didTapLeftBarButtonItem))
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "navigation_back"), style: .plain, target: self, action: #selector(onTapLeftBarButtonItem))
             viewController.navigationItem.leftBarButtonItem?.tintColor = .darkText
         }
         super.pushViewController(viewController, animated: animated)
@@ -32,7 +32,7 @@ class BaseNavigationController: RTRootNavigationController {
 
 extension BaseNavigationController {
     
-    @objc private func didTapLeftBarButtonItem() {
+    @objc private func onTapLeftBarButtonItem() {
         popViewController(animated: true)
     }
     

@@ -19,9 +19,17 @@ class SMScrollExampleRootController: BaseViewController, DisposeBagProtocol {
     private var pageController: SMScrollExamplePageController!
     private var menuViewTitles = ["Scroll", "Example", "Scroll", "Example", "Scroll", "Example", "Scroll", "Example"]
     
+    private var rightItem: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "滚动穿透"
+        rightItem = UIBarButtonItem(title: "开启穿透", style: .plain, target: self, action: #selector(onTapRightItem))
+        let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.mediumSystemFont(ofSize: 16), .foregroundColor: UIColor.darkText]
+        let selectedAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.mediumSystemFont(ofSize: 16), .foregroundColor: UIColor.placeholder]
+        rightItem.setTitleTextAttributes(normalAttributes, for: .normal)
+        rightItem.setTitleTextAttributes(selectedAttributes, for: .selected)
+        navigationItem.rightBarButtonItem = rightItem
         if UIDevice.simulator {
             OnceOperate.once(key: "SimulatorGGAlert") {
                 let alertVC = UIAlertController(title: "提示", message: "模拟器可能会感到卡顿，用真机才能看到真正效果", preferredStyle: .alert)
@@ -92,6 +100,26 @@ class SMScrollExampleRootController: BaseViewController, DisposeBagProtocol {
                 }
             })
             .disposed(by: disposeBag)
+    }
+    
+}
+
+// MARK: - Actions
+
+extension SMScrollExampleRootController {
+    
+    @objc private func onTapRightItem() {
+        if UserDefaults.standard.bool(forKey: "开启穿透") {
+            ProgressHUD.show(message: "已关闭穿透")
+            rightItem.title = "开启穿透"
+            UserDefaults.standard.set(false, forKey: "开启穿透")
+            UserDefaults.standard.synchronize()
+        } else {
+            ProgressHUD.show(message: "已开启穿透，滚动颜色块查看穿透效果")
+            rightItem.title = "关闭穿透"
+            UserDefaults.standard.set(true, forKey: "开启穿透")
+            UserDefaults.standard.synchronize()
+        }
     }
     
 }

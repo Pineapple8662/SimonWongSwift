@@ -53,11 +53,13 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, DisposeBag
                     ws.canScroll = canScroll
                     let vc = ws.pageController.currentViewController
                     if vc != self { return }
-//                    let offsetY = userInfo["offsetY"] as! CGFloat
-//                    if ws.tableView.contentOffset.y < ws.tableView.contentSize.height - ws.tableView.height {
-//                        let newOffsetY = ws.tableView.contentOffset.y + offsetY
-//                        ws.tableView.contentOffset = CGPoint(x: .zero, y: newOffsetY)
-//                    }
+                    if UserDefaults.standard.bool(forKey: "开启穿透") {
+                        let offsetY = userInfo["offsetY"] as! CGFloat
+                        if ws.tableView.contentOffset.y < ws.tableView.contentSize.height - ws.tableView.height {
+                            let newOffsetY = ws.tableView.contentOffset.y + offsetY
+                            ws.tableView.contentOffset = CGPoint(x: .zero, y: newOffsetY)
+                        }
+                    }
                 }
             })
             .disposed(by: disposeBag)

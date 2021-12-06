@@ -31,6 +31,7 @@ extension UIScrollView: UIGestureRecognizerDelegate {
             if otherGestureRecognizer.view?.tag == 200 { // tag 200 的，才能一起滚动
                 return true
             } else if otherGestureRecognizer.view?.tag == 201 { // tag 201 的，判断手势才能一起滚动
+                // case possible 尚未识别是何种手势操作（但可能已经触发了触摸事件），默认状态
                 if gestureRecognizer.state != .possible {
                     return true
                 }
