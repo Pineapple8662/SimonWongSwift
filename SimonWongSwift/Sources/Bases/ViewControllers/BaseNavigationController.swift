@@ -17,6 +17,7 @@ class BaseNavigationController: RTRootNavigationController {
             viewController.rt_disableInteractivePop = false
             viewController.navigationItem.hidesBackButton = false
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "navigation_back"), style: .plain, target: self, action: #selector(didTapLeftBarButtonItem))
+            viewController.navigationItem.leftBarButtonItem?.tintColor = .darkText
         }
         super.pushViewController(viewController, animated: animated)
         guard let tabBarController = tabBarController else { return }

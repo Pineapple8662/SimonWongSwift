@@ -19,13 +19,21 @@ extension AppDelegate {
     private static func configureAppearance() {
         // UINavigationBar
         let navigationBar = UINavigationBar.appearance()
-        navigationBar.barStyle = .default // 主题
-        navigationBar.isTranslucent = false // 透明
-        navigationBar.tintColor = .darkText // 按钮颜色
-        navigationBar.barTintColor = .dynamicColor(.white, .hex_282828) // 背景颜色
-        navigationBar.shadowImage = UIImage() // 去除分割线
-        navigationBar.titleTextAttributes = [.font: UIFont.mediumSystemFont(ofSize: 17), .foregroundColor: UIColor.darkText] // 标题
-        
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithDefaultBackground() // 主题
+            appearance.backgroundColor = .dynamicColor(.white, .hex_282828) // 背景颜色
+            appearance.shadowColor = .clear // 分割线
+            appearance.titleTextAttributes = [.font: UIFont.mediumSystemFont(ofSize: 17), .foregroundColor: UIColor.darkText] // 标题
+            navigationBar.standardAppearance = appearance
+            navigationBar.scrollEdgeAppearance = appearance
+        } else {
+            navigationBar.barStyle = .default // 主题
+            navigationBar.isTranslucent = false // 透明
+            navigationBar.barTintColor = .dynamicColor(.white, .hex_282828) // 背景颜色
+            navigationBar.shadowImage = UIImage() // 分割线
+            navigationBar.titleTextAttributes = [.font: UIFont.mediumSystemFont(ofSize: 17), .foregroundColor: UIColor.darkText] // 标题
+        }
         // UILabel
         UILabel.appearance().backgroundColor = .clear // 用于可视化测试调节颜色后还是显示透明
         // UITextField

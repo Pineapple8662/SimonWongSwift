@@ -25,14 +25,33 @@ class TabBarController: CYLTabBarController {
     }
     
     private static func configureAppearance() {
-        UITabBar.appearance().backgroundColor = .dynamicColor(.white, .hex_282828)
-        UITabBar.appearance().backgroundImage = UIImage()
-        UITabBar.appearance().shadowImage = UIImage(color: .dynamicColor(UIColor.hex_f3f3f3.withAlphaComponent(0.3), .clear))
-        UITabBar.appearance().unselectedItemTintColor = .darkText
-        let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
-        UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
-        let selectedAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 12), .foregroundColor: UIColor.darkText]
-        UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
+        let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.mediumSystemFont(ofSize: 10), .foregroundColor: UIColor.ultraLightText]
+        let selectedAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.semiboldSystemFont(ofSize: 10), .foregroundColor: UIColor.darkText]
+        let tabBar = UITabBar.appearance()
+        let tabBarItem = UITabBarItem.appearance()
+        if #available(iOS 13.0, *) {
+            let appearance = UITabBarAppearance()
+            appearance.configureWithDefaultBackground()
+            appearance.backgroundColor = .dynamicColor(.white, .hex_282828)
+            appearance.shadowColor = .dynamicColor(UIColor.hex_f3f3f3.withAlphaComponent(0.3), .clear)
+            appearance.stackedLayoutAppearance.normal.titleTextAttributes = normalAttributes
+            appearance.stackedLayoutAppearance.selected.titleTextAttributes = selectedAttributes
+            appearance.inlineLayoutAppearance.normal.titleTextAttributes = normalAttributes
+            appearance.inlineLayoutAppearance.selected.titleTextAttributes = selectedAttributes
+            appearance.compactInlineLayoutAppearance.normal.titleTextAttributes = normalAttributes
+            appearance.compactInlineLayoutAppearance.selected.titleTextAttributes = selectedAttributes
+            tabBar.standardAppearance = appearance
+            if #available(iOS 15.0, *) {
+                tabBar.scrollEdgeAppearance = appearance
+            }
+        } else {
+            tabBar.backgroundColor = .dynamicColor(.white, .hex_282828)
+            tabBar.backgroundImage = UIImage()
+            tabBar.shadowImage = UIImage(color: .dynamicColor(UIColor.hex_f3f3f3.withAlphaComponent(0.3), .clear))
+            tabBar.unselectedItemTintColor = .ultraLightText
+            tabBarItem.setTitleTextAttributes(normalAttributes, for: .normal)
+            tabBarItem.setTitleTextAttributes(selectedAttributes, for: .selected)
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -48,19 +67,22 @@ class TabBarController: CYLTabBarController {
     }
     
     private func customizeTabBar() {
-        let dic0 = [CYLTabBarItemTitle: "首页",
-                    CYLTabBarItemImage: "tabbar_icon_0",
-                    CYLTabBarItemSelectedImage: "tabbar_icon_0_selected"]
+        let dic0 = [CYLTabBarItemTitle: "标题",
+                    CYLTabBarItemImage: "ic_tabbar_0",
+                    CYLTabBarItemSelectedImage: "ic_tabbar_0_selected"]
         let dic1 = [CYLTabBarItemTitle: "标题",
-                    CYLTabBarItemImage: "tabbar_icon_1",
-                    CYLTabBarItemSelectedImage: "tabbar_icon_1_selected"]
+                    CYLTabBarItemImage: "ic_tabbar_1",
+                    CYLTabBarItemSelectedImage: "ic_tabbar_1_selected"]
         let dic2 = [CYLTabBarItemTitle: "标题",
-                    CYLTabBarItemImage: "tabbar_icon_2",
-                    CYLTabBarItemSelectedImage: "tabbar_icon_2_selected"]
+                    CYLTabBarItemImage: "ic_tabbar_2",
+                    CYLTabBarItemSelectedImage: "ic_tabbar_2_selected"]
         let dic3 = [CYLTabBarItemTitle: "标题",
-                    CYLTabBarItemImage: "tabbar_icon_3",
-                    CYLTabBarItemSelectedImage: "tabbar_icon_3_selected"]
-        tabBarItemsAttributes = [dic0, dic1, dic2, dic3]
+                    CYLTabBarItemImage: "ic_tabbar_3",
+                    CYLTabBarItemSelectedImage: "ic_tabbar_3_selected"]
+        let dic4 = [CYLTabBarItemTitle: "标题",
+                    CYLTabBarItemImage: "ic_tabbar_4",
+                    CYLTabBarItemSelectedImage: "ic_tabbar_4_selected"]
+        tabBarItemsAttributes = [dic0, dic1, dic2, dic3, dic4]
     }
     
     private func configureViewControllers() {
@@ -68,7 +90,8 @@ class TabBarController: CYLTabBarController {
         let naviVC1 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC2 = RTContainerNavigationController(rootViewController: BaseViewController())
         let naviVC3 = RTContainerNavigationController(rootViewController: BaseViewController())
-        viewControllers = [naviVC0, naviVC1, naviVC2, naviVC3];
+        let naviVC4 = RTContainerNavigationController(rootViewController: BaseViewController())
+        viewControllers = [naviVC0, naviVC1, naviVC2, naviVC3, naviVC4];
     }
     
 }

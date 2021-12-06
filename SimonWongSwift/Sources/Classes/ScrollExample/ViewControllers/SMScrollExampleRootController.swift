@@ -43,7 +43,7 @@ class SMScrollExampleRootController: BaseViewController, DisposeBagProtocol {
         scrollView.delegate = self
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { make in
-            make.top.equalToSuperview() // .offset(navigationBarHeight)
+            make.top.equalToSuperview().offset(navigationBarHeight)
             make.leading.bottom.trailing.equalToSuperview()
         }
         scrollContentView.backgroundColor = .clear

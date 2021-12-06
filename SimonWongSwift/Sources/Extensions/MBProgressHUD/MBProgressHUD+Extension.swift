@@ -19,7 +19,7 @@ extension ProgressHUD {
         let finalView = (view == mainWindow ? mainWindow : view) ?? UIView()
         let hud = showAdded(to: finalView, animated: true)
         hud.removeFromSuperViewOnHide = true
-        hud.contentColor = .hex_f8f8f8
+        hud.contentColor = .hex_f8f8f7
         hud.animationType = .fade
         hud.margin = 20
         hud.bezelView.layer.masksToBounds = false

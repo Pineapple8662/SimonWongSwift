@@ -10,6 +10,8 @@ import UIKit
 
 class BaseViewController: UIViewController, BaseViewProtocol, DZNEmptyDataSetProtocol {
     
+    lazy var navigationBarHeight = (navigationController?.navigationBar.height ?? 0) + UIStatusBarHeight
+    
     deinit {
         print("current function: \(self), \(#function)")
         StatusBarActivityIndicator.hide()

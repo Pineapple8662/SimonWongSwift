@@ -12,14 +12,14 @@ import UIKit
 
 extension UIColor {
     
-    // MARK: View 颜色
+    // MARK: View颜色
     
     /// 浅色view
     static let lightView: UIColor = {
         if #available(iOS 13.0, *) {
-            return dynamicColor(hex_f8f8f8, systemBackground)
+            return dynamicColor(hex_f8f8f7, systemBackground)
         } else {
-            return hex_f8f8f8
+            return hex_f8f8f7
         }
     }()
     
@@ -27,11 +27,15 @@ extension UIColor {
     
     /// 深色字体
     static let darkText: UIColor = {
-        return dynamicColor(hex_333333, hex_f8f8f8)
+        dynamicColor(hex_333333, hex_f8f8f7)
     }()
     /// 浅色字体
     static let lightText: UIColor = {
-        return dynamicColor(hex_969696, hex_969696)
+        dynamicColor(hex_666666, hex_666666)
+    }()
+    /// 超浅色字体
+    static let ultraLightText: UIColor = {
+        dynamicColor(hex_999999, hex_999999)
     }()
 
     // MARK: 分割线颜色
@@ -41,6 +45,16 @@ extension UIColor {
             return dynamicColor(hex_f3f3f3, hex_292929)
         } else {
             return hex_f3f3f3
+        }
+    }()
+    
+    // MARK: 占位颜色
+    
+    static let placeholder: UIColor = {
+        if #available(iOS 13.0, *) {
+            return dynamicColor(.hex(0xe3e6e7), .hex(0x1c1918))
+        } else {
+            return .hex(0xe3e6e7)
         }
     }()
     
@@ -55,14 +69,16 @@ extension UIColor {
     // MARK: View颜色
     
     /// 浅色view
-    static var hex_f8f8f8 = hex(0xf8f8f8)
+    static let hex_f8f8f7 = hex(0xf8f8f7)
     
     // MARK: 字体颜色
     
     /// 深色字体
     static let hex_333333 = hex(0x333333)
     /// 浅色字体
-    static let hex_969696 = hex(0x969696)
+    static let hex_666666 = hex(0x666666)
+    /// 超浅色字体
+    static let hex_999999 = hex(0x999999)
     
     // MARK: 分割线颜色
     

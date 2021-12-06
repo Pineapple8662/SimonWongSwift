@@ -11,7 +11,7 @@ import WMPageController
 
 class SMScrollExamplePageController: WMPageController {
     
-    static let menuViewHeight: CGFloat = 44
+    static let menuViewHeight: CGFloat = 50
     
     private var meunViewTitles: [String]?
 
