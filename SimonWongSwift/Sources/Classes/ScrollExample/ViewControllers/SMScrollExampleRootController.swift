@@ -108,7 +108,7 @@ extension SMScrollExampleRootController: UIScrollViewDelegate {
         }
         let maxOffsetY = scrollBottomContentView.top
         let offsetY = scrollView.contentOffset.y
-        if offsetY >= maxOffsetY {
+        if offsetY > maxOffsetY {
             canScroll = false
             scrollView.contentOffset = CGPoint(x: .zero, y: maxOffsetY)
             NotificationCenter.default.post(name: Notification.Name.ScrollExample.didScrollToTop, object: pageController, userInfo: ["canScroll": true, "offsetY": (offsetY - maxOffsetY)])

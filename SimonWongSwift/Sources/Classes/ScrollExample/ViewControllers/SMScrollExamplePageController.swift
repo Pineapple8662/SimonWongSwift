@@ -30,7 +30,7 @@ class SMScrollExamplePageController: WMPageController {
         self.titleFontName = "PingFangSC-Semibold"
         self.progressColor = .darkText
         self.itemsWidths = meunViewTitles.map { (string) -> NSNumber in
-            return NSNumber(value: Double(string.calculateWidth(font: .semiboldSystemFont(ofSize: 16)) + 24))
+            return NSNumber(value: Double(string.calculateWidth(font: .semiboldSystemFont(ofSize: 16)) + 34))
         }
         self.menuViewStyle = .line
         self.progressViewBottomSpace = 6
