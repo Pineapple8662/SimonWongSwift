@@ -35,7 +35,6 @@ class SMScrollExamplePageController: WMPageController {
         self.menuViewStyle = .line
         self.progressViewBottomSpace = 6
         self.progressViewCornerRadius = 1
-        self.menuViewContentMargin = 8
     }
     
     override func viewDidLoad() {
