@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18C1B8E026E9AFA0007078B5 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1B8DF26E9AFA0007078B5 /* Bundle+Extension.swift */; };
+		18E572DD275DAE1E00BC5E89 /* SMScrollExampleScrollTopContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E572DC275DAE1E00BC5E89 /* SMScrollExampleScrollTopContentView.swift */; };
 		350979EB2628945D0013F417 /* UIView+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350979EA2628945D0013F417 /* UIView+GestureRecognizer.swift */; };
 		350979EF26289E670013F417 /* DraggableMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350979EE26289E670013F417 /* DraggableMaskView.swift */; };
 		35376CFB262607370097642D /* SMIndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35376CFA262607370097642D /* SMIndexController.swift */; };
@@ -71,7 +72,6 @@
 		8471A31C24D56554008DA574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31B24D56553008DA574 /* TabBarController.swift */; };
 		8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31D24D573B3008DA574 /* UIColor+Random.swift */; };
 		84E803BE253D84B200A72725 /* SMScrollExampleRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E803BD253D84B200A72725 /* SMScrollExampleRootController.swift */; };
-		84E803C1253D85CD00A72725 /* SMScrollExampleRootController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E803C0253D85CD00A72725 /* SMScrollExampleRootController.xib */; };
 		84E803E0253D8AB500A72725 /* SMScrollExamplePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E803DF253D8AB500A72725 /* SMScrollExamplePageController.swift */; };
 		84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */; };
 		84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAB0032539517900CBA4C5 /* UIView+Frame.swift */; };
@@ -80,6 +80,7 @@
 /* Begin PBXFileReference section */
 		0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimonWongSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C1B8DF26E9AFA0007078B5 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		18E572DC275DAE1E00BC5E89 /* SMScrollExampleScrollTopContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScrollExampleScrollTopContentView.swift; sourceTree = "<group>"; };
 		350979EA2628945D0013F417 /* UIView+GestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+GestureRecognizer.swift"; sourceTree = "<group>"; };
 		350979EE26289E670013F417 /* DraggableMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableMaskView.swift; sourceTree = "<group>"; };
 		35376CFA262607370097642D /* SMIndexController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMIndexController.swift; sourceTree = "<group>"; };
@@ -145,7 +146,6 @@
 		8471A31B24D56553008DA574 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8471A31D24D573B3008DA574 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		84E803BD253D84B200A72725 /* SMScrollExampleRootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScrollExampleRootController.swift; sourceTree = "<group>"; };
-		84E803C0253D85CD00A72725 /* SMScrollExampleRootController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SMScrollExampleRootController.xib; sourceTree = "<group>"; };
 		84E803DF253D8AB500A72725 /* SMScrollExamplePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScrollExamplePageController.swift; sourceTree = "<group>"; };
 		84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Config.swift"; sourceTree = "<group>"; };
 		84FAB0032539517900CBA4C5 /* UIView+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
@@ -171,6 +171,25 @@
 				18C1B8DF26E9AFA0007078B5 /* Bundle+Extension.swift */,
 			);
 			path = Bundle;
+			sourceTree = "<group>";
+		};
+		18E572DA275DADF000BC5E89 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18E572DC275DAE1E00BC5E89 /* SMScrollExampleScrollTopContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18E572DB275DADF900BC5E89 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8448FF81253D98AF00F91299 /* SMScrollExampleNotification.swift */,
+				84E803BD253D84B200A72725 /* SMScrollExampleRootController.swift */,
+				84E803DF253D8AB500A72725 /* SMScrollExamplePageController.swift */,
+				8448FF79253D946400F91299 /* SMScrollExampleSubviewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		356484FA24D5943E0052304D /* Adapter */ = {
@@ -223,11 +242,8 @@
 		35DD5021262621EA000F4B03 /* ScrollExample */ = {
 			isa = PBXGroup;
 			children = (
-				8448FF81253D98AF00F91299 /* SMScrollExampleNotification.swift */,
-				84E803BD253D84B200A72725 /* SMScrollExampleRootController.swift */,
-				84E803C0253D85CD00A72725 /* SMScrollExampleRootController.xib */,
-				84E803DF253D8AB500A72725 /* SMScrollExamplePageController.swift */,
-				8448FF79253D946400F91299 /* SMScrollExampleSubviewController.swift */,
+				18E572DA275DADF000BC5E89 /* Views */,
+				18E572DB275DADF900BC5E89 /* ViewControllers */,
 			);
 			path = ScrollExample;
 			sourceTree = "<group>";
@@ -268,7 +284,7 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
-		842B927924D12673000BA398 /* Other */ = {
+		842B927924D12673000BA398 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				842B927C24D128D0000BA398 /* ViewControllers */,
@@ -276,7 +292,7 @@
 				84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */,
 				842B927A24D12692000BA398 /* AppDelegate+Fade.swift */,
 			);
-			path = Other;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		842B927C24D128D0000BA398 /* ViewControllers */ = {
@@ -420,7 +436,7 @@
 			children = (
 				8430431E253D708400A592AB /* Assets */,
 				8430431F253D70C000A592AB /* Fonts */,
-				84304320253D70CE00A592AB /* Localize */,
+				84304320253D70CE00A592AB /* Localizable */,
 				8430431D253D707400A592AB /* Settings */,
 				842F144924CA954600C45090 /* LaunchScreen.storyboard */,
 			);
@@ -451,11 +467,11 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		84304320253D70CE00A592AB /* Localize */ = {
+		84304320253D70CE00A592AB /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Localize;
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 		84304321253D713C00A592AB /* Sources */ = {
@@ -466,7 +482,7 @@
 				842B926C24D11C16000BA398 /* Extensions */,
 				842B927424D11D70000BA398 /* Headers */,
 				842B926D24D11C3F000BA398 /* Protocols */,
-				842B927924D12673000BA398 /* Other */,
+				842B927924D12673000BA398 /* Main */,
 				843D349E24D3EC7E00404FC6 /* Utils */,
 				843D349B24D3EB1600404FC6 /* Bridging-Header.h */,
 			);
@@ -656,7 +672,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E803C1253D85CD00A72725 /* SMScrollExampleRootController.xib in Resources */,
 				843042F6253D5F6800A592AB /* Images.xcassets in Resources */,
 				842F144B24CA954600C45090 /* LaunchScreen.storyboard in Resources */,
 				842F144824CA954600C45090 /* System.xcassets in Resources */,
@@ -767,6 +782,7 @@
 				843042F2253D5EF500A592AB /* String+Random.swift in Sources */,
 				842B927E24D128F8000BA398 /* SplitViewController.swift in Sources */,
 				3564850B24D594710052304D /* UIImage+UIColor.swift in Sources */,
+				18E572DD275DAE1E00BC5E89 /* SMScrollExampleScrollTopContentView.swift in Sources */,
 				843042D6253D371200A592AB /* BaseViewProtocol.swift in Sources */,
 				843D34A324D3ECBF00404FC6 /* StatusBarActivityIndicator.swift in Sources */,
 				84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */,

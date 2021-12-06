@@ -27,8 +27,14 @@ extension UIScrollView: UIGestureRecognizerDelegate {
     /// 返回true，则可以多个手势一起触发方法，返回false则为互斥
     /// 比如外层scrollView名为mainScroll内嵌的scrollView名为subScroll，当我们拖动subScroll时，mainScroll是不会响应手势的（多个手势默认是互斥的），当下面这个代理返回true时，subScroll和mainScroll就能同时响应手势，同时滚动，这符合我们这里的需求
     public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        if isMultipleScrollEnabled && gestureRecognizer.state != .possible {
-            return true
+        if isMultipleScrollEnabled {
+            if otherGestureRecognizer.view?.tag == 200 { // tag 200 的，才能一起滚动
+                return true
+            } else if otherGestureRecognizer.view?.tag == 201 { // tag 201 的，判断手势才能一起滚动
+                if gestureRecognizer.state != .possible {
+                    return true
+                }
+            }
         }
         return false
     }

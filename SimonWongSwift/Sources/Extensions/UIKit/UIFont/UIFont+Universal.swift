@@ -13,15 +13,19 @@ extension UIFont {
     // MARK: - 字体
     
     static func lightSystemFont(ofSize fontSize: CGFloat) -> UIFont {
-        return .systemFont(ofSize: fontSize, weight: UIFont.Weight.light)
+        return .systemFont(ofSize: fontSize, weight: .light)
     }
     
     static func regularSystemFont(ofSize fontSize: CGFloat) -> UIFont {
-        return .systemFont(ofSize: fontSize, weight: UIFont.Weight.regular)
+        return .systemFont(ofSize: fontSize, weight: .regular)
     }
     
     static func mediumSystemFont(ofSize fontSize: CGFloat) -> UIFont {
-        return .systemFont(ofSize: fontSize, weight: UIFont.Weight.medium)
+        return .systemFont(ofSize: fontSize, weight: .medium)
+    }
+    
+    static func semiboldSystemFont(ofSize fontSize: CGFloat) -> UIFont {
+        .systemFont(ofSize: fontSize, weight: .semibold)
     }
     
 }

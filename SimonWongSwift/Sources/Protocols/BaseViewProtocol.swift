@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol BaseViewProtocol: class { }
+protocol BaseViewProtocol { }
 
 private var customActivityIndicatorKey: Void?
 

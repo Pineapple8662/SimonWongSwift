@@ -1,12 +1,13 @@
 
 platform :ios, '12.0'
-inhibit_all_warnings!
-use_frameworks!
+
+source 'https://cdn.cocoapods.org/'
+
+workspace 'SimonWongSwift'
 
 def universal_pods
   
-  # SDK
-  pod 'WechatOpenSDK' # 微信
+  project 'SimonWongSwift'
   
   # Swift
   pod 'Alamofire' # 网络
@@ -37,6 +38,9 @@ def universal_pods
 end
 
 target 'SimonWongSwift' do
+  
+  use_frameworks!
+  inhibit_all_warnings!
   
   universal_pods
   

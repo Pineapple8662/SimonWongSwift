@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol ReuseIdentifierProtocol: class { }
+protocol ReuseIdentifierProtocol { }
 
 extension ReuseIdentifierProtocol {
     
