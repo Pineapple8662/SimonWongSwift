@@ -24,7 +24,13 @@ class SMScrollExampleRootController: BaseViewController, DisposeBagProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "滚动穿透"
-        rightItem = UIBarButtonItem(title: "开启穿透", style: .plain, target: self, action: #selector(onTapRightItem))
+        var rightItemTitle = "穿透已关"
+        if UserDefaults.standard.bool(forKey: "开启穿透") {
+            rightItemTitle = "穿透已关"
+        } else {
+            rightItemTitle = "穿透已开"
+        }
+        rightItem = UIBarButtonItem(title: rightItemTitle, style: .plain, target: self, action: #selector(onTapRightItem))
         let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.mediumSystemFont(ofSize: 16), .foregroundColor: UIColor.darkText]
         let selectedAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.mediumSystemFont(ofSize: 16), .foregroundColor: UIColor.placeholder]
         rightItem.setTitleTextAttributes(normalAttributes, for: .normal)
@@ -111,12 +117,12 @@ extension SMScrollExampleRootController {
     @objc private func onTapRightItem() {
         if UserDefaults.standard.bool(forKey: "开启穿透") {
             ProgressHUD.show(message: "已关闭穿透")
-            rightItem.title = "开启穿透"
+            rightItem.title = "穿透已关"
             UserDefaults.standard.set(false, forKey: "开启穿透")
             UserDefaults.standard.synchronize()
         } else {
             ProgressHUD.show(message: "已开启穿透，滚动颜色块查看穿透效果")
-            rightItem.title = "关闭穿透"
+            rightItem.title = "穿透已开"
             UserDefaults.standard.set(true, forKey: "开启穿透")
             UserDefaults.standard.synchronize()
         }
