@@ -26,7 +26,13 @@ class BaseNavigationController: RTRootNavigationController {
         tabBarController.tabBar.frame = frame
     }
     
-    @objc func didTapLeftBarButtonItem() {
+}
+
+// MARK: - Actions
+
+extension BaseNavigationController {
+    
+    @objc private func didTapLeftBarButtonItem() {
         popViewController(animated: true)
     }
     

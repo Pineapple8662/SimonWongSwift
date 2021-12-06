@@ -192,6 +192,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		18E572DE275DB70B00BC5E89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35D270CB262DE96000899459 /* MBProgressHUD */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		356484FA24D5943E0052304D /* Adapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,7 +259,6 @@
 		842B926C24D11C16000BA398 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				35D270CB262DE96000899459 /* MBProgressHUD */,
 				356484FA24D5943E0052304D /* Adapter */,
 				84304298253D358A00A592AB /* CoreGraphics */,
 				3564850C24D594E20052304D /* Dispatch */,
@@ -483,6 +490,7 @@
 				842B927424D11D70000BA398 /* Headers */,
 				842B926D24D11C3F000BA398 /* Protocols */,
 				842B927924D12673000BA398 /* Main */,
+				18E572DE275DB70B00BC5E89 /* Pods */,
 				843D349E24D3EC7E00404FC6 /* Utils */,
 				843D349B24D3EB1600404FC6 /* Bridging-Header.h */,
 			);

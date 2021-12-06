@@ -23,7 +23,7 @@ extension BaseViewProtocol where Self: UIViewController {
                 view.sendSubviewToBack(_indicator!)
                 _indicator?.snp.makeConstraints { (make) in
                     make.centerX.equalToSuperview()
-                    make.centerY.equalToSuperview().offset(-(self.tabBarController?.tabBar.height ?? 0) / 2)
+                    make.centerY.equalToSuperview()
                 }
                 objc_setAssociatedObject(self, &customActivityIndicatorKey, _indicator, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             }
@@ -36,7 +36,7 @@ extension BaseViewProtocol where Self: UIViewController {
     
     func showLoadingUI(offsetHeight: CGFloat = 0) {
         indicator.snp.updateConstraints { (make) in
-            make.centerY.equalToSuperview().offset(-(((self.tabBarController?.tabBar.height ?? 0) - offsetHeight) / 2))
+            make.centerY.equalToSuperview().offset(-(offsetHeight * 0.5))
         }
         indicator.startAnimating()
     }
