@@ -26,9 +26,9 @@ class SMScrollExampleRootController: BaseViewController, DisposeBagProtocol {
         navigationItem.title = "滚动穿透"
         var rightItemTitle = "穿透已关"
         if UserDefaults.standard.bool(forKey: "开启穿透") {
-            rightItemTitle = "穿透已关"
-        } else {
             rightItemTitle = "穿透已开"
+        } else {
+            rightItemTitle = "穿透已关"
         }
         rightItem = UIBarButtonItem(title: rightItemTitle, style: .plain, target: self, action: #selector(onTapRightItem))
         let normalAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.mediumSystemFont(ofSize: 16), .foregroundColor: UIColor.darkText]
