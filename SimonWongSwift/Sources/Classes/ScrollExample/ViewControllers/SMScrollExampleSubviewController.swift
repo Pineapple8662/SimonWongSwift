@@ -53,6 +53,8 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, DisposeBag
                     ws.canScroll = canScroll
                     let vc = ws.pageController.currentViewController
                     if vc != self { return }
+                    // 穿透其实仍然有些不理想的效果，多数项目其实也不需要这种效果
+                    // 仍有待加强处理
                     if UserDefaults.standard.bool(forKey: "开启穿透") {
                         let offsetY = userInfo["offsetY"] as! CGFloat
                         if ws.tableView.contentOffset.y < ws.tableView.contentSize.height - ws.tableView.height {
