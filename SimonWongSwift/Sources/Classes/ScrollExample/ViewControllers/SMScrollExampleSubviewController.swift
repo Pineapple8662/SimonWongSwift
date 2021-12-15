@@ -15,12 +15,18 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, DisposeBag
     private var pageController: SMScrollExamplePageController!
     private var rootViewController: SMScrollExampleRootController!
     private var canScroll = false
+    private var isDragging = false {
+        didSet {
+            print("isDragging: \(isDragging)")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pageController = wm_pageController as? SMScrollExamplePageController
         rootViewController = pageController.parent as? SMScrollExampleRootController
         canScroll = !rootViewController.canScroll
+        isDragging = !rootViewController.isDragging
         configureTableView()
     }
     
@@ -57,7 +63,7 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, DisposeBag
                     // 仍有待加强处理
                     if UserDefaults.standard.bool(forKey: "开启穿透") {
                         let offsetY = userInfo["offsetY"] as! CGFloat
-                        if ws.tableView.contentOffset.y < ws.tableView.contentSize.height - ws.tableView.height {
+                        if !ws.isDragging && ws.tableView.contentOffset.y < ws.tableView.contentSize.height - ws.tableView.height {
                             let newOffsetY = ws.tableView.contentOffset.y + offsetY
                             ws.tableView.contentOffset = CGPoint(x: .zero, y: newOffsetY)
                         }
@@ -85,7 +91,18 @@ class SMScrollExampleSubviewController: BasePlainTableViewController, DisposeBag
             let object = notification.object
             if object as? SMScrollExamplePageController != ws.pageController { return }
             ws.canScroll = false
+            ws.isDragging = false
             ws.tableView.contentOffset = .zero
+        })
+            .disposed(by: disposeBag)
+        NotificationCenter.default.rx
+            .notification(Notification.Name.ScrollExample.isRootDragging)
+            .take(until: self.rx.deallocated)
+            .subscribe(onNext: { [weak self] (notification) in
+            guard let ws = self else { return }
+            let object = notification.object
+            if object as? SMScrollExamplePageController != ws.pageController { return }
+            ws.isDragging = false
         })
             .disposed(by: disposeBag)
     }
@@ -127,6 +144,10 @@ extension SMScrollExampleSubviewController: UIScrollViewDelegate {
         if offsetY < 0 {
             NotificationCenter.default.post(name: Notification.Name.ScrollExample.didLeaveTheTop, object: pageController, userInfo: ["canScroll": true])
         }
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isDragging = true
     }
     
 }

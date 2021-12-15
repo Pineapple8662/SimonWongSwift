@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183F89CD27697ED400263DBD /* SMScrollExampleRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F89C927697ED300263DBD /* SMScrollExampleRootController.swift */; };
+		183F89CE27697ED400263DBD /* SMScrollExamplePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F89CA27697ED300263DBD /* SMScrollExamplePageController.swift */; };
+		183F89CF27697ED400263DBD /* SMScrollExampleNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F89CB27697ED300263DBD /* SMScrollExampleNotification.swift */; };
+		183F89D027697ED400263DBD /* SMScrollExampleSubviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F89CC27697ED400263DBD /* SMScrollExampleSubviewController.swift */; };
+		183F89D227697EEE00263DBD /* DraggableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183F89D127697EEE00263DBD /* DraggableProtocol.swift */; };
 		18C1B8E026E9AFA0007078B5 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C1B8DF26E9AFA0007078B5 /* Bundle+Extension.swift */; };
 		18E572DD275DAE1E00BC5E89 /* SMScrollExampleScrollTopContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E572DC275DAE1E00BC5E89 /* SMScrollExampleScrollTopContentView.swift */; };
 		350979EB2628945D0013F417 /* UIView+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350979EA2628945D0013F417 /* UIView+GestureRecognizer.swift */; };
@@ -63,22 +68,23 @@
 		843D34B124D41A3C00404FC6 /* UIColor+DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D34B024D41A3C00404FC6 /* UIColor+DynamicColor.swift */; };
 		8448FF6E253D912300F91299 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF6D253D912300F91299 /* UIView+Border.swift */; };
 		8448FF73253D920600F91299 /* UIScrollView+MultipleScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */; };
-		8448FF7A253D946400F91299 /* SMScrollExampleSubviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF79253D946400F91299 /* SMScrollExampleSubviewController.swift */; };
-		8448FF82253D98AF00F91299 /* SMScrollExampleNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF81253D98AF00F91299 /* SMScrollExampleNotification.swift */; };
 		844B125A253E828B004CFF31 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B1259253E828B004CFF31 /* BaseTableViewController.swift */; };
 		844B127A253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */; };
 		8471A31524D54C25008DA574 /* UIFont+Universal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31424D54C25008DA574 /* UIFont+Universal.swift */; };
 		8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31724D54F12008DA574 /* UIView+ViewController.swift */; };
 		8471A31C24D56554008DA574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31B24D56553008DA574 /* TabBarController.swift */; };
 		8471A31E24D573B3008DA574 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471A31D24D573B3008DA574 /* UIColor+Random.swift */; };
-		84E803BE253D84B200A72725 /* SMScrollExampleRootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E803BD253D84B200A72725 /* SMScrollExampleRootController.swift */; };
-		84E803E0253D8AB500A72725 /* SMScrollExamplePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E803DF253D8AB500A72725 /* SMScrollExamplePageController.swift */; };
 		84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */; };
 		84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FAB0032539517900CBA4C5 /* UIView+Frame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D3B8AD4F08A17B894EF01C0 /* Pods_SimonWongSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimonWongSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		183F89C927697ED300263DBD /* SMScrollExampleRootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMScrollExampleRootController.swift; sourceTree = "<group>"; };
+		183F89CA27697ED300263DBD /* SMScrollExamplePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMScrollExamplePageController.swift; sourceTree = "<group>"; };
+		183F89CB27697ED300263DBD /* SMScrollExampleNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMScrollExampleNotification.swift; sourceTree = "<group>"; };
+		183F89CC27697ED400263DBD /* SMScrollExampleSubviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMScrollExampleSubviewController.swift; sourceTree = "<group>"; };
+		183F89D127697EEE00263DBD /* DraggableProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableProtocol.swift; sourceTree = "<group>"; };
 		18C1B8DF26E9AFA0007078B5 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		18E572DC275DAE1E00BC5E89 /* SMScrollExampleScrollTopContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScrollExampleScrollTopContentView.swift; sourceTree = "<group>"; };
 		350979EA2628945D0013F417 /* UIView+GestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+GestureRecognizer.swift"; sourceTree = "<group>"; };
@@ -137,16 +143,12 @@
 		843D34B024D41A3C00404FC6 /* UIColor+DynamicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+DynamicColor.swift"; sourceTree = "<group>"; };
 		8448FF6D253D912300F91299 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
 		8448FF72253D920600F91299 /* UIScrollView+MultipleScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+MultipleScroll.swift"; sourceTree = "<group>"; };
-		8448FF79253D946400F91299 /* SMScrollExampleSubviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScrollExampleSubviewController.swift; sourceTree = "<group>"; };
-		8448FF81253D98AF00F91299 /* SMScrollExampleNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMScrollExampleNotification.swift; sourceTree = "<group>"; };
 		844B1259253E828B004CFF31 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DZNEmptyDataSetProtocol.swift; sourceTree = "<group>"; };
 		8471A31424D54C25008DA574 /* UIFont+Universal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Universal.swift"; sourceTree = "<group>"; };
 		8471A31724D54F12008DA574 /* UIView+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ViewController.swift"; sourceTree = "<group>"; };
 		8471A31B24D56553008DA574 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8471A31D24D573B3008DA574 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
-		84E803BD253D84B200A72725 /* SMScrollExampleRootController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScrollExampleRootController.swift; sourceTree = "<group>"; };
-		84E803DF253D8AB500A72725 /* SMScrollExamplePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMScrollExamplePageController.swift; sourceTree = "<group>"; };
 		84FAAFE42539474200CBA4C5 /* AppDelegate+Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Config.swift"; sourceTree = "<group>"; };
 		84FAB0032539517900CBA4C5 /* UIView+Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
 		98384983532BD539A3B504CF /* Pods-SimonWongSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimonWongSwift.release.xcconfig"; path = "Target Support Files/Pods-SimonWongSwift/Pods-SimonWongSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,10 +186,10 @@
 		18E572DB275DADF900BC5E89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8448FF81253D98AF00F91299 /* SMScrollExampleNotification.swift */,
-				84E803BD253D84B200A72725 /* SMScrollExampleRootController.swift */,
-				84E803DF253D8AB500A72725 /* SMScrollExamplePageController.swift */,
-				8448FF79253D946400F91299 /* SMScrollExampleSubviewController.swift */,
+				183F89CB27697ED300263DBD /* SMScrollExampleNotification.swift */,
+				183F89CA27697ED300263DBD /* SMScrollExamplePageController.swift */,
+				183F89C927697ED300263DBD /* SMScrollExampleRootController.swift */,
+				183F89CC27697ED400263DBD /* SMScrollExampleSubviewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -278,6 +280,7 @@
 				843042D5253D371200A592AB /* BaseViewProtocol.swift */,
 				843042D9253D3EAA00A592AB /* ViewModelType.swift */,
 				844B1279253EBE21004CFF31 /* DZNEmptyDataSetProtocol.swift */,
+				183F89D127697EEE00263DBD /* DraggableProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -739,19 +742,20 @@
 				843D34AA24D3F99100404FC6 /* UIDevice+Universal.swift in Sources */,
 				35D270CD262DE96000899459 /* MBProgressHUD+Extension.swift in Sources */,
 				8430429C253D359500A592AB /* CGSize+Extension.swift in Sources */,
+				183F89CE27697ED400263DBD /* SMScrollExamplePageController.swift in Sources */,
 				84304290253D311900A592AB /* PlaceholderController.swift in Sources */,
 				843D34B124D41A3C00404FC6 /* UIColor+DynamicColor.swift in Sources */,
 				35E5813F2628CA1E006F8619 /* OnceOperate.swift in Sources */,
 				843042F3253D5EF500A592AB /* String+Substring.swift in Sources */,
 				842B927824D11F90000BA398 /* UniversalHeader.swift in Sources */,
+				183F89D227697EEE00263DBD /* DraggableProtocol.swift in Sources */,
 				3564850F24D594F30052304D /* DispatchQueue+After.swift in Sources */,
 				3564850524D5943E0052304D /* AdapterConst.swift in Sources */,
 				3564850424D5943E0052304D /* UITextView+Adapter.swift in Sources */,
+				183F89CF27697ED400263DBD /* SMScrollExampleNotification.swift in Sources */,
 				8471A31C24D56554008DA574 /* TabBarController.swift in Sources */,
 				3564850724D5943E0052304D /* CATextLayer+Adapter.swift in Sources */,
 				8430429B253D359500A592AB /* CGRect+Extension.swift in Sources */,
-				8448FF82253D98AF00F91299 /* SMScrollExampleNotification.swift in Sources */,
-				84E803E0253D8AB500A72725 /* SMScrollExamplePageController.swift in Sources */,
 				8448FF73253D920600F91299 /* UIScrollView+MultipleScroll.swift in Sources */,
 				8471A31824D54F12008DA574 /* UIView+ViewController.swift in Sources */,
 				842F143F24CA954300C45090 /* AppDelegate.swift in Sources */,
@@ -772,8 +776,10 @@
 				843042E5253D3FB000A592AB /* SMLoginViewModel.swift in Sources */,
 				3564850224D5943E0052304D /* UILabel+Adapter.swift in Sources */,
 				84FAAFE52539474200CBA4C5 /* AppDelegate+Config.swift in Sources */,
+				183F89D027697ED400263DBD /* SMScrollExampleSubviewController.swift in Sources */,
 				842B927B24D12692000BA398 /* AppDelegate+Fade.swift in Sources */,
 				843D349D24D3EC0B00404FC6 /* BaseViewController.swift in Sources */,
+				183F89CD27697ED400263DBD /* SMScrollExampleRootController.swift in Sources */,
 				3564850824D5943E0052304D /* UIFont+Adapter.swift in Sources */,
 				843D34AD24D40ABD00404FC6 /* UIColor+Config.swift in Sources */,
 				843042DA253D3EAA00A592AB /* ViewModelType.swift in Sources */,
@@ -782,7 +788,6 @@
 				3564850624D5943E0052304D /* UITextField+Adapter.swift in Sources */,
 				842B926F24D11C51000BA398 /* LoadFromNibProtocol.swift in Sources */,
 				842B927324D11CFA000BA398 /* ReuseIdentifierProtocol.swift in Sources */,
-				84E803BE253D84B200A72725 /* SMScrollExampleRootController.swift in Sources */,
 				35F73613262859B600D8F3A7 /* SMPopController.swift in Sources */,
 				3564851124D5950F0052304D /* DispatchQueue+Once.swift in Sources */,
 				844B125A253E828B004CFF31 /* BaseTableViewController.swift in Sources */,
@@ -795,7 +800,6 @@
 				843D34A324D3ECBF00404FC6 /* StatusBarActivityIndicator.swift in Sources */,
 				84FAB0042539517900CBA4C5 /* UIView+Frame.swift in Sources */,
 				843042D2253D365400A592AB /* CAPropertyAnimation+Key.swift in Sources */,
-				8448FF7A253D946400F91299 /* SMScrollExampleSubviewController.swift in Sources */,
 				8471A31524D54C25008DA574 /* UIFont+Universal.swift in Sources */,
 				843042E2253D3F5A00A592AB /* LoginContoller.swift in Sources */,
 				843D34A724D3F7BA00404FC6 /* UIWindow+Hierarchy.swift in Sources */,

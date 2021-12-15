@@ -14,6 +14,7 @@ extension Notification.Name {
         static let didScrollToTop = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.didScrollToTop")
         static let didLeaveTheTop = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.didLeaveTheTop")
         static let forceAllScrollToTop = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.forceAllScrollToTop")
+        static let isRootDragging = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.isRootDragging")
         static let reloadData = Notification.Name(rawValue: "\(Bundle.identifier).scrollExample.reloadData")
     }
     

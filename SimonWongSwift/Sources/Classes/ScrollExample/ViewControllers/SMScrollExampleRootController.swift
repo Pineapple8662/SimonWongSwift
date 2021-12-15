@@ -11,6 +11,7 @@ import UIKit
 class SMScrollExampleRootController: BaseViewController, DisposeBagProtocol {
 
     private(set) var canScroll = true
+    private(set) var isDragging = true
     
     private var scrollView = UIScrollView()
     private var scrollContentView = UIView()
@@ -155,9 +156,15 @@ extension SMScrollExampleRootController: UIScrollViewDelegate {
     
     func scrollViewShouldScrollToTop(_ scrollView: UIScrollView) -> Bool {
         canScroll = true
+        isDragging = true
         scrollView.setContentOffset(.zero, animated: true)
         NotificationCenter.default.post(name: Notification.Name.ScrollExample.forceAllScrollToTop, object: pageController, userInfo: nil)
         return true
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        isDragging = true
+        NotificationCenter.default.post(name: Notification.Name.ScrollExample.isRootDragging, object: pageController, userInfo: nil)
     }
     
 }
